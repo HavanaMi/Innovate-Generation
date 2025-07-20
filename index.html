@@ -5,6 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header, footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .hero {
+      text-align: center;
+      background-color: #000;
+      padding: 60px 20px;
+    }
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .portfolio-item {
+      background: #1f1f1f;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      color: #eee;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .shop-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .shop-item {
+      width: 200px;
+      background: #222;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      color: #eee;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .shop-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,6 +106,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#portfolio">Our Work</a>
+    <a href="#shop">Shop</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -44,6 +134,30 @@
       <div class="portfolio-item">
         <img src="https://source.unsplash.com/400x300/?technology" alt="Tech for Good">
         <div><h3>Tech for Good</h3><p>Digital tools to support local communities.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Our Shop</h2>
+    <div class="shop-items">
+      <div class="shop-item">
+        <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="Logo T-Shirt">
+        <h3>Logo T-Shirt</h3>
+        <p>Price: £15</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="shop-item">
+        <img src="https://via.placeholder.com/200x200?text=Tote+Bag" alt="Canvas Tote Bag">
+        <h3>Canvas Tote Bag</h3>
+        <p>Price: £12</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="shop-item">
+        <img src="https://via.placeholder.com/200x200?text=Mug" alt="Innovate Mug">
+        <h3>Innovate Mug</h3>
+        <p>Price: £8</p>
+        <button>Add to Cart</button>
       </div>
     </div>
   </section>
