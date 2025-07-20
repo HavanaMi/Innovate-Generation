@@ -1,44 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Shop - Innovate Generation</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Global Styles */
+body {
+  margin: 0;
+  background-color: #111;
+  color: #f2f2f2;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  <header>
-    <h1>Our Shop</h1>
-  </header>
+header, footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-  <section>
-    <h2>Shop</h2>
-    <div class="shop-items">
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="Logo T-Shirt">
-        <h3>Logo T-Shirt</h3>
-        <p>Price: £15</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=Tote+Bag" alt="Canvas Tote Bag">
-        <h3>Canvas Tote Bag</h3>
-        <p>Price: £12</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=Mug" alt="Innovate Mug">
-        <h3>Innovate Mug</h3>
-        <p>Price: £8</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </section>
+nav {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
 
-  <footer>
-    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
-  </footer>
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-</body>
-</html>
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Shop Page Styles */
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.shop-item {
+  width: 250px;
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.shop-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.shop-item:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #007acc;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  color: #fff;
+}
+
