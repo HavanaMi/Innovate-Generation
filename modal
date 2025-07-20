@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Generation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link do Twojego pliku CSS -->
+</head>
+<body>
+
+    <!-- Nagłówek z menu -->
+    <header>
+        <div class="menu">
+            <a href="#welcome" class="modal-button">Welcome</a>
+            <a href="#team" class="modal-button">Our Team</a>
+            <a href="#work" class="modal-button">Work</a>
+            <a href="#contact" class="modal-button">Contact</a>
+        </div>
+    </header>
+
+    <!-- MODAL - Welcome -->
+    <div class="modal" id="welcome">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to Innovate Generation</h2>
+            <p>Here at Innovate Generation, we focus on innovation in design and technology.</p>
+        </div>
+    </div>
+
+    <!-- MODAL - Our Team -->
+    <div class="modal" id="team">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Our Team</h2>
+            <p>Our team is composed of passionate individuals, each contributing unique skills to drive success.</p>
+        </div>
+    </div>
+
+    <!-- MODAL - Our Work -->
+    <div class="modal" id="work">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Our Work</h2>
+            <div class="work-gallery">
+                <img src="project1.jpg" alt="Project 1">
+                <img src="project2.jpg" alt="Project 2">
+                <img src="project3.jpg" alt="Project 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - Contact -->
+    <div class="modal" id="contact">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Skrypt JavaScript -->
+    <script src="scripts.js"></script> <!-- Link do Twojego pliku JavaScript -->
+
+</body>
+</html>
