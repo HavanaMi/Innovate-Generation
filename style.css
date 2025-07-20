@@ -13,19 +13,17 @@ header {
     text-align: center;
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
+header .menu a {
     color: white;
     text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+header .menu a:hover {
+    background-color: #555;
 }
 
 /* Style dla modali */
