@@ -1,21 +1,78 @@
-/* style.css */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; background: #f4f9fc; color: #333; }
-header, footer { background: #007acc; color: #fff; text-align: center; padding: 20px; }
-nav { background: #005f99; display: flex; justify-content: center; padding: 10px; }
-nav a { color: #fff; margin: 0 15px; font-weight: bold; text-decoration: none; }
-nav a:hover { color: #ffdd57; }
-.hero { text-align: center; padding: 80px 20px; background: #e6f2fa; }
-.hero h1 { font-size: 3.2em; color: #007acc; margin-bottom: 20px; }
-.hero p { font-size: 1.2em; max-width: 700px; margin: auto; }
-section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-h2 { color: #007acc; margin-bottom: 30px; text-align: center; }
-.portfolio { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.portfolio-item { width: 300px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s; }
-.portfolio-item img { width: 100%; height: 200px; object-fit: cover; }
-.portfolio-item div { padding: 15px; }
-.portfolio-item h3 { color: #005f99; font-size: 1.1em; }
-.portfolio-item p { font-size: 0.9em; color: #555; }
-.portfolio-item:hover { transform: translateY(-5px); }
-footer { background: #005f99; padding: 20px; margin-top: 40px; }
-footer p { color: #fff; }
+/* Globalne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style dla modali */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #333;
+    color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.close-btn {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.work-gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efekt dla przycisków */
+.modal-button:hover {
+    color: #ddd;
+}
