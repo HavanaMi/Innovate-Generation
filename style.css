@@ -13,16 +13,25 @@ header {
     text-align: center;
 }
 
-header .menu a {
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
     padding: 10px 20px;
     background-color: #444;
     border-radius: 5px;
 }
 
-header .menu a:hover {
+header nav ul li a:hover {
     background-color: #555;
 }
 
