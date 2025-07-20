@@ -4,43 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovate Generation</title>
-    <!-- Link do pliku CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Łączenie z plikiem CSS -->
 </head>
 <body>
 
-    <!-- Nagłówek z menu -->
+    <!-- Nagłówek z menu nawigacyjnym -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#welcome" class="modal-button">Welcome</a></li>
-                <li><a href="#team" class="modal-button">Our Team</a></li>
-                <li><a href="#work" class="modal-button">Work</a></li>
-                <li><a href="#contact" class="modal-button">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <a href="#welcome" class="modal-button">Welcome</a>
+            <a href="#team" class="modal-button">Our Team</a>
+            <a href="#work" class="modal-button">Work</a>
+            <a href="#contact" class="modal-button">Contact</a>
+        </div>
     </header>
 
     <!-- Modale (Popupy) -->
-    <!-- Modal Welcome -->
+
+    <!-- Modal: Welcome -->
     <div class="modal" id="welcome">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Welcome to Innovate Generation</h2>
-            <p>Here at Innovate Generation, we focus on innovation in design and technology.</p>
+            <p>We innovate in design and technology to shape the future. Explore our work and team.</p>
         </div>
     </div>
 
-    <!-- Modal Our Team -->
+    <!-- Modal: Our Team -->
     <div class="modal" id="team">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Our Team</h2>
-            <p>Our team is composed of passionate individuals, each contributing unique skills to drive success.</p>
+            <p>Our team is composed of passionate individuals, each bringing unique skills to the table.</p>
         </div>
     </div>
 
-    <!-- Modal Our Work -->
+    <!-- Modal: Our Work -->
     <div class="modal" id="work">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -53,26 +51,10 @@
         </div>
     </div>
 
-    <!-- Modal Contact -->
+    <!-- Modal: Contact -->
     <div class="modal" id="contact">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Contact Us</h2>
             <form>
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Link do pliku JavaScript -->
-    <script src="scripts.js"></script>
-
-</body>
-</html>
-
