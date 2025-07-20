@@ -1,19 +1,21 @@
 /* Global Styles */
-body {
+html, body {
+  height: 100%; /* Ensure the body takes full height */
   margin: 0;
-  background-color: #111 !important; /* Force dark background for body */
-  color: #f2f2f2; /* Light text color */
+  padding: 0;
+  background-color: #111 !important;  /* Dark background for entire page */
+  color: #f2f2f2;                     /* Light text color */
   font-family: 'Segoe UI', sans-serif;
 }
 
 header, footer {
-  background-color: #1a1a1a; /* Darker background for header and footer */
+  background-color: #1a1a1a !important; /* Darker background for header and footer */
   text-align: center;
   padding: 40px 20px;
 }
 
 nav {
-  background-color: #222; /* Dark nav background */
+  background-color: #222 !important; /* Dark nav background */
   padding: 10px;
   text-align: center;
 }
@@ -26,25 +28,24 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffcc00; /* Hover color */
+  color: #ffcc00;                     /* Hover color */
 }
 
 /* Section Styles */
-section {
-  background-color: #1f1f1f; /* Dark background for sections */
+section, .hero {
+  background-color: #1f1f1f !important;  /* Dark background for sections */
   padding: 40px 20px;
-  color: #f2f2f2; /* Light text for the sections */
+  color: #f2f2f2;                      /* Light text for the sections */
 }
 
+/* Hero Section */
 .hero {
-  text-align: center;
-  background-color: #000; /* Black background for hero */
+  background-color: #000 !important;    /* Black background for hero */
   padding: 60px 20px;
 }
 
-/* Footer Styles */
 footer {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a !important;
   padding: 20px;
   color: #fff;
 }
