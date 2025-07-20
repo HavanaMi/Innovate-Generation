@@ -4,131 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f9fc;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #007acc;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #005f99;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffdd57;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background-color: #e6f2fa;
-    }
-
-    .hero h1 {
-      font-size: 3.2em;
-      color: #007acc;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.3em;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #007acc;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .about p {
-      font-size: 1.1em;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .portfolio {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .portfolio-item {
-      width: 300px;
-      background-color: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .portfolio-item div {
-      padding: 15px;
-    }
-
-    .portfolio-item h3 {
-      color: #005f99;
-      font-size: 1.2em;
-    }
-
-    .portfolio-item p {
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
-
-    footer {
-      background-color: #005f99;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 80px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -138,47 +14,48 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="#portfolio">Our Work</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <h1>Welcome to Innovate Generation</h1>
-    <p>This is the official website of Innovate Generation — a company dedicated to social initiatives and innovative solutions for real-world problems.</p>
+    <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <section id="about" class="about">
+  <section id="about">
     <h2>About Us</h2>
-    <p>We are passionate about creating social impact through innovation, education, technology, and creative projects. Our team works with communities, startups, and organizations to design meaningful solutions.</p>
+    <p>We create positive social impact through innovation, workshops, and community-driven projects. Our team collaborates with volunteers and partners to build meaningful solutions.</p>
   </section>
 
   <section id="portfolio">
     <h2>Our Work</h2>
     <div class="portfolio">
       <div class="portfolio-item">
-        <img src="https://source.unsplash.com/300x200/?education" alt="Project 1">
-        <div>
-          <h3>Educational Programs</h3>
-          <p>Workshops and mentoring for young innovators and changemakers.</p>
-        </div>
+        <img src="https://source.unsplash.com/400x300/?workshop" alt="Edu Workshops">
+        <div><h3>Educational Workshops</h3><p>Empowering youth with skills and knowledge.</p></div>
       </div>
       <div class="portfolio-item">
-        <img src="https://source.unsplash.com/300x200/?technology" alt="Project 2">
-        <div>
-          <h3>Tech for Good</h3>
-          <p>We design digital tools and platforms that support local communities.</p>
-        </div>
+        <img src="https://source.unsplash.com/400x300/?community" alt="Community Event">
+        <div><h3>Community Events</h3><p>Bringing people together for social good.</p></div>
       </div>
       <div class="portfolio-item">
-        <img src="https://source.unsplash.com/300x200/?teamwork" alt="Project 3">
-        <div>
-          <h3>Community Events</h3>
-          <p>Organizing events that promote inclusion, creativity, and collaboration.</p>
-        </div>
+        <img src="https://source.unsplash.com/400x300/?technology" alt="Tech for Good">
+        <div><h3>Tech for Good</h3><p>Digital tools to support local communities.</p></div>
       </div>
     </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Thanks! We will be in touch.'); return false;">
+      <label>Name:<input type="text" name="name" required /></label><br/>
+      <label>Email:<input type="email" name="email" required /></label><br/>
+      <label>Message:<textarea name="message" rows="4" required></textarea></label><br/>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
