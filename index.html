@@ -1,151 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovate Generation</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #0e0e0e;
-      color: #fff;
-    }
-    header {
-      background: #1f1f1f;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    nav {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #f2f2f2;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #ffdd57;
-    }
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 60px;
-    }
-    .portfolio {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .portfolio-item {
-      width: 300px;
-      background: #1a1a1a;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(255,255,255,0.05);
-      overflow: hidden;
-      text-align: center;
-      color: #f0f0f0;
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .portfolio-item h3 {
-      margin: 15px 0 5px;
-    }
-    .portfolio-item p {
-      padding: 0 15px 15px;
-      font-size: 0.95em;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 30px 10px;
-    }
-    .contact-details {
-      font-size: 0.95em;
-      margin-top: 20px;
-    }
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.4em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Generation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Upewnij się, że masz plik styles.css -->
 </head>
 <body>
 
-  <header>
-    <h1>Innovate Generation</h1>
-    <p>Social Innovation. Real Impact.</p>
-  </header>
+    <!-- Nagłówek z menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#welcome" class="modal-button">Welcome</a></li>
+                <li><a href="#team" class="modal-button">Our Team</a></li>
+                <li><a href="#work" class="modal-button">Work</a></li>
+                <li><a href="#contact" class="modal-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="about.html" target="_blank">About</a>
-    <a href="portfolio.html" target="_blank">Our Work</a>
-    <a href="shop.html" target="_blank">Shop</a>
-    <a href="contact.html" target="_blank">Contact</a>
-    <a href="https://www.instagram.com/innovategeneration" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-  </nav>
-
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Innovate Generation is a socially driven company dedicated to creating change through innovation, education, and community projects. We organize workshops, support local leadership, and build tools for meaningful collaboration.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>We’d love to hear from you! Reach out with ideas, collaboration opportunities, or just to say hi.</p>
-      <div class="contact-details">
-        <p>Email: innovategen@mail.com</p>
-        <p>Phone: +44 7545514867</p>
-        <p>Instagram: <a href="https://www.instagram.com/innovategeneration" target="_blank">@innovategeneration</a></p>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <h2>Featured Projects</h2>
-      <div class="portfolio">
-        <div class="portfolio-item">
-          <img src="images/workshop.jpg" alt="Workshop">
-          <h3>Educational Workshops</h3>
-          <p>Empowering youth with skills and mentoring through creative learning experiences.</p>
+    <!-- Modale (Popupy) -->
+    <!-- Modal Welcome -->
+    <div class="modal" id="welcome">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to Innovate Generation</h2>
+            <p>Treść powitalna tutaj.</p>
         </div>
-        <div class="portfolio-item">
-          <img src="images/community.jpg" alt="Community">
-          <h3>Community Events</h3>
-          <p>Events that unite local voices, promote inclusion, and foster real community engagement.</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="images/tech.jpg" alt="Tech">
-          <h3>Tech for Good</h3>
-          <p>Creating platforms and apps that serve the public interest and drive progress.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/innovategeneration" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
-  </footer>
 
+    <!-- Modal Our Team -->
+    <div class="modal" id="team">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Our Team</h2>
+            <p>Szczegóły o zespole.</p>
+        </div>
+    </div>
+
+    <!-- Modal Our Work -->
+    <div class="modal" id="work">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Our Work</h2>
+            <div class="work-gallery">
+                <img src="project1.jpg" alt="Project 1">
+                <img src="project2.jpg" alt="Project 2">
+                <img src="project3.jpg" alt="Project 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+    <div class="modal" id="contact">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Upewnij się, że masz plik scripts.js -->
 </body>
 </html>
-
