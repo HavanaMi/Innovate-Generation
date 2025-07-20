@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovate Generation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innovate Generation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Nagłówek z menu -->
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#welcome" class="modal-button">Welcome</a></li>
-                    <li><a href="#team" class="modal-button">Our Team</a></li>
-                    <li><a href="#work" class="modal-button">Our Work</a></li>
-                    <li><a href="#contact" class="modal-button">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <h1>Innovate Generation</h1>
+    <p>Social Innovation. Real Impact.</p>
+  </header>
 
-    <!-- Modale (Popupy) -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Our Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- Modal: Welcome -->
-    <div class="modal" id="welcome">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Welcome to Innovate Generation</h2>
-            <p>We innovate in design and technology to shape the future. Explore our work and team.</p>
-        </div>
+  <section id="home" class="hero">
+    <h1>Welcome to Innovate Generation</h1>
+    <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We create positive social impact through innovation, workshops, and community-driven projects. Our team collaborates with volunteers and partners to build meaningful solutions.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Work</h2>
+    <div class="portfolio">
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?workshop" alt="Edu Workshops">
+        <div><h3>Educational Workshops</h3><p>Empowering youth with skills and knowledge.</p></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?community" alt="Community Event">
+        <div><h3>Community Events</h3><p>Bringing people together for social good.</p></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?technology" alt="Tech for Good">
+        <div><h3>Tech for Good</h3><p>Digital tools to support local communities.</p></div>
+      </div>
     </div>
+  </section>
 
-    <!-- Modal: Our Team -->
-    <div class="modal" id="team">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Our Team</h2>
-            <p>Our team is composed of passionate individuals, each bringing unique skills to the table.</p>
-        </div>
-    </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Thanks! We will be in touch.'); return false;">
+      <label>Name:<input type="text" name="name" required /></label><br/>
+      <label>Email:<input type="email" name="email" required /></label><br/>
+      <label>Message:<textarea name="message" rows="4" required></textarea></label><br/>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Modal: Our Work -->
-    <div class="modal" id="work">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Our Work</h2>
-            <div class="work-gallery">
-                <img src="images/project1.jpg" alt="Project 1">
-                <img src="images/project2.jpg" alt="Project 2">
-                <img src="images/project3.jpg" alt="Project 3">
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Contact -->
-    <div class="modal" id="contact">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Skrypt JavaScript -->
-    <script src="scripts.js"></script>
+  <footer>
+    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
+
 
