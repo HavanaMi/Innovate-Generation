@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovate Generation</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Łączenie z plikiem CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Nagłówek z ciemnym menu nawigacyjnym -->
+    <!-- Nagłówek z menu nawigacyjnym -->
     <header>
-        <div class="navbar">
-            <a href="#welcome" class="modal-button">Welcome</a>
-            <a href="#team" class="modal-button">Our Team</a>
-            <a href="#work" class="modal-button">Work</a>
-            <a href="#contact" class="modal-button">Contact</a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#welcome" class="modal-button">Welcome</a></li>
+                    <li><a href="#team" class="modal-button">Our Team</a></li>
+                    <li><a href="#work" class="modal-button">Work</a></li>
+                    <li><a href="#contact" class="modal-button">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Modale (Popupy) -->
+    <!-- Sekcja modali -->
 
     <!-- Modal: Welcome -->
     <div class="modal" id="welcome">
@@ -44,15 +48,9 @@
             <span class="close-btn">&times;</span>
             <h2>Our Work</h2>
             <div class="work-gallery">
-                <div class="work-item">
-                    <p>Project 1</p>
-                </div>
-                <div class="work-item">
-                    <p>Project 2</p>
-                </div>
-                <div class="work-item">
-                    <p>Project 3</p>
-                </div>
+                <img src="images/project1.jpg" alt="Project 1">
+                <img src="images/project2.jpg" alt="Project 2">
+                <img src="images/project3.jpg" alt="Project 3">
             </div>
         </div>
     </div>
@@ -74,8 +72,8 @@
         </div>
     </div>
 
-    <!-- Skrypt JavaScript do działania modali -->
-    <script src="scripts.js"></script> <!-- Łączenie z plikiem JavaScript -->
+    <!-- Skrypt JavaScript -->
+    <script src="scripts.js"></script>
 
 </body>
 </html>
