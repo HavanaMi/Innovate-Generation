@@ -48,6 +48,49 @@
     </div>
   </section>
 
+  <div class="popup-button" id="shopBtn">
+  <i class="icon-shopping-cart"></i>
+  <span>Shop</span>
+</div>
+  <div id="shopPopup" class="popup-content" style="display:none;">
+  <h2>Our Shop</h2>
+  <div class="shop-items">
+    <div class="shop-item">
+      <img src="images/product1.jpg" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $25</p>
+    </div>
+    <div class="shop-item">
+      <img src="images/product2.jpg" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $40</p>
+    </div>
+    <!-- Dodaj kolejne produkty -->
+  </div>
+  <button class="close-popup">×</button>
+</div>
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.shop-item {
+  width: 200px;
+  background: #222;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  color: #eee;
+}
+
+.shop-item img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
   <section id="contact">
     <h2>Contact Us</h2>
     <form onsubmit="alert('Thanks! We will be in touch.'); return false;">
