@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
   margin: 0;
-  background-color: #111; /* Dark background for the entire page */
+  background-color: #111 !important; /* Force dark background for body */
   color: #f2f2f2; /* Light text color */
   font-family: 'Segoe UI', sans-serif;
 }
@@ -48,3 +48,4 @@ footer {
   padding: 20px;
   color: #fff;
 }
+
