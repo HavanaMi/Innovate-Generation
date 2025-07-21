@@ -6,16 +6,101 @@
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Centering and Enlarging Text */
-    #home h1, #home p {
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* General Styles for Sections */
+    section {
+      background-color: #f7f7f7;  /* Light Gray Background for Sections */
+      padding: 40px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;  /* Light border for section separation */
+    }
+
+    /* Text Centering for Titles */
+    section h1, section h2, section h3, section p {
       text-align: center;
-      font-size: 2em; /* Adjust the font size as needed */
     }
 
-    #home p {
-      font-size: 1.5em; /* Make the second line slightly smaller but still prominent */
+    /* Specific Styling for Each Section */
+    .hero {
+      background-color: #000;
+      padding: 60px 20px;
+      color: white;
     }
 
+    .categories, .featured-product, .event-section {
+      margin: 40px 0;
+    }
+
+    /* Styling for Buttons */
+    button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+
+    .portfolio {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+      width: 300px;
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-item {
+      display: inline-block;
+      width: 200px;
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      color: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .event-list {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .event-list li {
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -26,16 +111,82 @@
   </header>
 
   <!-- Home Section -->
-  <section id="home">
+  <section class="hero">
     <h1>Welcome to Innovate Generation</h1>
     <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <!-- Rest of your content -->
+  <!-- Categories of the Month Section -->
+  <section class="categories">
+    <h2>Categories of the Month</h2>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="portfolio">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300?text=Watch" alt="Watches">
+        <p>Watches</p>
+        <button>Go Shop</button>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300?text=Shoes" alt="Shoes">
+        <p>Shoes</p>
+        <button>Go Shop</button>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300?text=Accessories" alt="Accessories">
+        <p>Accessories</p>
+        <button>Go Shop</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-product">
+    <h2>Featured Product</h2>
+    <div class="portfolio">
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Gym Weight">
+        <p>Gym Weight</p>
+        <button>Shop</button>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Cloud Nike Shoes">
+        <p>Cloud Nike Shoes</p>
+        <button>Shop</button>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Summer Addides Shoes">
+        <p>Summer Addides Shoes</p>
+        <button>Shop</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="event-section">
+    <h2>Upcoming Events</h2>
+    <ul class="event-list">
+      <li>Fashion Event - August 15, 2025</li>
+      <li>Art Gallery - September 10, 2025</li>
+      <li>Music Event - October 20, 2025</li>
+    </ul>
+    <a href="https://www.eventbrite.com" target="_blank"><button>View More Events</button></a>
+  </section>
+
+  <!-- Poll Section -->
+  <section>
+    <h2>Which event would you like to see?</h2>
+    <form>
+      <input type="radio" name="event" value="fashion"> Fashion Event<br>
+      <input type="radio" name="event" value="art"> Art Gallery<br>
+      <input type="radio" name="event" value="music"> Music Event<br><br>
+      <button type="submit">Vote</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-
-
-
 
