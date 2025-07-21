@@ -6,19 +6,26 @@
   <title>About Us - Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Center the header title */
+    /* Center the page header title */
     header h1 {
       text-align: center;
     }
 
-    /* Optional: Style the About Us section title */
-    section#about h2 {
+    /* Center titles in each section */
+    section h2, section h3 {
       text-align: center;
+      margin: 20px 0; /* optional: space above and below the title */
     }
 
-    /* Optional: Additional styles for footer */
-    footer {
+    /* Optional: Center the sections themselves */
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
+      background-color: #111;
     }
   </style>
 </head>
@@ -77,4 +84,3 @@
 
 </body>
 </html>
-
