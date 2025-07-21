@@ -5,121 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      background-color: #111;
-      color: #f2f2f2;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #000;
-      color: #fff;
-    }
-
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 20px;
-      margin: 10px 0 20px;
-    }
-
-    /* Navigation Menu */
-    nav {
-      background-color: #222;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    /* Section styling */
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero {
-      background-color: #000;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .hero p {
-      font-size: 22px;
-      color: #fff;
-    }
-
-    .categories {
-      margin-top: 40px;
-      background-color: #333; /* Graphite background */
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .categories h2 {
-      font-size: 28px;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-
-    .categories p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    /* Featured Product Styling */
-    .featured-product {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: #333; /* Graphite background */
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .featured-product img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* Footer Styling */
-    footer {
-      background-color: #1a1a1a;
-      padding: 20px;
-      color: #fff;
-      text-align: center;
-    }
-
-  </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>Innovate Generation</h1>
     <p>Social Innovation. Real Impact.</p>
@@ -135,57 +24,86 @@
   </nav>
 
   <!-- Home Section -->
-  <section class="hero">
+  <section id="home" class="hero">
     <h1>Welcome to Innovate Generation</h1>
     <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <!-- Categories of The Month Section -->
-  <section class="categories">
-    <h2>Categories of The Month</h2>
-    <p>Each year, we nominate the best talents by evaluating their progress and achievements over the course of the year. This year, we award Nikola for her outstanding artwork completed at the end of the school year.</p>
-    <div>
-      <img src="nikola_image.jpg" alt="Nikola" style="width: 300px; float: right; margin-left: 20px;">
-      <p style="text-align: left;">Nikola has demonstrated exceptional dedication to her craft and has shown significant growth. We are proud to recognize her as our top talent this year.</p>
+  <!-- Categories of the Month -->
+  <section id="categories-of-the-month">
+    <h2 style="text-align:center;">Categories of the Month</h2>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="categories">
+      <div class="category-item">
+        <img src="https://via.placeholder.com/150x150?text=Watches" alt="Watches">
+        <h3>Watches</h3>
+        <a href="#"><button>Go Shop</button></a>
+      </div>
+      <div class="category-item">
+        <img src="https://via.placeholder.com/150x150?text=Shoes" alt="Shoes">
+        <h3>Shoes</h3>
+        <a href="#"><button>Go Shop</button></a>
+      </div>
+      <div class="category-item">
+        <img src="https://via.placeholder.com/150x150?text=Accessories" alt="Accessories">
+        <h3>Accessories</h3>
+        <a href="#"><button>Go Shop</button></a>
+      </div>
     </div>
   </section>
 
   <!-- Featured Product Section -->
-  <section class="featured-product">
-    <h2>Featured Product</h2>
-    <div>
-      <img src="product1.jpg" alt="Product 1">
-      <img src="product2.jpg" alt="Product 2">
-      <img src="product3.jpg" alt="Product 3">
-      <img src="product4.jpg" alt="Product 4">
+  <section id="featured-products">
+    <h2 style="text-align:center;">Featured Product</h2>
+    <div class="featured-products">
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200?text=Gym+Weight" alt="Gym Weight">
+        <h3>Gym Weight</h3>
+        <p>$240.00</p>
+        <a href="https://www.eventbrite.com" target="_blank"><button>Shop Now</button></a>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200?text=Cloud+Nike+Shoes" alt="Cloud Nike Shoes">
+        <h3>Cloud Nike Shoes</h3>
+        <p>$480.00</p>
+        <a href="https://www.ticketmaster.com" target="_blank"><button>Shop Now</button></a>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/300x200?text=Summer+Addides+Shoes" alt="Summer Addides Shoes">
+        <h3>Summer Addides Shoes</h3>
+        <p>$360.00</p>
+        <a href="https://www.eventbrite.com" target="_blank"><button>Shop Now</button></a>
+      </div>
     </div>
   </section>
 
-  <!-- Events Section -->
-  <section class="events">
-    <h2>Events</h2>
+  <!-- Event Section -->
+  <section id="events">
+    <h2 style="text-align:center;">Upcoming Events</h2>
     <ul>
-      <li>Fashion Event - 30th August</li>
-      <li>Art Gallery - 15th September</li>
-      <li>Music Event - 20th October</li>
+      <li><a href="https://www.eventbrite.com" target="_blank">Fashion Event - July 30, 2025</a></li>
+      <li><a href="https://www.ticketmaster.com" target="_blank">Art Gallery - August 15, 2025</a></li>
+      <li><a href="https://www.eventbrite.com" target="_blank">Music Event - September 10, 2025</a></li>
     </ul>
-    <p>Join us on Eventbrite or Ticketmaster for more details and tickets.</p>
+    <a href="https://www.eventbrite.com" target="_blank"><button>Support Education & Events</button></a>
   </section>
 
   <!-- Poll Section -->
-  <section class="poll">
-    <h2>Poll: Which event would you like to see?</h2>
+  <section id="poll">
+    <h2 style="text-align:center;">Vote for Your Favorite Event</h2>
     <form>
       <label><input type="radio" name="event" value="fashion"> Fashion Event</label><br>
       <label><input type="radio" name="event" value="art"> Art Gallery</label><br>
       <label><input type="radio" name="event" value="music"> Music Event</label><br>
-      <button type="submit">Submit</button>
+      <button type="submit">Vote</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+
