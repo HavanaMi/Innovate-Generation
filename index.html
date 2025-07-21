@@ -6,54 +6,120 @@
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Center the text in the hero section */
-    #home {
+    /* Featured Product Section */
+    #featured-products {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .product-item {
+      width: 22%;
       text-align: center;
-      background-color: #000;
-      padding: 60px 20px;
+      background: #1f1f1f;
+      border-radius: 8px;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .product-item button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .product-item button:hover {
+      background-color: #005f99;
+    }
+
+    /* Events Section */
+    #events {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    #events h3 {
+      font-size: 2em;
+      text-align: center;
       color: #fff;
     }
 
-    #home h1 {
-      font-size: 2.5em; /* Adjust title size */
+    #events ul {
+      list-style-type: none;
+      padding: 0;
+      color: #fff;
     }
 
-    #home p {
-      font-size: 1.2em; /* Adjust paragraph size */
-      margin-top: 20px; /* Adds space between title and description */
+    #events ul li {
+      font-size: 1.2em;
+      margin-bottom: 10px;
     }
 
-    /* Categories of the Month section styling */
-    #categories {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Support Section */
+    #support {
+      margin-top: 40px;
+      text-align: center;
+      padding: 40px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    #support button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #support button:hover {
+      background-color: #005f99;
+    }
+
+    /* Poll Section */
+    #poll {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    #poll h4 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    #poll form {
+      margin-bottom: 20px;
+    }
+
+    #poll input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    /* Footer Section */
+    footer {
       margin-top: 40px;
       padding: 20px;
       background-color: #1a1a1a;
-    }
-
-    #categories .text {
-      width: 60%;
-      color: #fff;
-      text-align: left;
-      padding-right: 20px;
-    }
-
-    #categories img {
-      width: 30%;
-      border-radius: 8px;
-    }
-
-    #categories h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
       text-align: center;
-      color: #fff;
-    }
-
-    #categories p {
-      font-size: 1.2em;
       color: #fff;
     }
   </style>
@@ -80,13 +146,59 @@
     <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <!-- Categories of the Month Section -->
-  <section id="categories">
-    <div class="text">
-      <h2>Categories of the Month</h2>
-      <p>Every year, we nominate the best talents by evaluating their achievements and progress over the year. This year, we are awarding Nikola for her outstanding art pieces that she created at the end of school. These works have shown immense dedication and creativity, and we are proud to celebrate her accomplishments.</p>
+  <!-- Featured Products Section -->
+  <section id="featured-products">
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $25</p>
+      <button>Shop</button>
     </div>
-    <img src="images/nikola-photo.jpg" alt="Nikola's Photo">
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $40</p>
+      <button>Shop</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Price: $15</p>
+      <button>Shop</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+4" alt="Product 4">
+      <h3>Product 4</h3>
+      <p>Price: $30</p>
+      <button>Shop</button>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <h3>Upcoming Events</h3>
+    <ul>
+      <li>Fashion Event - 2025-07-01</li>
+      <li>Art Gallery Showcase - 2025-08-15</li>
+      <li>Music Festival - 2025-09-10</li>
+    </ul>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support">
+    <p>If you would like to support our educational programs, events, and the promotion of young talents, please consider donating or getting involved.</p>
+    <button>Support Our Cause</button>
+  </section>
+
+  <!-- Poll Section -->
+  <section id="poll">
+    <h4>Which event would you most like to see?</h4>
+    <form>
+      <label><input type="radio" name="event" value="fashion"> Fashion Event</label><br>
+      <label><input type="radio" name="event" value="art"> Art Gallery</label><br>
+      <label><input type="radio" name="event" value="music"> Music Event</label><br>
+      <button type="submit">Vote</button>
+    </form>
   </section>
 
   <!-- Footer -->
