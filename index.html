@@ -6,6 +6,11 @@
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Title Center Alignment */
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
     /* Featured Product Section */
     #featured-products {
       display: flex;
@@ -53,6 +58,9 @@
       padding: 20px;
       background-color: #222;
       color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     #nikola-award h3 {
@@ -63,6 +71,7 @@
     #nikola-award p {
       font-size: 1.2em;
       margin-bottom: 20px;
+      width: 60%;
     }
 
     #nikola-award img {
@@ -184,8 +193,10 @@
 
   <!-- Nikola Featured Section -->
   <section id="nikola-award">
-    <h3>Featured Talent of the Year: Nikola</h3>
-    <p>Every year, we honor individuals who have made significant progress in their field. This year, we are proud to award Nikola for her remarkable achievements in the arts. Her work at the end of the school year was exceptional, and we are excited to recognize her dedication and creativity.</p>
+    <div>
+      <h3>Featured Talent of the Year: Nikola</h3>
+      <p>Every year, we honor individuals who have made significant progress in their field. This year, we are proud to award Nikola for her remarkable achievements in the arts. Her work at the end of the school year was exceptional, and we are excited to recognize her dedication and creativity.</p>
+    </div>
     <img src="images/nikola-photo.jpg" alt="Nikola's Photo">
   </section>
 
@@ -251,5 +262,6 @@
 
 </body>
 </html>
+
 
 
