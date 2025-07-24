@@ -2,109 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innovate Generation</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Innovate Generation</title>
   <style>
-    body { margin: 0; background: #111; color: #fff; font-family: 'Segoe UI', sans-serif; }
-    header, footer { background: #1a1a1a; text-align: center; padding: 40px 20px; }
-    nav { background: #222; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #ffcc00; }
-    section { padding: 40px 20px; }
-    h1, h2, h3, h4 { text-align: center; }
-    .flex { display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; }
-    .half { flex: 1 1 300px; }
-    .product-item { background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center; }
-    .product-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-    .product-item button { margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    .product-item button:hover { background: #005f99; }
-    form input, form textarea, form button { width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: none; }
-    form button { background: #007acc; color: white; cursor: pointer; }
-    form button:hover { background: #005f99; }
-    ul.event-links { list-style: none; padding: 0; text-align: center; }
-    ul.event-links li { margin: 10px 0; }
-    ul.event-links a { color: #fff; text-decoration: underline; }
-    ul.event-links a:hover { color: #ffcc00; }
+    body { background: #111; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    header, footer { background-color: #1a1a1a; text-align: center; padding: 30px 20px; }
+    h1, h2 { text-align: center; }
+    .shop-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px 20px; }
+    .product-card { background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 260px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+    .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
+    .product-card h3 { margin: 15px 0 10px; font-size: 1.1rem; }
+    .product-card p { font-size: 0.95rem; color: #ccc; }
+    .product-card button { margin-top: 10px; background-color: #007acc; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    .product-card button:hover { background-color: #005f99; }
+    .shipping-note { text-align: center; font-size: 0.9rem; color: #aaa; margin-bottom: 40px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Innovate Generation</h1>
-    <p>Social Innovation. Real Impact.</p>
+    <h1>Innovate Generation Shop</h1>
+    <p>Support our creative youth by purchasing original merchandise</p>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <p class="shipping-note">Flat-rate shipping: £4 added at checkout</p>
 
-  <section>
-    <h2>Welcome to Innovate Generation</h2>
-    <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
-  </section>
-
-  <section class="flex">
-    <div class="half">
-      <h3>Talent Spotlight: Nikola</h3>
-      <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
+  <div class="shop-container">
+    <div class="product-card">
+      <img src="images/poster.jpg" alt="Poster">
+      <h3>Artistic Poster</h3>
+      <p>A3 poster printed with youth artwork. £25</p>
+      <button>Buy with PayPal</button>
     </div>
-    <div class="half">
-      <img src="images/nikola-photo.jpg" alt="Nikola's Artwork" style="max-width:100%; border-radius: 8px;" />
+    <div class="product-card">
+      <img src="images/lanyard.jpg" alt="Lanyard">
+      <h3>Innovate Lanyard</h3>
+      <p>Bold logo lanyard, perfect for keys and ID. £5</p>
+      <button>Buy with PayPal</button>
     </div>
-  </section>
-
-  <section>
-    <h2>Our Goal</h2>
-    <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
-  </section>
-
-  <section>
-    <h2>Event Links</h2>
-    <ul class="event-links">
-      <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
-      <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Buy Me Breakfast / Lunch</h2>
-    <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops.</p>
-    <div class="flex">
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="5.00">
-        <button type="submit">Donate £5</button>
-      </form>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="10.00">
-        <button type="submit">Donate £10</button>
-      </form>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="20.00">
-        <button type="submit">Donate £20</button>
-      </form>
+    <div class="product-card">
+      <img src="images/mug.jpg" alt="Mug">
+      <h3>Mug with Artwork</h3>
+      <p>Ceramic mug featuring youth-created design. £10</p>
+      <button>Buy with PayPal</button>
     </div>
-  </section>
-
-  <section>
-    <h2>Apply for Mentoring or Workshops</h2>
-    <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
-    <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell us what you're interested in…" rows="5"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <div class="product-card">
+      <img src="images/waterbottle.jpg" alt="Water Bottle">
+      <h3>Logo Water Bottle</h3>
+      <p>Reusable bottle with Innovate Generation logo. £12</p>
+      <button>Buy with PayPal</button>
+    </div>
+    <div class="product-card">
+      <img src="images/keychain.jpg" alt="Keychain">
+      <h3>Keychain</h3>
+      <p>Metal keychain with engraved logo. £4</p>
+      <button>Buy with PayPal</button>
+    </div>
+    <div class="product-card">
+      <img src="images/buckethat.jpg" alt="Bucket Hat">
+      <h3>Bucket Hat</h3>
+      <p>Trendy bucket hat with youth artwork. £15</p>
+      <button>Buy with PayPal</button>
+    </div>
+    <div class="product-card">
+      <img src="images/backpack.jpg" alt="Backpack">
+      <h3>Backpack</h3>
+      <p>Durable backpack with printed logo. £30</p>
+      <button>Buy with PayPal</button>
+    </div>
+    <div class="product-card">
+      <img src="images/tshirt.jpg" alt="T-shirt">
+      <h3>Art T-shirt</h3>
+      <p>Cotton t-shirt printed with youth artwork. £20</p>
+      <button>Buy with PayPal</button>
+    </div>
+    <div class="product-card">
+      <img src="images/photoprint.jpg" alt="Photo Print">
+      <h3>Photo Print</h3>
+      <p>High-quality photography print by young artist. £18</p>
+      <button>Buy with PayPal</button>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
