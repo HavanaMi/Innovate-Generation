@@ -5,15 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
+    #featured-products {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-item {
+      width: 22%;
+      text-align: center;
+      background: #1f1f1f;
+      border-radius: 8px;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .product-item button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .product-item button:hover {
+      background-color: #005f99;
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <h1>Innovate Generation</h1>
     <p>Social Innovation. Real Impact.</p>
   </header>
 
-  <!-- Navigation Menu -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -22,13 +66,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Home Section -->
   <section id="home">
     <h1>Welcome to Innovate Generation</h1>
     <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <!-- Nikola Featured Section -->
   <section id="nikola-award">
     <div>
       <h3>Featured Talent of the Year: Nikola</h3>
@@ -37,11 +79,10 @@
     <img src="images/nikola-photo.jpg" alt="Nikola's Photo">
   </section>
 
-  <!-- Product Section with PayPal -->
   <section id="featured-products">
-    <h2 style="text-align: center; margin-bottom: 30px;">Support Our Creative Projects</h2>
+    <h2>Support Our Creative Projects</h2>
     <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Product 1">
+      <img src="https://via.placeholder.com/200x200?text=Poster" alt="Poster">
       <h3>Artistic Poster</h3>
       <p>£25 – High-quality A3 print, designed by our youth team.</p>
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
@@ -52,7 +93,7 @@
       </form>
     </div>
     <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Product 2">
+      <img src="https://via.placeholder.com/200x200?text=Print" alt="Print">
       <h3>Photo Print</h3>
       <p>£40 – Limited edition signed photography print.</p>
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
@@ -63,7 +104,7 @@
       </form>
     </div>
     <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Product 3">
+      <img src="https://via.placeholder.com/200x200?text=Stickers" alt="Stickers">
       <h3>Sticker Pack</h3>
       <p>£15 – Custom-designed sticker collection by local artists.</p>
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
@@ -74,7 +115,7 @@
       </form>
     </div>
     <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Product+4" alt="Product 4">
+      <img src="https://via.placeholder.com/200x200?text=Tote+Bag" alt="Tote Bag">
       <h3>Tote Bag</h3>
       <p>£30 – Eco-friendly bag printed with youth-made art.</p>
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
@@ -86,22 +127,10 @@
     </div>
   </section>
 
-  <!-- Events Section -->
-  <section id="events">
-    <h3>Upcoming Events</h3>
-    <ul>
-      <li><a href="https://www.eventbrite.com" target="_blank">Fashion Event - 2025-07-01</a></li>
-      <li><a href="https://www.ticketmaster.com" target="_blank">Art Gallery Showcase - 2025-08-15</a></li>
-      <li><a href="https://www.eventbrite.com" target="_blank">Music Festival - 2025-09-10</a></li>
-    </ul>
-  </section>
-
-  <!-- Donate Button for Breakfast Support -->
   <section id="support">
-    <h2 style="text-align: center; margin-bottom: 20px;">Donate to Youth Breakfasts</h2>
-    <p style="text-align: center;">Help us provide warm breakfasts during our workshops and events for underprivileged young people.</p>
-    <p style="text-align: center;"><strong>Choose your donation amount:</strong></p>
-    <form action="https://www.paypal.com/donate" method="post" target="_blank" style="text-align: center;">
+    <h2>Donate to Youth Breakfasts</h2>
+    <p>Help us provide warm breakfasts during our workshops and events for underprivileged young people.</p>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
       <input type="hidden" name="business" value="crofame@post.com">
       <input type="hidden" name="currency_code" value="GBP">
       <select name="amount">
@@ -110,27 +139,14 @@
         <option value="20.00">£20</option>
         <option value="50.00">£50</option>
       </select>
-      <button class="donate-button" type="submit" style="margin-left: 10px;">Donate to Breakfast</button>
+      <button type="submit">Donate to Breakfast</button>
     </form>
-    <p style="margin-top: 20px; color: #90ee90; text-align: center;"><strong>Thank you for your support! Your contribution makes a difference ❤️</strong></p>
-    <p style="margin-top: 10px; font-size: 0.95em; color: #ccc; text-align: center;">You will receive an email confirmation directly from PayPal.</p>
+    <p style="margin-top: 20px; color: #90ee90;"><strong>Thank you for your support! Your contribution makes a difference ❤️</strong></p>
+    <p style="margin-top: 10px; font-size: 0.95em; color: #ccc;">You will receive an email confirmation directly from PayPal.</p>
   </section>
 
-  <!-- Poll Section -->
-  <section id="poll">
-    <h4>Which event would you most like to see?</h4>
-    <form>
-      <label><input type="radio" name="event" value="fashion"> Fashion Event</label><br>
-      <label><input type="radio" name="event" value="art"> Art Gallery</label><br>
-      <label><input type="radio" name="event" value="music"> Music Event</label><br>
-      <button type="submit">Vote</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
