@@ -50,6 +50,54 @@
     .product-item button:hover {
       background-color: #005f99;
     }
+
+    #nikola-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding: 40px;
+      color: #fff;
+    }
+
+    #nikola-section img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    #about-organization {
+      background-color: #111;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #mentoring-form {
+      background-color: #222;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #mentoring-form input, #mentoring-form textarea {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 500px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #mentoring-form button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -71,12 +119,17 @@
     <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
   </section>
 
-  <section id="nikola-award">
+  <section id="nikola-section">
     <div>
-      <h3>Featured Talent of the Year: Nikola</h3>
-      <p>Every year, we honor individuals who have made significant progress in their field. This year, we are proud to award Nikola for her remarkable achievements in the arts. Her work at the end of the school year was exceptional, and we are excited to recognize her dedication and creativity.</p>
+      <h2>Talent Spotlight: Nikola</h2>
+      <p>Nikola was selected for her outstanding achievements in the arts. Her creativity and dedication have inspired many young people in our programs. We’re proud to showcase her work here.</p>
     </div>
-    <img src="images/nikola-photo.jpg" alt="Nikola's Photo">
+    <img src="images/nikola-photo.jpg" alt="Nikola's Artwork">
+  </section>
+
+  <section id="about-organization">
+    <h2>About Our Work</h2>
+    <p>Innovate Generation helps young people discover and develop their talents through free workshops, mentoring programs, and creative events. We support them from idea to income – offering guidance, promotion, and opportunities to showcase their work.</p>
   </section>
 
   <section id="featured-products">
@@ -133,63 +186,17 @@
         <button type="submit">Buy via PayPal</button>
       </form>
     </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Mug" alt="Mug">
-      <h3>Mug with Logo</h3>
-      <p>£12 – Ceramic mug with the Innovate Generation logo.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="12.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="T-shirt">
-      <h3>T-Shirt</h3>
-      <p>£20 – Branded cotton t-shirt with Innovate Generation logo.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="20.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Lanyard" alt="Lanyard">
-      <h3>Lanyard</h3>
-      <p>£8 – Handy lanyard printed with our organisation’s brand.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="8.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
   </section>
 
-  <section id="support">
-    <h2>Donate to Youth Breakfasts</h2>
-    <p>Help us provide warm breakfasts during our workshops and events for underprivileged young people.</p>
-    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-      <input type="hidden" name="business" value="innovategen@mail.com">
-      <input type="hidden" name="currency_code" value="GBP">
-      <select name="amount">
-        <option value="5.00">£5</option>
-        <option value="10.00">£10</option>
-        <option value="20.00">£20</option>
-        <option value="50.00">£50</option>
-      </select>
-      <button type="submit">Donate to Breakfast</button>
+  <section id="mentoring-form">
+    <h2>Get Involved – Apply for Mentoring or Workshops</h2>
+    <p>We’d love to hear from young people interested in developing their talents. Send us a message below:</p>
+    <form action="mailto:crofame@post.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" rows="4" placeholder="Tell us what you’re passionate about…"></textarea><br>
+      <button type="submit">Send Message</button>
     </form>
-    <p style="margin-top: 20px; color: #90ee90;"><strong>Thank you for your support! Your contribution makes a difference ❤️</strong></p>
-    <p style="margin-top: 10px; font-size: 0.95em; color: #ccc;">You will receive an email confirmation directly from PayPal.</p>
   </section>
 
   <footer>
@@ -197,4 +204,3 @@
   </footer>
 </body>
 </html>
-
