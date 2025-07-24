@@ -2,90 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop | Innovate Generation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innovate Generation - Shop</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { background: #111; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-    header, footer { background-color: #1a1a1a; text-align: center; padding: 30px 20px; }
-    h1, h2 { text-align: center; }
-    .shop-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px 20px; }
-    .product-card { background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 260px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
-    .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
-    .product-card h3 { margin: 15px 0 10px; font-size: 1.1rem; }
-    .product-card p { font-size: 0.95rem; color: #ccc; }
-    .product-card button { margin-top: 10px; background-color: #007acc; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
-    .product-card button:hover { background-color: #005f99; }
-    .shipping-note { text-align: center; font-size: 0.9rem; color: #aaa; margin-bottom: 40px; }
+    body { margin: 0; background: #111; color: #fff; font-family: 'Segoe UI', sans-serif; }
+    header, footer { background: #1a1a1a; text-align: center; padding: 40px 20px; }
+    nav { background: #222; padding: 10px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #ffcc00; }
+    section { padding: 40px 20px; }
+    h1, h2, h3, h4 { text-align: center; }
+    .product-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .product-item { background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center; }
+    .product-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+    .product-item button { margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .product-item button:hover { background: #005f99; }
   </style>
 </head>
 <body>
   <header>
     <h1>Innovate Generation Shop</h1>
-    <p>Support our creative youth by purchasing original merchandise</p>
+    <p>Support Youth Creators – Buy Art-Inspired Products</p>
   </header>
 
-  <p class="shipping-note">Flat-rate shipping: £4 added at checkout</p>
+  <nav>
+    <a href="https://havanami.github.io/Innovate-Generation/index.html">Home</a>
+    <a href="https://havanami.github.io/Innovate-Generation/about.html">About</a>
+    <a href="https://havanami.github.io/Innovate-Generation/portfolio.html">Portfolio</a>
+    <a href="https://havanami.github.io/Innovate-Generation/shop.html">Shop</a>
+    <a href="https://havanami.github.io/Innovate-Generation/contact.html">Contact</a>
+  </nav>
 
-  <div class="shop-container">
-    <div class="product-card">
-      <img src="images/poster.jpg" alt="Poster">
-      <h3>Artistic Poster</h3>
-      <p>A3 poster printed with youth artwork. £25</p>
-      <button>Buy with PayPal</button>
+  <section>
+    <h2>Our Products</h2>
+    <p>Every item supports youth-led programs and creative development through Innovate Generation CIC. Shipping cost: £4 (added after payment).</p>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="images/poster.jpg" alt="Poster">
+        <h4>Art Poster</h4>
+        <p>A3 artwork by our young creators. £25</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/29', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/lanyard.jpg" alt="Lanyard">
+        <h4>Lanyard</h4>
+        <p>Custom branded lanyard. £5</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/9', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/mug.jpg" alt="Mug">
+        <h4>Mug</h4>
+        <p>Printed ceramic mug. £10</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/14', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/waterbottle.jpg" alt="Water Bottle">
+        <h4>Water Bottle</h4>
+        <p>Logo bottle, reusable. £12</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/16', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/keychain.jpg" alt="Keychain">
+        <h4>Keychain</h4>
+        <p>Logo keychain. £4</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/8', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/buckethat.jpg" alt="Bucket Hat">
+        <h4>Bucket Hat</h4>
+        <p>Stylish & branded. £18</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/22', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/backpack.jpg" alt="Backpack">
+        <h4>Backpack</h4>
+        <p>Durable & practical. £28</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/32', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/tshirt.jpg" alt="T-shirt">
+        <h4>T-shirt</h4>
+        <p>Art print tee. £20</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/24', '_blank')">Buy with PayPal</button>
+      </div>
+      <div class="product-item">
+        <img src="images/print.jpg" alt="Photo Print">
+        <h4>Photo Print</h4>
+        <p>Framed art photo. £30</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/34', '_blank')">Buy with PayPal</button>
+      </div>
     </div>
-    <div class="product-card">
-      <img src="images/lanyard.jpg" alt="Lanyard">
-      <h3>Innovate Lanyard</h3>
-      <p>Bold logo lanyard, perfect for keys and ID. £5</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/mug.jpg" alt="Mug">
-      <h3>Mug with Artwork</h3>
-      <p>Ceramic mug featuring youth-created design. £10</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/waterbottle.jpg" alt="Water Bottle">
-      <h3>Logo Water Bottle</h3>
-      <p>Reusable bottle with Innovate Generation logo. £12</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/keychain.jpg" alt="Keychain">
-      <h3>Keychain</h3>
-      <p>Metal keychain with engraved logo. £4</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/buckethat.jpg" alt="Bucket Hat">
-      <h3>Bucket Hat</h3>
-      <p>Trendy bucket hat with youth artwork. £15</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/backpack.jpg" alt="Backpack">
-      <h3>Backpack</h3>
-      <p>Durable backpack with printed logo. £30</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/tshirt.jpg" alt="T-shirt">
-      <h3>Art T-shirt</h3>
-      <p>Cotton t-shirt printed with youth artwork. £20</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-card">
-      <img src="images/photoprint.jpg" alt="Photo Print">
-      <h3>Photo Print</h3>
-      <p>High-quality photography print by young artist. £18</p>
-      <button>Buy with PayPal</button>
-    </div>
-  </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
