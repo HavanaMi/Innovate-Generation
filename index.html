@@ -1,329 +1,136 @@
-/* Global Styles */
-body {
-  margin: 0;
-  background-color: #111;
-  color: #f2f2f2;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innovate Generation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-header, footer {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 40px 20px;
-}
+  <header>
+    <h1>Innovate Generation</h1>
+    <p>Social Innovation. Real Impact.</p>
+  </header>
 
-nav {
-  background-color: #222;
-  padding: 10px;
-  text-align: center;
-}
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Innovate Generation</h1>
+    <p>This is the official website of Innovate Generation – a company dedicated to social initiatives and positive change.</p>
+  </section>
 
-nav a:hover {
-  color: #ffcc00;
-}
+  <!-- Nikola Featured Section -->
+  <section id="nikola-award">
+    <div>
+      <h3>Featured Talent of the Year: Nikola</h3>
+      <p>Every year, we honor individuals who have made significant progress in their field. This year, we are proud to award Nikola for her remarkable achievements in the arts. Her work at the end of the school year was exceptional, and we are excited to recognize her dedication and creativity.</p>
+    </div>
+    <img src="images/nikola-photo.jpg" alt="Nikola's Photo">
+  </section>
 
-section {
-  padding: 40px 20px;
-}
+  <!-- Product Section with PayPal -->
+  <section id="featured-products">
+    <h2 style="text-align: center; margin-bottom: 30px;">Support Our Creative Projects</h2>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Product 1">
+      <h3>Artistic Poster</h3>
+      <p>£25 – High-quality A3 print, designed by our youth team.</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="crofame@post.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="25.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Product 2">
+      <h3>Photo Print</h3>
+      <p>£40 – Limited edition signed photography print.</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="crofame@post.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="40.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Product 3">
+      <h3>Sticker Pack</h3>
+      <p>£15 – Custom-designed sticker collection by local artists.</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="crofame@post.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="15.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Product+4" alt="Product 4">
+      <h3>Tote Bag</h3>
+      <p>£30 – Eco-friendly bag printed with youth-made art.</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="crofame@post.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="30.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+  </section>
 
-/* Contact Page Styles */
-#contact h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
+  <!-- Events Section -->
+  <section id="events">
+    <h3>Upcoming Events</h3>
+    <ul>
+      <li><a href="https://www.eventbrite.com" target="_blank">Fashion Event - 2025-07-01</a></li>
+      <li><a href="https://www.ticketmaster.com" target="_blank">Art Gallery Showcase - 2025-08-15</a></li>
+      <li><a href="https://www.eventbrite.com" target="_blank">Music Festival - 2025-09-10</a></li>
+    </ul>
+  </section>
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  <!-- Donate Button for Breakfast Support -->
+  <section id="support">
+    <h2 style="text-align: center; margin-bottom: 20px;">Donate to Youth Breakfasts</h2>
+    <p style="text-align: center;">Help us provide warm breakfasts during our workshops and events for underprivileged young people.</p>
+    <p style="text-align: center;"><strong>Choose your donation amount:</strong></p>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank" style="text-align: center;">
+      <input type="hidden" name="business" value="crofame@post.com">
+      <input type="hidden" name="currency_code" value="GBP">
+      <select name="amount">
+        <option value="5.00">£5</option>
+        <option value="10.00">£10</option>
+        <option value="20.00">£20</option>
+        <option value="50.00">£50</option>
+      </select>
+      <button class="donate-button" type="submit" style="margin-left: 10px;">Donate to Breakfast</button>
+    </form>
+    <p style="margin-top: 20px; color: #90ee90; text-align: center;"><strong>Thank you for your support! Your contribution makes a difference ❤️</strong></p>
+    <p style="margin-top: 10px; font-size: 0.95em; color: #ccc; text-align: center;">You will receive an email confirmation directly from PayPal.</p>
+  </section>
 
-label {
-  margin: 10px 0;
-  color: #fff;
-}
+  <!-- Poll Section -->
+  <section id="poll">
+    <h4>Which event would you most like to see?</h4>
+    <form>
+      <label><input type="radio" name="event" value="fashion"> Fashion Event</label><br>
+      <label><input type="radio" name="event" value="art"> Art Gallery</label><br>
+      <label><input type="radio" name="event" value="music"> Music Event</label><br>
+      <button type="submit">Vote</button>
+    </form>
+  </section>
 
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+  </footer>
 
-textarea {
-  resize: vertical;
-}
-
-button {
-  background-color: #007acc;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #005f99;
-}
-
-/* Special Button for Zrzutka */
-.donate-button {
-  background-color: #e63946;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.donate-button:hover {
-  background-color: #c71c2a;
-}
-
-/* Portfolio Page Styles */
-#portfolio {
-  padding: 40px 20px;
-  background-color: #111;
-}
-
-#portfolio h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#portfolio p {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.portfolio-item {
-  background: #1f1f1f;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  color: #eee;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-#video-section {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#video-section h3,
-#image-gallery h3 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-#image-gallery {
-  margin-top: 40px;
-}
-
-/* Categories Section */
-#categories-of-the-month {
-  background-color: #333;
-}
-
-.categories {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.category-item {
-  background: #444;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 200px;
-}
-
-.category-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.category-item button {
-  margin-top: 10px;
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.category-item button:hover {
-  background-color: #005f99;
-}
-
-/* Featured Product Section */
-#featured-products {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.product-item {
-  background-color: #444;
-  padding: 20px;
-  width: 22%;
-  text-align: center;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-
-.product-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product-item form {
-  margin-top: 10px;
-}
-
-.product-item button {
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.product-item button:hover {
-  background-color: #005f99;
-}
-
-/* Events Section */
-#events {
-  background-color: #222;
-  color: white;
-  text-align: center;
-}
-
-#events ul {
-  list-style: none;
-  padding: 0;
-}
-
-#events ul li {
-  margin: 10px 0;
-}
-
-#events button {
-  margin-top: 20px;
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#events button:hover {
-  background-color: #005f99;
-}
-
-/* Poll Section */
-#poll {
-  background-color: #444;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-#poll form {
-  margin-top: 20px;
-}
-
-#poll button {
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#poll button:hover {
-  background-color: #005f99;
-}
-
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #222;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  color: white;
-  border-radius: 10px;
-}
-
-.close-btn {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: #ffcc00;
-}
-
-.work-gallery img {
-  width: 30%;
-  margin: 10px;
-  border-radius: 5px;
-}
-
+</body>
+</html>
