@@ -3,25 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innovate Generation</title>
+  <title>Innovate Generation – Shop</title>
   <link rel="stylesheet" href="style.css">
   <style>
     h1, h2, h3, h4 {
       text-align: center;
     }
-
-    #featured-products {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #111;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
     .product-item {
-      width: 22%;
+      width: 30%;
       text-align: center;
       background: #1f1f1f;
       border-radius: 8px;
@@ -29,7 +18,6 @@
       color: #fff;
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
-
     .product-item img {
       width: 100%;
       height: 200px;
@@ -37,7 +25,6 @@
       border-radius: 4px;
       margin-bottom: 10px;
     }
-
     .product-item button {
       background-color: #007acc;
       color: #fff;
@@ -46,157 +33,121 @@
       border: none;
       cursor: pointer;
     }
-
     .product-item button:hover {
       background-color: #005f99;
     }
-
-    #nikola-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #222;
+    .section {
       padding: 40px;
-      color: #fff;
-    }
-
-    #nikola-section img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    #about-organization {
       background-color: #111;
       color: #fff;
-      padding: 40px;
-      text-align: center;
     }
-
-    #mentoring-form {
-      background-color: #222;
-      color: #fff;
-      padding: 40px;
-      text-align: center;
-    }
-
-    #mentoring-form input, #mentoring-form textarea {
-      padding: 10px;
-      margin: 10px 0;
-      width: 80%;
-      max-width: 500px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #mentoring-form button {
-      background-color: #007acc;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Innovate Generation</h1>
-    <p>Social Innovation. Real Impact.</p>
+    <h1>Shop – Support Youth Talent</h1>
+    <p>Explore unique, youth-designed products. Every purchase helps support our creative mentoring and development programs.</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
     <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
   </nav>
 
-  <section id="home">
-    <h1>Welcome to Innovate Generation</h1>
-    <p>Innovate Generation is a Community Interest Company (CIC) that supports young people aged 14–25 by helping them expand their horizons and strengthen their talents. We run workshops in fashion design, photography, canvas art, and more. Get in touch and join us!</p>
-  </section>
-
-  <section id="nikola-section">
-    <div>
-      <h2>Talent Spotlight: Nikola</h2>
-      <p>Nikola was selected for her outstanding achievements in the arts. Her creativity and dedication have inspired many young people in our programs. We’re proud to showcase her work here.</p>
+  <section class="section">
+    <h2>All Products</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Poster" alt="Poster">
+        <h3>Poster</h3>
+        <p>£25 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="29.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Keychain" alt="Keychain">
+        <h3>Keychain</h3>
+        <p>£6 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="10.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="T-Shirt">
+        <h3>T-Shirt</h3>
+        <p>£20 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="24.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Mug" alt="Mug">
+        <h3>Mug</h3>
+        <p>£12 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="16.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Lanyard" alt="Lanyard">
+        <h3>Lanyard</h3>
+        <p>£8 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="12.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Bucket+Hat" alt="Bucket Hat">
+        <h3>Bucket Hat</h3>
+        <p>£18 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="22.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/200x200?text=Water+Bottle" alt="Water Bottle">
+        <h3>Water Bottle</h3>
+        <p>£10 + £4 shipping</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="innovategen@mail.com">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="hidden" name="amount" value="14.00">
+          <button type="submit">Buy via PayPal</button>
+        </form>
+      </div>
     </div>
-    <img src="images/nikola-photo.jpg" alt="Nikola's Artwork">
-  </section>
-
-  <section id="about-organization">
-    <h2>About Our Work</h2>
-    <p>We help young people discover and develop their talents through free workshops, one-to-one mentoring, and creative projects. Our mission is to turn passion into opportunity and build confident, skilled individuals ready to shine.</p>
-  </section>
-
-  <section id="featured-products">
-    <h2>Support Our Creative Projects</h2>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Poster" alt="Poster">
-      <h3>Artistic Poster</h3>
-      <p>£25 – High-quality A3 print, designed by our youth team.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="25.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Print" alt="Print">
-      <h3>Photo Print</h3>
-      <p>£40 – Limited edition signed photography print.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="40.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Stickers" alt="Stickers">
-      <h3>Sticker Pack</h3>
-      <p>£15 – Custom-designed sticker collection by local artists.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="15.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-
-    <div class="product-item">
-      <img src="https://via.placeholder.com/200x200?text=Tote+Bag" alt="Tote Bag">
-      <h3>Tote Bag</h3>
-      <p>£30 – Eco-friendly bag printed with youth-made art.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="innovategen@mail.com">
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="hidden" name="amount" value="30.00">
-        <button type="submit">Buy via PayPal</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="mentoring-form">
-    <h2>Get Involved – Apply for Mentoring or Workshops</h2>
-    <p>Are you aged 14 to 25 and want to develop your talent? Join our mentoring sessions or sign up for workshops!</p>
-    <form action="mailto:crofame@post.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required><br>
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <textarea name="message" rows="4" placeholder="Tell us what you're interested in…"></textarea><br>
-      <button type="submit">Submit</button>
-    </form>
   </section>
 
   <footer>
