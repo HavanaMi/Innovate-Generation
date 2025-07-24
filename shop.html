@@ -3,51 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop - Innovate Generation</title>
+  <title>Innovate Generation Shop</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
+    #featured-products {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-item {
+      width: 30%;
+      text-align: center;
+      background: #1f1f1f;
+      border-radius: 8px;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .product-item button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .product-item button:hover {
+      background-color: #005f99;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <h1>Innovate Generation Shop</h1>
-    <p>Explore our products and make a difference!</p>
+    <h1>Shop – Innovate Generation</h1>
+    <p>Support our cause by purchasing youth-designed products</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">Back to Home</a>
   </nav>
 
-  <section id="shop">
-    <h2>Our Products</h2>
-    <div class="shop-items">
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="Logo T-Shirt">
-        <h3>Logo T-Shirt</h3>
-        <p>Price: £15</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=Tote+Bag" alt="Canvas Tote Bag">
-        <h3>Canvas Tote Bag</h3>
-        <p>Price: £12</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="shop-item">
-        <img src="https://via.placeholder.com/200x200?text=Mug" alt="Innovate Mug">
-        <h3>Innovate Mug</h3>
-        <p>Price: £8</p>
-        <button>Add to Cart</button>
-      </div>
+  <section id="featured-products">
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Poster" alt="Poster">
+      <h3>Artistic Poster</h3>
+      <p>£25 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="29.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Keychain" alt="Keychain">
+      <h3>Logo Keychain</h3>
+      <p>£6 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="10.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="T-Shirt">
+      <h3>Logo T-Shirt</h3>
+      <p>£20 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="24.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Mug" alt="Mug">
+      <h3>Logo Mug</h3>
+      <p>£12 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="16.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Lanyard" alt="Lanyard">
+      <h3>Branded Lanyard</h3>
+      <p>£8 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="12.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Bucket+Hat" alt="Bucket Hat">
+      <h3>Bucket Hat</h3>
+      <p>£18 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="22.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
+    </div>
+
+    <div class="product-item">
+      <img src="https://via.placeholder.com/200x200?text=Water+Bottle" alt="Water Bottle">
+      <h3>Water Bottle</h3>
+      <p>£10 + £4 shipping</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="innovategen@mail.com">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="amount" value="14.00">
+        <button type="submit">Buy via PayPal</button>
+      </form>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
