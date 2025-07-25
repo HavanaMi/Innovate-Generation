@@ -95,11 +95,18 @@
       background: #005f99;
     }
 
+    .donate-section {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     .donate-buttons {
       display: flex;
       justify-content: center;
       gap: 20px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     .donate-buttons button {
@@ -207,7 +214,7 @@
     <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
   </section>
 
-  <section>
+  <section class="donate-section">
     <h2>Buy Me Breakfast / Lunch</h2>
     <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops.</p>
     <div class="donate-buttons">
@@ -252,7 +259,7 @@
   <section>
     <h2>Apply for Mentoring or Workshops</h2>
     <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
- <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
+    <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Tell us what you're interested in…" rows="5"></textarea>
