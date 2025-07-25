@@ -1,343 +1,113 @@
-/* Global Styles */
-body {
-  margin: 0;
-  background-color: #111;
-  color: #f2f2f2;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innovate Generation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
 
-header, footer {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 40px 20px;
-}
+    <header>
+      <h1>Innovate Generation</h1>
+      <p>Social Innovation. Real Impact.</p>
+    </header>
 
-nav {
-  background-color: #222;
-  padding: 10px;
-  text-align: center;
-}
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    <section>
+      <h2>Welcome to Innovate Generation</h2>
+      <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
+    </section>
 
-nav a:hover {
-  color: #ffcc00;
-}
+    <section class="flex">
+      <div class="half">
+        <h3>Talent Spotlight: Nikola</h3>
+        <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
+      </div>
+      <div class="half">
+        <img src="images/nikola-photo.jpg" alt="Nikola's Artwork" style="max-width:100%; border-radius: 8px;" />
+      </div>
+    </section>
 
-section {
-  padding: 40px 20px;
-}
+    <section>
+      <h2>Our Goal</h2>
+      <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
+    </section>
 
-/* Contact Page Styles */
-#contact h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
+    <section>
+      <h2>Buy Me Breakfast/Lunch</h2>
+      <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops:</p>
+      <div class="flex">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="amount" value="5">
+          <button type="submit">Donate £5</button>
+        </form>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="amount" value="15">
+          <button type="submit">Donate £15</button>
+        </form>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="amount" value="30">
+          <button type="submit">Donate £30</button>
+        </form>
+      </div>
+    </section>
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    <section>
+      <h2>Shop – Youth-Created Products</h2>
+      <div class="flex product-row">
+        <div class="product-item">
+          <img src="images/mug.jpg" alt="Mug">
+          <h4>Mug</h4>
+          <p>Ceramic mug with youth-designed art. £25</p>
+          <button>Buy with PayPal</button>
+        </div>
+        <div class="product-item">
+          <img src="images/lanyard.jpg" alt="Lanyard">
+          <h4>Lanyard</h4>
+          <p>Bold logo lanyard. £15</p>
+          <button>Buy with PayPal</button>
+        </div>
+        <div class="product-item">
+          <img src="images/tshirt.jpg" alt="T-shirt">
+          <h4>T-shirt</h4>
+          <p>Cotton t-shirt with art print. £45</p>
+          <button>Buy with PayPal</button>
+        </div>
+      </div>
+    </section>
 
-label {
-  margin: 10px 0;
-  color: #fff;
-}
+    <section>
+      <h2>Event Links</h2>
+      <ul class="event-links">
+        <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
+        <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
+      </ul>
+    </section>
 
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-}
+    <section>
+      <h2>Apply for Mentoring or Workshops</h2>
+      <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
+      <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell us what you're interested in…" rows="5"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-textarea {
-  resize: vertical;
-}
+  </div>
 
-button {
-  background-color: #007acc;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #005f99;
-}
-
-/* Special Button for Zrzutka */
-.donate-button {
-  background-color: #e63946;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.donate-button:hover {
-  background-color: #c71c2a;
-}
-
-/* Portfolio Page Styles */
-#portfolio {
-  padding: 40px 20px;
-  background-color: #111;
-}
-
-#portfolio h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#portfolio p {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.portfolio-item {
-  background: #1f1f1f;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  color: #eee;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-#video-section {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#video-section h3,
-#image-gallery h3 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-#image-gallery {
-  margin-top: 40px;
-}
-
-/* Categories Section */
-#categories-of-the-month {
-  background-color: #333;
-}
-
-.categories {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.category-item {
-  background: #444;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 200px;
-}
-
-.category-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.category-item button {
-  margin-top: 10px;
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.category-item button:hover {
-  background-color: #005f99;
-}
-
-/* Featured Product Section */
-#featured-products {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.product-item {
-  background-color: #444;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-  width: 100%;
-  max-width: 100%;
-}
-
-.product-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product-item form {
-  margin-top: 10px;
-}
-
-.product-item button {
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.product-item button:hover {
-  background-color: #005f99;
-}
-
-/* Shop Row Layout */
-.flex.product-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.flex.product-row .product-item {
-  flex: 1;
-  max-width: 32%;
-}
-
-/* Events Section */
-#events {
-  background-color: #222;
-  color: white;
-  text-align: center;
-}
-
-#events ul {
-  list-style: none;
-  padding: 0;
-}
-
-#events ul li {
-  margin: 10px 0;
-}
-
-#events button {
-  margin-top: 20px;
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#events button:hover {
-  background-color: #005f99;
-}
-
-/* Poll Section */
-#poll {
-  background-color: #444;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-#poll form {
-  margin-top: 20px;
-}
-
-#poll button {
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#poll button:hover {
-  background-color: #005f99;
-}
-
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #222;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  color: white;
-  border-radius: 10px;
-}
-
-.close-btn {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: #ffcc00;
-}
-
-.work-gallery img {
-  width: 30%;
-  margin: 10px;
-  border-radius: 5px;
-}
+  <footer>
+    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+  </footer>
+</body>
+</html>
