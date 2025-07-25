@@ -1,150 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innovate Generation</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .main-container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* tylko dla sekcji sklepu */
-    .flex.product-row {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .flex.product-row .product-item {
-      flex: 1 1 30%;
-      max-width: 30%;
-      box-sizing: border-box;
-    }
-
-    @media screen and (max-width: 768px) {
-      .flex.product-row {
-        flex-wrap: wrap;
-      }
-
-      .flex.product-row .product-item {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="main-container">
-
-    <header>
-      <h1>Innovate Generation</h1>
-      <p>Social Innovation. Real Impact.</p>
-    </header>
-
+  <header>
+    <h1>Innovate Generation</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
+      <a href="#goal">Our Goal</a>
+      <a href="#donate">Donate</a>
+      <a href="#shop">Shop</a>
+      <a href="#mentoring">Mentoring</a>
+      <a href="#nikola">Nikola</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section>
-      <h2>Welcome to Innovate Generation</h2>
-      <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
-    </section>
+  <section id="goal">
+    <h2>Our Goal</h2>
+    <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
+  </section>
 
-    <section>
-      <h2>Buy Me Breakfast/Lunch</h2>
-      <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops:</p>
-      <div class="flex">
-        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-          <input type="hidden" name="amount" value="5">
-          <button type="submit">Donate £5</button>
-        </form>
-        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-          <input type="hidden" name="amount" value="15">
-          <button type="submit">Donate £15</button>
-        </form>
-        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-          <input type="hidden" name="amount" value="30">
-          <button type="submit">Donate £30</button>
+  <section id="donate">
+    <h2>Buy Me Breakfast/Lunch</h2>
+    <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops:</p>
+    <div class="donate-row">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="amount" value="5">
+        <button type="submit">Donate £5</button>
+      </form>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="amount" value="15">
+        <button type="submit">Donate £15</button>
+      </form>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="amount" value="30">
+        <button type="submit">Donate £30</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Shop – Youth-Created Products</h2>
+    <div class="flex product-row">
+      <div class="product-item">
+        <img src="images/mug.jpg" alt="Mug">
+        <h3>Mug</h3>
+        <p>Ceramic mug with youth-designed art. £25</p>
+        <form action="#">
+          <button type="submit">Buy with PayPal</button>
         </form>
       </div>
-    </section>
+      <div class="product-item">
+        <img src="images/lanyard.jpg" alt="Lanyard">
+        <h3>Lanyard</h3>
+        <p>Bold logo lanyard. £15</p>
+        <form action="#">
+          <button type="submit">Buy with PayPal</button>
+        </form>
+      </div>
+      <div class="product-item">
+        <img src="images/tshirt.jpg" alt="T-shirt">
+        <h3>T-shirt</h3>
+        <p>Cotton t-shirt with art print. £45</p>
+        <form action="#">
+          <button type="submit">Buy with PayPal</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-.flex.product-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
+  <section id="mentoring">
+    <h2>Apply for Mentoring or Workshops</h2>
+    <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Tell us what you're interested in..."></textarea>
+      <button type="submit">Apply</button>
+    </form>
+  </section>
 
-.flex.product-row .product-item {
-  flex: 1 1 30%;
-  max-width: 30%;
-  background-color: #444;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
+  <section id="nikola">
+    <h2>Nikola’s Role</h2>
+    <p>Nikola is the Director and Community Wellbeing Coordinator at Innovate Generation. With her background in forensic psychology, healthcare volunteering, and working with youth and elders, she ensures every young person feels welcome, safe, and empowered. She oversees mentoring activities and supports a positive and respectful environment across all our programs.</p>
+  </section>
 
-.flex.product-row .product-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.flex.product-row .product-item button {
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.flex.product-row .product-item button:hover {
-  background-color: #005f99;
-}
-
-@media screen and (max-width: 768px) {
-  .flex.product-row {
-    flex-wrap: wrap;
-  }
-
-  .flex.product-row .product-item {
-    max-width: 100%;
-  }
-}
-
-
-    <section>
-      <h2>Apply for Mentoring or Workshops</h2>
-      <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
-      <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Tell us what you're interested in…" rows="5"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-  </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Your message..."></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
