@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .main-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* tylko dla sekcji sklepu */
+    .flex.product-row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .flex.product-row .product-item {
+      flex: 1 1 30%;
+      max-width: 30%;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 768px) {
+      .flex.product-row {
+        flex-wrap: wrap;
+      }
+
+      .flex.product-row .product-item {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="main-container">
@@ -27,21 +59,6 @@
       <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
     </section>
 
-    <section class="flex">
-      <div class="half">
-        <h3>Talent Spotlight: Nikola</h3>
-        <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
-      </div>
-      <div class="half">
-        <img src="images/nikola-photo.jpg" alt="Nikola's Artwork" style="max-width:100%; border-radius: 8px;" />
-      </div>
-    </section>
-
-    <section>
-      <h2>Our Goal</h2>
-      <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
-    </section>
-
     <section>
       <h2>Buy Me Breakfast/Lunch</h2>
       <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops:</p>
@@ -61,37 +78,28 @@
       </div>
     </section>
 
-<section>
-  <h2>Shop – Youth-Created Products</h2>
-  <div class="flex product-row">
-    <div class="product-item">
-      <img src="images/mug.jpg" alt="Mug">
-      <h4>Mug</h4>
-      <p>Ceramic mug with youth-designed art. £25</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-item">
-      <img src="images/lanyard.jpg" alt="Lanyard">
-      <h4>Lanyard</h4>
-      <p>Bold logo lanyard. £15</p>
-      <button>Buy with PayPal</button>
-    </div>
-    <div class="product-item">
-      <img src="images/tshirt.jpg" alt="T-shirt">
-      <h4>T-shirt</h4>
-      <p>Cotton t-shirt with art print. £45</p>
-      <button>Buy with PayPal</button>
-    </div>
-  </div>
-</section>
-
-
     <section>
-      <h2>Event Links</h2>
-      <ul class="event-links">
-        <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
-        <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
-      </ul>
+      <h2>Shop – Youth-Created Products</h2>
+      <div class="flex product-row">
+        <div class="product-item">
+          <img src="images/mug.jpg" alt="Mug">
+          <h4>Mug</h4>
+          <p>Ceramic mug with youth-designed art. £25</p>
+          <button>Buy with PayPal</button>
+        </div>
+        <div class="product-item">
+          <img src="images/lanyard.jpg" alt="Lanyard">
+          <h4>Lanyard</h4>
+          <p>Bold logo lanyard. £15</p>
+          <button>Buy with PayPal</button>
+        </div>
+        <div class="product-item">
+          <img src="images/tshirt.jpg" alt="T-shirt">
+          <h4>T-shirt</h4>
+          <p>Cotton t-shirt with art print. £45</p>
+          <button>Buy with PayPal</button>
+        </div>
+      </div>
     </section>
 
     <section>
