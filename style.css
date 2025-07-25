@@ -339,34 +339,14 @@ button:hover {
   background-color: #005f99;
 }
 
-.flex.product-row {
+.donate-flex {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
-.flex.product-row .product-item {
-  flex: 1 1 30%;
-  max-width: 30%;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Nadpisujemy to, co wcześniej powodowało złamanie */
-.product-item {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* RESPONSYWNOŚĆ — na małych ekranach w kolumnę */
-@media screen and (max-width: 768px) {
-  .flex.product-row {
-    flex-wrap: wrap;
-  }
-
-  .flex.product-row .product-item {
-    max-width: 100%;
-  }
+.donate-flex form {
+  margin: 0;
 }
