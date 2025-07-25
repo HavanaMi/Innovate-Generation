@@ -78,29 +78,57 @@
       </div>
     </section>
 
-    <section>
-      <h2>Shop – Youth-Created Products</h2>
-      <div class="flex product-row">
-        <div class="product-item">
-          <img src="images/mug.jpg" alt="Mug">
-          <h4>Mug</h4>
-          <p>Ceramic mug with youth-designed art. £25</p>
-          <button>Buy with PayPal</button>
-        </div>
-        <div class="product-item">
-          <img src="images/lanyard.jpg" alt="Lanyard">
-          <h4>Lanyard</h4>
-          <p>Bold logo lanyard. £15</p>
-          <button>Buy with PayPal</button>
-        </div>
-        <div class="product-item">
-          <img src="images/tshirt.jpg" alt="T-shirt">
-          <h4>T-shirt</h4>
-          <p>Cotton t-shirt with art print. £45</p>
-          <button>Buy with PayPal</button>
-        </div>
-      </div>
-    </section>
+.flex.product-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flex.product-row .product-item {
+  flex: 1 1 30%;
+  max-width: 30%;
+  background-color: #444;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.flex.product-row .product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.flex.product-row .product-item button {
+  background-color: #007acc;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.flex.product-row .product-item button:hover {
+  background-color: #005f99;
+}
+
+@media screen and (max-width: 768px) {
+  .flex.product-row {
+    flex-wrap: wrap;
+  }
+
+  .flex.product-row .product-item {
+    max-width: 100%;
+  }
+}
+
 
     <section>
       <h2>Apply for Mentoring or Workshops</h2>
