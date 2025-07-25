@@ -6,10 +6,131 @@
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     .main-container {
       max-width: 960px;
       margin: 0 auto;
       padding: 0 20px;
+    }
+
+    header, footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
+    .flex {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .half {
+      flex: 1 1 300px;
+    }
+
+    .product-item {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .product-item button {
+      margin-top: 10px;
+      background: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-item button:hover {
+      background: #005f99;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    form button {
+      background: #007acc;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #005f99;
+    }
+
+    ul.event-links {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    ul.event-links li {
+      margin: 10px 0;
+    }
+
+    ul.event-links a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    ul.event-links a:hover {
+      color: #ffcc00;
     }
   </style>
 </head>
@@ -94,7 +215,7 @@
       </form>
     </section>
 
-  </div> <!-- end .main-container -->
+  </div>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
