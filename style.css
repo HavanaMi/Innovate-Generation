@@ -339,3 +339,15 @@ button:hover {
   background-color: #005f99;
 }
 
+.flex.product-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flex.product-row .product-item {
+  flex: 1;
+  max-width: 32%;
+}
