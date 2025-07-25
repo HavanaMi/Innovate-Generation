@@ -1,103 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
+    header, footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .half {
+      flex: 1 1 300px;
+    }
+
+    .product-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .product-item {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 8px;
+      width: 30%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .product-item button {
+      margin-top: 10px;
+      background: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-item button:hover {
+      background: #005f99;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    form button {
+      background: #007acc;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #005f99;
+    }
+
+    ul.event-links {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    ul.event-links li {
+      margin: 10px 0;
+    }
+
+    ul.event-links a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    ul.event-links a:hover {
+      color: #ffcc00;
+    }
+
+    @media screen and (max-width: 768px) {
+      .product-row {
+        flex-wrap: wrap;
+      }
+
+      .product-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
 <body>
   <header>
     <h1>Innovate Generation</h1>
-    <nav>
-      <a href="#goal">Our Goal</a>
-      <a href="#donate">Donate</a>
-      <a href="#shop">Shop</a>
-      <a href="#mentoring">Mentoring</a>
-      <a href="#nikola">Nikola</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Social Innovation. Real Impact.</p>
   </header>
 
-  <section id="goal">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to Innovate Generation</h2>
+    <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
+  </section>
+
+  <section class="flex">
+    <div class="half">
+      <h3>Talent Spotlight: Nikola</h3>
+      <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
+    </div>
+    <div class="half">
+      <img src="images/nikola-photo.jpg" alt="Nikola's Artwork" style="max-width:100%; border-radius: 8px;" />
+    </div>
+  </section>
+
+  <section>
     <h2>Our Goal</h2>
     <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
   </section>
 
-  <section id="donate">
-    <h2>Buy Me Breakfast/Lunch</h2>
-    <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops:</p>
-    <div class="donate-row">
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="amount" value="5">
-        <button type="submit">Donate £5</button>
-      </form>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="amount" value="15">
-        <button type="submit">Donate £15</button>
-      </form>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="amount" value="30">
-        <button type="submit">Donate £30</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="shop">
-    <h2>Shop – Youth-Created Products</h2>
-    <div class="flex product-row">
+  <section>
+    <h2>Buy Me Breakfast / Lunch</h2>
+    <p>Want to support our youth? Donate the cost of a breakfast or lunch to help young volunteers and creatives stay nourished during events and workshops.</p>
+    <div class="product-row">
       <div class="product-item">
         <img src="images/mug.jpg" alt="Mug">
-        <h3>Mug</h3>
+        <h4>Mug</h4>
         <p>Ceramic mug with youth-designed art. £25</p>
-        <form action="#">
-          <button type="submit">Buy with PayPal</button>
-        </form>
+        <button>Buy with PayPal</button>
       </div>
       <div class="product-item">
         <img src="images/lanyard.jpg" alt="Lanyard">
-        <h3>Lanyard</h3>
+        <h4>Lanyard</h4>
         <p>Bold logo lanyard. £15</p>
-        <form action="#">
-          <button type="submit">Buy with PayPal</button>
-        </form>
+        <button>Buy with PayPal</button>
       </div>
       <div class="product-item">
         <img src="images/tshirt.jpg" alt="T-shirt">
-        <h3>T-shirt</h3>
+        <h4>T-shirt</h4>
         <p>Cotton t-shirt with art print. £45</p>
-        <form action="#">
-          <button type="submit">Buy with PayPal</button>
-        </form>
+        <button>Buy with PayPal</button>
       </div>
     </div>
   </section>
 
-  <section id="mentoring">
+  <section>
+    <h2>Event Links</h2>
+    <ul class="event-links">
+      <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
+      <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Apply for Mentoring or Workshops</h2>
     <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea placeholder="Tell us what you're interested in..."></textarea>
-      <button type="submit">Apply</button>
-    </form>
-  </section>
-
-  <section id="nikola">
-    <h2>Nikola’s Role</h2>
-    <p>Nikola is the Director and Community Wellbeing Coordinator at Innovate Generation. With her background in forensic psychology, healthcare volunteering, and working with youth and elders, she ensures every young person feels welcome, safe, and empowered. She oversees mentoring activities and supports a positive and respectful environment across all our programs.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Your message..."></textarea>
-      <button type="submit">Send Message</button>
+    <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell us what you're interested in…" rows="5"></textarea>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
@@ -105,5 +224,4 @@
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
