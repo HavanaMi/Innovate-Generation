@@ -348,6 +348,25 @@ button:hover {
 }
 
 .flex.product-row .product-item {
-  flex: 1;
-  max-width: 32%;
+  flex: 1 1 30%;
+  max-width: 30%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Nadpisujemy to, co wcześniej powodowało złamanie */
+.product-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* RESPONSYWNOŚĆ — na małych ekranach w kolumnę */
+@media screen and (max-width: 768px) {
+  .flex.product-row {
+    flex-wrap: wrap;
+  }
+
+  .flex.product-row .product-item {
+    max-width: 100%;
+  }
 }
