@@ -44,3 +44,169 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f2f2f2;
+    }
+
+    header, footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 25%;
+      position: sticky;
+      top: 20px;
+      align-self: flex-start;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #ffcc00;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      color: white;
+    }
+
+    .content {
+      width: 75%;
+    }
+
+    article {
+      margin-bottom: 60px;
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar, .content {
+        width: 100%;
+      }
+
+      .sidebar {
+        position: relative;
+        top: unset;
+        text-align: center;
+      }
+
+      .sidebar a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Articles</h1>
+    <p>Discover inspiring stories, event highlights, and behind-the-scenes from Innovate Generation.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="articles.html">Articles</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Sidebar / Spis treści -->
+    <aside class="sidebar">
+      <h3>Jump to article</h3>
+      <ul>
+        <li><a href="#article1">🎨 Nikola's First Portrait</a></li>
+        <li><a href="#article2">👗 Summer Fashion Show</a></li>
+        <li><a href="#article3">⚒️ Building Our Workshop</a></li>
+      </ul>
+    </aside>
+
+    <!-- Artykuły -->
+    <main class="content">
+      <article id="article1">
+        <h2>Nikola's First Portrait</h2>
+        <img src="images/nikola-photo.jpg" alt="Nikola's Portrait">
+        <p>Nikola shares the story of how she started painting portraits and the emotions that inspired her first project...</p>
+      </article>
+
+      <article id="article2">
+        <h2>Behind the Summer Fashion Show</h2>
+        <img src="images/fashion-show.jpg" alt="Fashion Show">
+        <p>Go backstage with us and meet the designers, volunteers, and young creatives who made our show unforgettable...</p>
+      </article>
+
+      <article id="article3">
+        <h2>How We Built a Creative Workshop in 3 Days</h2>
+        <img src="images/workshop.jpg" alt="Workshop">
+        <p>From an empty hall to a full studio. Read how we transformed a space into a workshop hub for young artists and designers...</p>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
