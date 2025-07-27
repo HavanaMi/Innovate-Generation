@@ -16,13 +16,14 @@
     header, footer {
       background-color: #1a1a1a;
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px 15px;
     }
 
     nav {
       background-color: #222;
-      padding: 10px;
+      padding: 6px;
       text-align: center;
+      font-size: 1.1em;
     }
 
     nav a {
@@ -37,7 +38,7 @@
     }
 
     section {
-      padding: 40px 20px;
+      padding: 20px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -50,7 +51,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
     }
 
     .half {
@@ -164,6 +165,13 @@
       color: #ffcc00;
     }
 
+    section img {
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
     @media screen and (max-width: 768px) {
       .product-row {
         flex-wrap: wrap;
@@ -181,14 +189,14 @@
   </style>
 </head>
 <body>
-  <header style="padding-top: 10px; padding-bottom: 10px;">
+  <header>
     <img src="images/Banner%20index_1.png" alt="Banner image"
-      style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" />
+      style="max-width: 100%; height: auto; margin-bottom: 10px;" />
     <h1 style="font-size: 3em; margin: 10px 0 5px;">Innovate Generation</h1>
     <p style="font-size: 1.4em; margin: 0;">Social Innovation. Real Impact.</p>
   </header>
 
-  <nav style="margin-top: 10px; font-size: 1.2em;">
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="portfolio.html">Portfolio</a>
@@ -202,29 +210,26 @@
     <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
   </section>
 
-<section class="flex">
-  <div class="half">
-    <h3>Talent Spotlight: Nikola</h3>
-    <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
-  </div>
-  <div class="half">
-    <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year" style="width: 80%; display: block; margin: 0 auto; border-radius: 8px;" />
-  </div>
-</section>
+  <section class="flex">
+    <div class="half">
+      <h3>Talent Spotlight: Nikola</h3>
+      <p>Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.</p>
+    </div>
+    <div class="half">
+      <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year" />
+    </div>
+  </section>
 
   <section>
     <h2>Our Goal</h2>
     <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
   </section>
-  <div style="text-align: center; margin: 40px 0;">
-  <img src="images/Culture.png" alt="Culture Illustration" style="width: 80%; max-width: 800px; border-radius: 8px;" />
-</div>
+
+  <img src="images/Culture.png" alt="Culture Illustration" />
 
   <section class="donate-section">
     <h2>Buy Me Breakfast / Lunch</h2>
-        <div style="text-align: center; margin: 40px 0;">
-  <img src="images/Lunch_blank.png" alt="Lunch Illustration" style="width: 80%; max-width: 800px; border-radius: 8px;" /> 
-</div>
+    <img src="images/Lunch_blank.png" alt="Lunch Illustration" />
     <p>Want to support our youth? Donate the cost of a breakfast or lunch to help volunteers and creatives stay nourished during events and workshops. A snack break during the course, particularly while working, and in case the teenager hasn’t had breakfast at home.</p>
     <div class="donate-buttons">
       <button>Donate £5</button>
@@ -232,10 +237,9 @@
       <button>Donate £30</button>
     </div>
   </section>
+
   <section>
-    <div style="text-align: center; margin: 40px 0;">
-  <img src="images/Merchandise.png" alt="Merchandise Illustration" style="width: 80%; max-width: 800px; border-radius: 8px;" /> 
-</div>
+    <img src="images/Merchandise.png" alt="Merchandise Illustration" />
     <h2>Shop – Youth-Created Products</h2>
     <div class="product-row">
       <div class="product-item">
@@ -258,21 +262,18 @@
       </div>
     </div>
   </section>
-  
+
   <section>
-    <div style="text-align: center; margin: 40px 0;">
-  <img src="images/Upcoming%20events_1.png" alt="Events Illustration" style="width: 80%; max-width: 800px; border-radius: 8px;" /> 
-          <h2>Event Links</h2>
-</div>
+    <img src="images/Upcoming%20events_1.png" alt="Events Illustration" />
+    <h2>Event Links</h2>
     <ul class="event-links">
       <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
       <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
     </ul>
   </section>
+
   <section>
-<div style="text-align: center; margin: 40px 0;">
-  <img src="images/Join%20Us.png" alt="Join Illustration" style="width: 80%; max-width: 800px; border-radius: 8px;" />
-</div>
+    <img src="images/Join%20Us.png" alt="Join Illustration" />
     <h2>Apply for Mentoring or Workshops</h2>
     <p>Are you 14–25 years old and want to grow your talent in art, photography, fashion design, or sculpture? Want to volunteer with us? Join our free programs today!</p>
     <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
@@ -282,9 +283,11 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
 
