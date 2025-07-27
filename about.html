@@ -6,63 +6,87 @@
   <title>About Us - Innovate Generation</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Center the page header title */
-    header h1 {
-      text-align: center;
-    }
-
-    /* Center titles in each section */
-    section h2, section h3 {
-      text-align: center;
-      margin: 20px 0; /* Optional: space above and below the title */
-      font-weight: bold;
-    }
-
-    /* Optional: Additional styles for footer */
-    footer {
-      text-align: center;
-    }
-
-    /* Center the sections themselves */
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
+    body {
+      margin: 0;
       background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Style for section titles */
-    section h2, section h3 {
-      font-size: 2em;
-      font-weight: bold;
-    }
-
-    /* Styling for the office gallery section */
-    .office-gallery {
-      margin-top: 20px;
+    header, footer {
+      background-color: #1a1a1a;
+      text-align: center;
       padding: 40px 20px;
     }
 
-    .office-gallery p {
-      font-size: 1.2em;
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .narrow {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2, h3 {
+      text-align: center;
       margin-bottom: 20px;
     }
 
-    .portfolio-item img {
-      width: 100%;
+    img {
+      max-width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 10px;
+    }
+
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
     }
 
     .portfolio-item {
-      text-align: center;
+      flex: 1 1 250px;
+      max-width: 300px;
+      background-color: #1f1f1f;
       padding: 10px;
-      border: 1px solid #ddd;
       border-radius: 8px;
+    }
+
+    footer {
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .portfolio {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -73,37 +97,39 @@
   </header>
 
   <!-- Navigation Menu -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="articles.html">Articles</a>
-  <a href="shop.html">Shop</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="articles.html">Articles</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <!-- About Us Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Innovate Generation collaborates with donors, sponsors, media, and many others. We operate in London with very ambitious plans. Everyone has some talent and qualities, and we want to help them discover what is best in themselves and pursue the career path they have always dreamed of. We understand that not everyone manages to follow the path they once set, which is why we want to help such individuals and guide them toward success.</p>
+  <section>
+    <div class="narrow">
+      <h2>About Us</h2>
+      <p>Innovate Generation collaborates with donors, sponsors, media, and many others. We operate in London with very ambitious plans. Everyone has some talent and qualities, and we want to help them discover what is best in themselves and pursue the career path they have always dreamed of. We understand that not everyone manages to follow the path they once set, which is why we want to help such individuals and guide them toward success.</p>
+    </div>
   </section>
 
   <!-- Meet Our Team Section -->
-  <section id="team">
-    <h2>Meet Our Team</h2>
-    <div id="team-image">
-      <img src="images/team-photo.jpg" alt="Our Team" style="width:100%; height: auto; border-radius: 8px;">
+  <section>
+    <div class="narrow">
+      <h2>Meet Our Team</h2>
+      <img src="images/team-photo.jpg" alt="Our Team">
+      <h3>Background of the Team</h3>
+      <p>Our team is responsible for organizing events, conducting workshops in various fields, and providing one-on-one mentoring. We train our participants and prepare them for their debut at events across London. Our team includes mentors, event organizers, supply chain/logistics teams, wardrobe and backstage support, event planners, operations, and marketing teams. Our organization thrives on collaboration to help teenagers and young adults develop their talents and choose the right career path. We recognize that not everyone follows the path they once envisioned, which is why we help guide those individuals towards success.</p>
     </div>
-
-    <!-- Background of the Team Title -->
-    <h3>Background of the Team</h3>
-    <p>Our team is responsible for organizing events, conducting workshops in various fields, and providing one-on-one mentoring. We train our participants and prepare them for their debut at events across London. Our team includes mentors, event organizers, supply chain/logistics teams, wardrobe and backstage support, event planners, operations, and marketing teams. Our organization thrives on collaboration to help teenagers and young adults develop their talents and choose the right career path. We recognize that not everyone follows the path they once envisioned, which is why we help guide those individuals towards success.</p>
   </section>
 
   <!-- Office Gallery Section -->
-  <section id="office-gallery">
-    <h3>Our Office</h3>
-    <p>We operate in London with very ambitious plans. Our team collaborates with various partners and stakeholders to drive positive change. Our office serves as the hub of our activities, where creative ideas are nurtured and implemented.</p>
+  <section>
+    <div class="narrow">
+      <h3>Our Office</h3>
+      <p>We operate in London with very ambitious plans. Our team collaborates with various partners and stakeholders to drive positive change. Our office serves as the hub of our activities, where creative ideas are nurtured and implemented.</p>
+    </div>
     <div class="portfolio">
       <div class="portfolio-item">
         <img src="images/office1.jpg" alt="Office Building 1">
@@ -124,4 +150,3 @@
 
 </body>
 </html>
-
