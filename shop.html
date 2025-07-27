@@ -6,18 +6,68 @@
   <title>Innovate Generation - Shop</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { margin: 0; background: #111; color: #fff; font-family: 'Segoe UI', sans-serif; }
-    header, footer { background: #1a1a1a; text-align: center; padding: 40px 20px; }
-    nav { background: #222; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #ffcc00; }
-    section { padding: 40px 20px; }
-    h1, h2, h3, h4 { text-align: center; }
-    .product-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .product-item { background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center; }
-    .product-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-    .product-item button { margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    .product-item button:hover { background: #005f99; }
+    body {
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header, footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .product-item {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+    }
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .product-item button {
+      margin-top: 10px;
+      background: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product-item button:hover {
+      background: #005f99;
+    }
   </style>
 </head>
 <body>
@@ -35,72 +85,76 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-<section>
-  <h2>Our Products</h2>
-  <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
-    <p>
-      Every item supports youth-led programs and creative development through Innovate Generation CIC.
-      <br><br>
-      Our shop features unique products — including mugs printed with visual artworks created by our talented young artists.
-      By purchasing, you directly support the next generation of creatives.
-      <br><br>
-      <em>*Shipping cost: £4 (added after payment).</em>
-    </p>
-  </div>
+  <section>
+    <h2>Our Products</h2>
+    <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+      <p>
+        Every item supports youth-led programs and creative development through Innovate Generation CIC.
+        <br><br>
+        Our shop features unique products — including mugs printed with visual artworks created by our talented young artists.
+        By purchasing, you directly support the next generation of creatives.
+        <br><br>
+        <em>*Shipping cost: £4 (added after payment).</em>
+      </p>
+    </div>
 
-  <div class="product-grid">
-    <!-- your product cards here -->
-  </div>
-</section>
-
+    <div class="product-grid">
       <div class="product-item">
         <img src="images/poster.jpg" alt="Poster">
         <h4>Art Poster</h4>
         <p>A3 artwork by our young creators. <strong>£45</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/49', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/lanyard.jpg" alt="Lanyard">
         <h4>Lanyard</h4>
         <p>Custom branded lanyard. <strong>£12</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/16', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/mug.jpg" alt="Mug">
         <h4>Mug</h4>
         <p>Printed ceramic mug. <strong>£18</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/22', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/waterbottle.jpg" alt="Water Bottle">
         <h4>Water Bottle</h4>
         <p>Logo bottle, reusable. <strong>£20</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/24', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/keychain.jpg" alt="Keychain">
         <h4>Keychain</h4>
         <p>Logo keychain. <strong>£10</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/14', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/buckethat.jpg" alt="Bucket Hat">
         <h4>Bucket Hat</h4>
         <p>Stylish & branded. <strong>£28</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/32', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/backpack.jpg" alt="Backpack">
         <h4>Backpack</h4>
         <p>Durable & practical. <strong>£45</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/49', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/tshirt.jpg" alt="T-shirt">
         <h4>T-shirt</h4>
         <p>Art print tee. <strong>£32</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/36', '_blank')">Buy with PayPal</button>
       </div>
+
       <div class="product-item">
         <img src="images/print.jpg" alt="Photo Print">
         <h4>Photo Print</h4>
@@ -115,4 +169,3 @@
   </footer>
 </body>
 </html>
-
