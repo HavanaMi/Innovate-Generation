@@ -42,6 +42,8 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .product-item {
       background: #1f1f1f;
@@ -49,12 +51,14 @@
       border-radius: 8px;
       width: 250px;
       text-align: center;
+      box-sizing: border-box;
     }
     .product-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 4px;
+      cursor: zoom-in;
     }
     .product-item button {
       margin-top: 10px;
@@ -67,6 +71,29 @@
     }
     .product-item button:hover {
       background: #005f99;
+    }
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    #popup span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -87,7 +114,7 @@
 
   <section>
     <h2>Our Products</h2>
-    <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+    <div style="max-width: 1200px; margin: 0 auto; font-size: 1.1em;">
       <p>
         Every item supports youth-led programs and creative development through Innovate Generation CIC.
         <br><br>
@@ -98,64 +125,65 @@
       </p>
     </div>
 
-     <div class="product-item">
-       <img src="images/POSTER_Where_bark_becomes_brilliance.png" alt="Poster – Where Bark Becomes Brilliance">
-       <h4>Poster – Where Bark Becomes Brilliance</h4>
-       <p>Artistic A3 print designed by youth. <strong>£49</strong></p>
-       <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/53', '_blank')">Buy with PayPal</button>
-     </div>
-    
+    <div class="product-grid">
       <div class="product-item">
-        <img src="images/lanyard.jpg" alt="Lanyard">
+        <img src="images/poster.jpg" alt="Poster" onclick="openPopup(this.src)">
+        <h4>Art Poster</h4>
+        <p>A3 artwork by our young creators. <strong>£45</strong></p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/49', '_blank')">Buy with PayPal</button>
+      </div>
+
+      <div class="product-item">
+        <img src="images/lanyard.jpg" alt="Lanyard" onclick="openPopup(this.src)">
         <h4>Lanyard</h4>
         <p>Custom branded lanyard. <strong>£12</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/16', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/mug.jpg" alt="Mug">
+        <img src="images/mug.jpg" alt="Mug" onclick="openPopup(this.src)">
         <h4>Mug</h4>
         <p>Printed ceramic mug. <strong>£18</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/22', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/waterbottle.jpg" alt="Water Bottle">
+        <img src="images/waterbottle.jpg" alt="Water Bottle" onclick="openPopup(this.src)">
         <h4>Water Bottle</h4>
         <p>Logo bottle, reusable. <strong>£20</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/24', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/keychain.jpg" alt="Keychain">
+        <img src="images/keychain.jpg" alt="Keychain" onclick="openPopup(this.src)">
         <h4>Keychain</h4>
         <p>Logo keychain. <strong>£10</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/14', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/buckethat.jpg" alt="Bucket Hat">
+        <img src="images/buckethat.jpg" alt="Bucket Hat" onclick="openPopup(this.src)">
         <h4>Bucket Hat</h4>
         <p>Stylish & branded. <strong>£28</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/32', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/backpack.jpg" alt="Backpack">
+        <img src="images/backpack.jpg" alt="Backpack" onclick="openPopup(this.src)">
         <h4>Backpack</h4>
         <p>Durable & practical. <strong>£45</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/49', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/tshirt.jpg" alt="T-shirt">
+        <img src="images/tshirt.jpg" alt="T-shirt" onclick="openPopup(this.src)">
         <h4>T-shirt</h4>
         <p>Art print tee. <strong>£32</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/36', '_blank')">Buy with PayPal</button>
       </div>
 
       <div class="product-item">
-        <img src="images/print.jpg" alt="Photo Print">
+        <img src="images/print.jpg" alt="Photo Print" onclick="openPopup(this.src)">
         <h4>Photo Print</h4>
         <p>Framed art photo. <strong>£55</strong></p>
         <button onclick="window.open('https://www.paypal.com/paypalme/innovategen/59', '_blank')">Buy with PayPal</button>
@@ -163,8 +191,25 @@
     </div>
   </section>
 
+  <!-- Image Popup -->
+  <div id="popup">
+    <span onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="">
+  </div>
+
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
+
+  <script>
+    function openPopup(src) {
+      document.getElementById("popup-img").src = src;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 </body>
 </html>
