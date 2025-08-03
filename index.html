@@ -240,27 +240,44 @@
 
   <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
     <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/MugArch.png" alt="Mug Arch" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+      <img src="images/MugArch.png" alt="Mug Arch" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
       <h4>White Mug</h4>
       <p>Arch Ceramic Mug. <strong>£65</strong></p>
       <button style="margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Buy with PayPal</button>
     </div>
 
     <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/TshirtPerfectlyFineWhite.png" alt="T-shirt" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+      <img src="images/TshirtPerfectlyFineWhite.png" alt="T-shirt" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
       <h4>T-shirt</h4>
       <p>Perfectly Fine White – Cotton. <strong>£120</strong></p>
       <button style="margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Buy with PayPal</button>
     </div>
 
     <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/TshirtPerfectlyFineBlack.png" alt="T-shirt" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+      <img src="images/TshirtPerfectlyFineBlack.png" alt="T-shirt" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
       <h4>T-shirt</h4>
       <p>Perfectly Fine Black – Cotton. <strong>£120</strong></p>
       <button style="margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Buy with PayPal</button>
     </div>
   </div>
 </section>
+
+<!-- Image Popup (wklej raz na stronie, najlepiej tuż przed </body>) -->
+<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;">
+  <span onclick="closePopup()" style="position: absolute; top: 20px; right: 30px; font-size: 40px; color: white; cursor: pointer;">&times;</span>
+  <img id="popup-img" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
+</div>
+
+<script>
+  function openPopup(src) {
+    document.getElementById("popup-img").src = src;
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
 
   <section>
     <img src="images/Upcoming%20events_1.png" alt="Events Illustration" style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
