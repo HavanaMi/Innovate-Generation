@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
+  <meta name="description" content="Innovate Generation is a London-based CIC promoting youth talent through art, fashion, music, and creative events. Join us to support the next generation of creators.">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -60,18 +61,16 @@
 
     .product-row {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: 20px;
-      justify-content: space-between;
-      flex-direction: row;
+      justify-content: center;
     }
 
     .product-item {
       background: #1f1f1f;
       padding: 20px;
       border-radius: 8px;
-      width: 30%;
-      box-sizing: border-box;
+      width: 250px;
       text-align: center;
     }
 
@@ -110,15 +109,19 @@
       flex-wrap: wrap;
     }
 
-    .donate-buttons button {
+    .donate-buttons button,
+    .donate-buttons a {
       background-color: #007acc;
       color: white;
       padding: 12px 24px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
     }
 
+    .donate-buttons a:hover,
     .donate-buttons button:hover {
       background-color: #005f99;
     }
@@ -166,14 +169,6 @@
     }
 
     @media screen and (max-width: 768px) {
-      .product-row {
-        flex-wrap: wrap;
-      }
-
-      .product-item {
-        width: 100%;
-      }
-
       .donate-buttons {
         flex-direction: column;
         align-items: center;
@@ -181,6 +176,8 @@
     }
   </style>
 </head>
+<!-- BODY CONTENT CONTINUES FROM HERE -->
+
 <body>
   <header>
     <img src="images/Banner%20index_1.png" alt="Banner image"
