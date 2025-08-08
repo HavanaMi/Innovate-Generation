@@ -71,3 +71,51 @@ input, textarea {
 .section-dark { background:#303030 !important; color:#f8f6f1 !important; padding:40px 20px; }
 .section-dark h2 { color:#fff !important; }
 .section-dark p  { color:#ececec !important; }
+
+/* === NAV: wyróżniony szary pasek === */
+nav{
+  background:#303030 !important;
+  border-top:none !important;
+  border-bottom:none !important;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+nav a{ color:#fff !important; }
+nav a:hover{ color:#ffcc00 !important; }
+
+/* === TALENT SPOTLIGHT (Nikola) jako szara karta === */
+/* Wariant A – jeśli możesz dodać id w HTML: <section id="talent-spotlight"> ... */
+#talent-spotlight{
+  background:#303030 !important;
+  color:#f8f6f1 !important;
+  padding:40px 24px !important;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+/* Wariant B – jeśli dodałaś klasę: <section class="section-dark"> ... */
+.section-dark{
+  background:#303030 !important;
+  color:#f8f6f1 !important;
+  padding:40px 24px !important;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+.section-dark h2,#talent-spotlight h2{ color:#fff !important; }
+.section-dark p,#talent-spotlight p{ color:#ececec !important; }
+
+/* Jeśli w środku masz układ tekst + obraz, ładna siatka (opcjonalnie) */
+#talent-spotlight .grid-2, .section-dark .grid-2{
+  display:grid; gap:24px; align-items:center;
+  grid-template-columns:1fr 1fr;
+}
+@media (max-width:900px){
+  #talent-spotlight .grid-2, .section-dark .grid-2{ grid-template-columns:1fr; }
+}
+
+/* === EVENT LINKS – ciemne i widoczne === */
+#events a{
+  color:#111 !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+#events a:hover{ color:#333 !important; }
+
