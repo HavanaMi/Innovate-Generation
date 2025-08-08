@@ -17,14 +17,44 @@
   <meta property="og:url" content="https://www.innovategeneration.com/portfolio.html">
   <meta property="og:type" content="website">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Work – Innovate Generation">
-  <meta name="twitter:description" content="Youth-led projects that create real impact.">
-  <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
+  <!-- CSS (cache-busting) -->
+  <link rel="stylesheet" href="style.css?v=5">
 
-  <!-- CACHE BUST -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <!-- Page-specific fixes to ensure layout even if old cache persists -->
+  <style>
+    body { background:#f8f6f1; }
+    header h1, #portfolio h2, #video-section h3 { text-align:center; }
+    nav{
+      background:#303030; box-shadow:0 2px 8px rgba(0,0,0,.08);
+      text-align:center; padding:10px;
+    }
+    nav a{ color:#fff; margin:0 15px; font-weight:700; text-decoration:none; }
+    nav a:hover{ color:#ffcc00; }
+
+    /* Szary panel jak w Shop */
+    .section-dark{
+      background:#303030; color:#f8f6f1;
+      padding:32px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.12);
+      max-width:1100px; margin:0 auto;
+    }
+    .section-dark p{ color:#ececec; }
+
+    /* Siatka 3 w rzędzie (responsywna) */
+    .portfolio-wrap{ max-width:1100px; margin:24px auto; }
+    .portfolio{
+      display:grid; gap:24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .portfolio-item{
+      background:#303030; color:#f8f6f1; border-radius:8px;
+      text-align:center; padding:16px; box-shadow:0 0 10px rgba(0,0,0,.12);
+    }
+    .portfolio-item img{ width:100%; height:180px; object-fit:cover; border-radius:6px; }
+    .portfolio-item p{ color:#e8e8e8; }
+
+    /* Video sekcja */
+    #video-section{ max-width:1100px; margin:24px auto; }
+  </style>
 </head>
 <body>
 
@@ -46,9 +76,9 @@
   <section id="portfolio">
     <h2>Our Projects</h2>
 
-    <!-- OPIS jako SZARY panel (jak w Shop) -->
-    <div class="section-dark" style="max-width:1100px;margin:0 auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);">
-      <div style="max-width:800px;margin:0 auto;font-size:1.1em;">
+    <!-- OPIS jako SZARY panel -->
+    <div class="section-dark">
+      <div style="max-width:800px;margin:0 auto;font-size:1.05em;">
         <p>
           Our youth-driven projects are designed to inspire, educate, and create lasting impact. From fashion shows and art exhibitions to creative workshops and live performances – these events give young people a voice and a platform to grow.
           <br><br>
@@ -59,8 +89,8 @@
       </div>
     </div>
 
-    <!-- Project Video Section -->
-    <div id="video-section" style="max-width:1100px;margin:24px auto 0;">
+    <!-- Project Video -->
+    <div id="video-section">
       <h3>Project Video</h3>
       <video width="100%" controls poster="images/video-poster.jpg">
         <source src="images/750mb.mp4" type="video/mp4">
@@ -68,24 +98,26 @@
       </video>
     </div>
 
-    <!-- Image Gallery -->
-    <div class="portfolio" style="max-width:1100px;margin:24px auto;">
-      <div class="portfolio-item">
-        <img src="images/ResiN.png" alt="Educational Workshops">
-        <h3>Educational Workshops</h3>
-        <p>Empowering young people through hands-on learning.</p>
-      </div>
+    <!-- 3 kafelki w jednym rzędzie -->
+    <div class="portfolio-wrap">
+      <div class="portfolio">
+        <div class="portfolio-item">
+          <img src="images/ResiN.png" alt="Educational Workshops">
+          <h3>Educational Workshops</h3>
+          <p>Empowering young people through hands-on learning.</p>
+        </div>
 
-      <div class="portfolio-item">
-        <img src="images/Musa_pokaz.png" alt="Community Events">
-        <h3>Community Events</h3>
-        <p>Building networks and showcasing talent.</p>
-      </div>
+        <div class="portfolio-item">
+          <img src="images/Musa_pokaz.png" alt="Community Events">
+          <h3>Community Events</h3>
+          <p>Building networks and showcasing talent.</p>
+        </div>
 
-      <div class="portfolio-item">
-        <img src="images/AparaT.png" alt="Tech for Good">
-        <h3>Tech for Good</h3>
-        <p>Runway shows and original youth fashion collections.</p>
+        <div class="portfolio-item">
+          <img src="images/AparaT.png" alt="Tech for Good">
+          <h3>Tech for Good</h3>
+          <p>Runway shows and original youth fashion collections.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -96,3 +128,4 @@
 
 </body>
 </html>
+
