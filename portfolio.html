@@ -3,33 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio- Innovate Generation</title>
-    <meta name="description" content="Innovate Generation is a London-based CIC empowering young creatives in art, music, fashion and events through workshops, mentoring, and showcases.">
+  <title>Our Work – Innovate Generation</title>
+
+  <meta name="description" content="Innovate Generation is a London-based CIC empowering young creatives in art, music, fashion and events through workshops, mentoring, and showcases.">
   <meta name="keywords" content="Innovate Generation, CIC, London, youth, art, music, fashion, workshops, mentoring, creative projects">
   <meta name="author" content="Innovate Generation">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="About Us – Innovate Generation">
-  <meta property="og:description" content="We support young creatives aged 14–25 in London with mentoring, art shows, fashion events, and creative business opportunities.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Work – Innovate Generation">
+  <meta property="og:description" content="See our youth-led projects: exhibitions, fashion shows, workshops and more.">
   <meta property="og:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
-  <meta property="og:url" content="https://www.innovategeneration.com/about.html">
+  <meta property="og:url" content="https://www.innovategeneration.com/portfolio.html">
   <meta property="og:type" content="website">
 
-  <!-- Twitter (optional) -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Us – Innovate Generation">
-  <meta name="twitter:description" content="Helping young people grow in the creative industry through real-world projects and support.">
+  <meta name="twitter:title" content="Our Work – Innovate Generation">
+  <meta name="twitter:description" content="Youth-led projects that create real impact.">
   <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- CACHE BUST -->
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
   <header>
     <h1>Our Work - Innovate Generation</h1>
   </header>
-  
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -38,50 +40,55 @@
     <a href="shop.html">Shop</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
-    <a href="policy.html">Policy</a> <!-- Dodany link -->
+    <a href="policy.html">Policy</a>
   </nav>
 
-<section id="portfolio">
-  <h2>Our Projects</h2>
-  <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
-    <p>
-      Our youth-driven projects are designed to inspire, educate, and create lasting impact. From fashion shows and art exhibitions to creative workshops and live performances – these events give young people a voice and a platform to grow.
-      <br><br>
-      We invite sponsors and business partners to join us in supporting these initiatives. By collaborating with us, your brand becomes part of a visible, purpose-led movement — empowering youth and building stronger communities through creativity and innovation.
-      <br><br>
-      <strong>Partner with us — and make your impact count.</strong>
-    </p>
-  </div>
+  <section id="portfolio">
+    <h2>Our Projects</h2>
 
-<!-- Project Video Section -->
-<div id="video-section">
-  <h3>Project Video</h3>
-<video width="100%" controls>
-  <source src="images/750mb.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
+    <!-- OPIS jako SZARY panel (jak w Shop) -->
+    <div class="section-dark" style="max-width:1100px;margin:0 auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);">
+      <div style="max-width:800px;margin:0 auto;font-size:1.1em;">
+        <p>
+          Our youth-driven projects are designed to inspire, educate, and create lasting impact. From fashion shows and art exhibitions to creative workshops and live performances – these events give young people a voice and a platform to grow.
+          <br><br>
+          We invite sponsors and business partners to join us in supporting these initiatives. By collaborating with us, your brand becomes part of a visible, purpose-led movement — empowering youth and building stronger communities through creativity and innovation.
+          <br><br>
+          <strong>Partner with us — and make your impact count.</strong>
+        </p>
+      </div>
+    </div>
 
-<!-- Updated Image Gallery -->
-<div class="portfolio">
-  <div class="portfolio-item">
-    <img src="images/ResiN.png" alt="Educational Workshops">
-    <h3>Educational Workshops</h3>
-    <p>Empowering young people through hands-on learning.</p>
-  </div>
+    <!-- Project Video Section -->
+    <div id="video-section" style="max-width:1100px;margin:24px auto 0;">
+      <h3>Project Video</h3>
+      <video width="100%" controls poster="images/video-poster.jpg">
+        <source src="images/750mb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <div class="portfolio-item">
-    <img src="images/Musa_pokaz.png" alt="Community Events">
-    <h3>Community Events</h3>
-    <p>Building networks and showcasing talent.</p>
-  </div>
+    <!-- Image Gallery -->
+    <div class="portfolio" style="max-width:1100px;margin:24px auto;">
+      <div class="portfolio-item">
+        <img src="images/ResiN.png" alt="Educational Workshops">
+        <h3>Educational Workshops</h3>
+        <p>Empowering young people through hands-on learning.</p>
+      </div>
 
-  <div class="portfolio-item">
-    <img src="images/AparaT.png" alt="Tech for Good">
-    <h3>Tech for Good</h3>
-    <p>Runway shows and original youth fashion collections.</p>
-  </div>
-</div>
+      <div class="portfolio-item">
+        <img src="images/Musa_pokaz.png" alt="Community Events">
+        <h3>Community Events</h3>
+        <p>Building networks and showcasing talent.</p>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="images/AparaT.png" alt="Tech for Good">
+        <h3>Tech for Good</h3>
+        <p>Runway shows and original youth fashion collections.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
