@@ -1,78 +1,18 @@
-/* ===== HARD THEME OVERRIDES (paste at very end) ===== */
+/* ===== HARD THEME OVERRIDES (musi być NA SAMYM KOŃCU) ===== */
 
 /* Globalne tło + tekst */
-html, body { background-color:#f8f6f1 !important; color:#222 !important; }
+html, body { 
+  background-color:#f8f6f1 !important; 
+  color:#222 !important; 
+}
 
-/* Header / Nav / Footer na jasno */
-header, footer, nav {
+/* Header / Nav / Footer */
+header, footer {
   background-color:#f8f6f1 !important;
   color:#222 !important;
   border-top:1px solid #e6e2d9 !important;
   border-bottom:1px solid #e6e2d9 !important;
 }
-nav a { color:#333 !important; }
-nav a:hover { color:#ffcc00 !important; }
-
-/* Typowe jasne sekcje (żeby nie były czarne) */
-section, #home, #about, #articles, #shop, #resources, #contact, #policy {
-  background-color:transparent !important;
-  color:#222 !important;
-}
-
-/* KAFLE/PANELE, które mają być SZARE #303030 */
-#portfolio,
-.portfolio-item,
-#categories-of-the-month,
-.category-item,
-#featured-products,
-.product-item,
-#events,
-#poll,
-.modal-content {
-  background-color:#303030 !important;
-  color:#f8f6f1 !important;
-  border-color: rgba(255,255,255,.08) !important;
-  box-shadow: 0 0 10px rgba(0,0,0,.12) !important;
-}
-
-/* Teksty w szarych panelach */
-#portfolio h2, #portfolio h3, #portfolio .price,
-.category-item h2, .category-item h3,
-.product-item h2, .product-item h3,
-#events h2, #poll h2,
-.modal-content h2, .modal-content h3 {
-  color:#ffffff !important;
-}
-#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p {
-  color:#e8e8e8 !important;
-}
-
-/* Formularze – jasne */
-label { color:#222 !important; }
-input, textarea {
-  background:#ffffff !important; color:#222 !important;
-  border:1px solid #ccc !important;
-}
-
-/* Przyciski na panelach */
-.product-item button, .category-item button, #events button, #poll button, button {
-  background:#007acc !important; color:#fff !important;
-}
-.product-item button:hover, .category-item button:hover, #events button:hover, #poll button:hover, button:hover {
-  background:#005f99 !important;
-}
-
-/* Artykuły */
-.post { border-bottom:1px solid #ddd !important; }
-.post h2 { color:#111 !important; }
-.post p { color:#333 !important; }
-
-/* Sekcja Nikola (dodaj class="section-dark" w HTML) */
-.section-dark { background:#303030 !important; color:#f8f6f1 !important; padding:40px 20px; }
-.section-dark h2 { color:#fff !important; }
-.section-dark p  { color:#ececec !important; }
-
-/* === NAV: wyróżniony szary pasek === */
 nav{
   background:#303030 !important;
   border-top:none !important;
@@ -82,71 +22,90 @@ nav{
 nav a{ color:#fff !important; }
 nav a:hover{ color:#ffcc00 !important; }
 
-/* === TALENT SPOTLIGHT (Nikola) jako szara karta === */
-/* Wariant A – jeśli możesz dodać id w HTML: <section id="talent-spotlight"> ... */
-#talent-spotlight{
-  background:#303030 !important;
-  color:#f8f6f1 !important;
-  padding:40px 24px !important;
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
+/* Jasne sekcje */
+section, #home, #about, #articles, #shop, #resources, #contact, #policy {
+  background-color:transparent !important;
+  color:#222 !important;
 }
-/* Wariant B – jeśli dodałaś klasę: <section class="section-dark"> ... */
-.section-dark{
-  background:#303030 !important;
-  color:#f8f6f1 !important;
-  padding:40px 24px !important;
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
-}
-.section-dark h2,#talent-spotlight h2{ color:#fff !important; }
-.section-dark p,#talent-spotlight p{ color:#ececec !important; }
 
-/* Jeśli w środku masz układ tekst + obraz, ładna siatka (opcjonalnie) */
-#talent-spotlight .grid-2, .section-dark .grid-2{
+/* Panele/kafle ciemne */
+#portfolio, .portfolio-item,
+#categories-of-the-month, .category-item,
+#featured-products, .product-item,
+#events, #poll, .modal-content {
+  background-color:#303030 !important;
+  color:#f8f6f1 !important;
+  border-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,.12) !important;
+}
+
+/* Teksty w panelach ciemnych */
+#portfolio h2, #portfolio h3, #portfolio .price,
+.category-item h2, .category-item h3,
+.product-item h2, .product-item h3,
+#events h2, #poll h2, .modal-content h2, .modal-content h3 {
+  color:#ffffff !important;
+}
+#portfolio p, .category-item p, .product-item p,
+#events p, #poll p, .modal-content p {
+  color:#e8e8e8 !important;
+}
+
+/* Formularze */
+label { color:#222 !important; }
+input, textarea {
+  background:#ffffff !important; 
+  color:#222 !important;
+  border:1px solid #ccc !important;
+}
+
+/* Przyciski */
+.product-item button, .category-item button, 
+#events button, #poll button, button {
+  background:#007acc !important; 
+  color:#fff !important;
+}
+.product-item button:hover, .category-item button:hover, 
+#events button:hover, #poll button:hover, button:hover {
+  background:#005f99 !important;
+}
+
+/* Artykuły */
+.post { border-bottom:1px solid #ddd !important; }
+.post h2 { color:#111 !important; }
+.post p { color:#333 !important; }
+
+/* Sekcja ciemna / talent spotlight */
+.section-dark, #talent-spotlight {
+  background:#303030 !important;
+  color:#f8f6f1 !important;
+  padding:40px 24px !important;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+.section-dark h2, #talent-spotlight h2 { color:#fff !important; }
+.section-dark p, #talent-spotlight p { color:#ececec !important; }
+
+/* Układ tekst + obraz */
+#talent-spotlight .grid-2, .section-dark .grid-2 {
   display:grid; gap:24px; align-items:center;
   grid-template-columns:1fr 1fr;
 }
 @media (max-width:900px){
-  #talent-spotlight .grid-2, .section-dark .grid-2{ grid-template-columns:1fr; }
+  #talent-spotlight .grid-2, .section-dark .grid-2 {
+    grid-template-columns:1fr;
+  }
 }
 
-/* === EVENT LINKS – ciemne i widoczne === */
-#events a{
+/* Event Links */
+#events a {
   color:#111 !important;
   text-decoration: underline;
   font-weight: 600;
 }
-#events a:hover{ color:#333 !important; }
+#events a:hover { color:#333 !important; }
 
-/* --- Talent card: szara ramka (jaśniejsza niż menu) --- */
-.talent-card{
-  background:#505050 !important;   /* jaśniejszy szary niż #303030 */
-  color:#f8f6f1 !important;
-  padding:20px !important;
-  border-radius:12px !important;
-  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
-  max-width:1100px !important;
-  margin:30px auto !important;
-  display:flex !important;
-  gap:20px !important;
-  align-items:center !important;
-  flex-wrap:wrap !important;
-}
-.talent-card .half{ flex:1 1 300px !important; }
-.talent-card h3{ color:#fff !important; margin:0 0 8px !important; }
-.talent-card p{ color:#e8e8e8 !important; }
-
-/* jeśli kiedyś daliśmy .section-dark itp., to niech nie psują tej karty */
-.flex .section-dark, section.talent-card{ background:initial !important; }
-
-/* Intro nad ramką */
-.intro-ig{
-  max-width:1100px; margin:40px auto 20px; text-align:center;
-}
-.intro-ig p{ margin:0; color:#222; }
-
-/* TALENT CARD – jaśniejsza szarość niż menu, tekst L / zdjęcie P */
+/* Talent card – jaśniejsza niż menu */
 .talent-card{
   background:#505050 !important;     /* jaśniejszy szary niż #303030 */
   color:#f8f6f1 !important;
@@ -155,7 +114,9 @@ nav a:hover{ color:#ffcc00 !important; }
   box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
   max-width:1100px !important;
   margin:20px auto 36px !important;
-  display:flex !important; gap:24px !important; align-items:center !important;
+  display:flex !important; 
+  gap:24px !important; 
+  align-items:center !important;
   flex-wrap:wrap !important;
 }
 .talent-card .half{ flex:1 1 420px !important; }
@@ -165,10 +126,16 @@ nav a:hover{ color:#ffcc00 !important; }
   width:90%; max-width:360px; display:block; margin:0 auto; border-radius:8px;
 }
 
-/* Mobile: obraz pod tekstem */
+/* Mobile – obraz pod tekstem */
 @media (max-width:900px){
   .talent-card{ padding:20px !important; }
   .talent-card h3{ text-align:left; }
 }
 
-
+/* Intro nad ramką */
+.intro-ig {
+  max-width:1100px; 
+  margin:40px auto 20px; 
+  text-align:center;
+}
+.intro-ig p { margin:0; color:#222; }
