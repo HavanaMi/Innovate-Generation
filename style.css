@@ -1,395 +1,73 @@
-/* Global Styles */
-body {
-  margin: 0;
-  background-color: #f8f6f1;  /* BYŁO #111 */
-  color: #222;                /* BYŁO #f2f2f2 */
-  font-family: 'Segoe UI', sans-serif;
+/* ===== HARD THEME OVERRIDES (paste at very end) ===== */
+
+/* Globalne tło + tekst */
+html, body { background-color:#f8f6f1 !important; color:#222 !important; }
+
+/* Header / Nav / Footer na jasno */
+header, footer, nav {
+  background-color:#f8f6f1 !important;
+  color:#222 !important;
+  border-top:1px solid #e6e2d9 !important;
+  border-bottom:1px solid #e6e2d9 !important;
+}
+nav a { color:#333 !important; }
+nav a:hover { color:#ffcc00 !important; }
+
+/* Typowe jasne sekcje (żeby nie były czarne) */
+section, #home, #about, #articles, #shop, #resources, #contact, #policy {
+  background-color:transparent !important;
+  color:#222 !important;
 }
 
-header, footer {
-  background-color: #f8f6f1;  /* BYŁO #1a1a1a */
-  text-align: center;
-  padding: 40px 20px;
-  color: #222;
-}
-
-nav {
-  background-color: #f8f6f1;  /* BYŁO #222 */
-  padding: 10px;
-  text-align: center;
-  border-top: 1px solid #e6e2d9;
-  border-bottom: 1px solid #e6e2d9;
-}
-
-nav a {
-  color: #333;                /* BYŁO #fff */
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-/* Contact Page Styles */
-#contact h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;                /* BYŁO #fff */
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-label {
-  margin: 10px 0;
-  color: #222;                /* BYŁO #fff */
-}
-
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #ffffff;  /* BYŁO #222 */
-  color: #222;                /* BYŁO #fff */
-  border-radius: 5px;
-  border: 1px solid #ccc;     /* BYŁO none */
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  background-color: #007acc;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #005f99;
-}
-
-/* Special Button for Zrzutka */
-.donate-button {
-  background-color: #e63946;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.donate-button:hover {
-  background-color: #c71c2a;
-}
-
-/* Portfolio Page Styles */
-#portfolio {
-  padding: 40px 20px;
-  background-color: transparent; /* BYŁO #111 */
-}
-
-#portfolio h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-#portfolio p {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.portfolio-item {
-  background: #303030;          /* BYŁO #1f1f1f */
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  color: #f8f6f1;               /* BYŁO #eee */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* BYŁO z białym */
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-#video-section {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#video-section h3,
-#image-gallery h3 {
-  color: #222;                   /* BYŁO #fff */
-  margin-bottom: 20px;
-}
-
-#image-gallery {
-  margin-top: 40px;
-}
-
-/* Categories Section */
-#categories-of-the-month {
-  background-color: #303030;     /* BYŁO #333 */
-  color: #f8f6f1;
-}
-
-.categories {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.category-item {
-  background: #303030;           /* BYŁO #444 */
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 200px;
-  color: #f0f0f0;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.category-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.category-item button {
-  margin-top: 10px;
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.category-item button:hover {
-  background-color: #005f99;
-}
-
-/* Featured Product Section */
-#featured-products {
-  background-color: #303030;     /* BYŁO #333 */
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin-top: 40px;
-  gap: 20px;
-  flex-wrap: wrap;
-  color: #f8f6f1;
-}
-
-.product-item {
-  background-color: #303030;     /* BYŁO #444 */
-  padding: 20px;
-  width: 22%;
-  min-width: 240px;
-  text-align: center;
-  border-radius: 8px;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.12); /* naturalniejszy cień */
-}
-
-.product-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product-item form {
-  margin-top: 10px;
-}
-
-.product-item button {
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.product-item button:hover {
-  background-color: #005f99;
-}
-
-/* Events Section */
-#events {
-  background-color: #303030;     /* BYŁO #222 */
-  color: #f8f6f1;
-  text-align: center;
-}
-
-#events ul {
-  list-style: none;
-  padding: 0;
-}
-
-#events ul li {
-  margin: 10px 0;
-}
-
-#events button {
-  margin-top: 20px;
-  background-color: #007acc;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#events button:hover {
-  background-color: #005f99;
-}
-
-/* Poll Section */
-#poll {
-  background-color: #303030;     /* BYŁO #444 */
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-#poll form {
-  margin-top: 20px;
-}
-
-#poll button {
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#poll button:hover {
-  background-color: #005f99;
-}
-
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
+/* KAFLE/PANELE, które mają być SZARE #303030 */
+#portfolio,
+.portfolio-item,
+#categories-of-the-month,
+.category-item,
+#featured-products,
+.product-item,
+#events,
+#poll,
 .modal-content {
-  background-color: #303030;     /* BYŁO #222 */
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  color: white;
-  border-radius: 10px;
+  background-color:#303030 !important;
+  color:#f8f6f1 !important;
+  border-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,.12) !important;
 }
 
-.close-btn {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+/* Teksty w szarych panelach */
+#portfolio h2, #portfolio h3, #portfolio .price,
+.category-item h2, .category-item h3,
+.product-item h2, .product-item h3,
+#events h2, #poll h2,
+.modal-content h2, .modal-content h3 {
+  color:#ffffff !important;
+}
+#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p {
+  color:#e8e8e8 !important;
 }
 
-.close-btn:hover {
-  color: #ffcc00;
+/* Formularze – jasne */
+label { color:#222 !important; }
+input, textarea {
+  background:#ffffff !important; color:#222 !important;
+  border:1px solid #ccc !important;
 }
 
-.work-gallery img {
-  width: 30%;
-  margin: 10px;
-  border-radius: 5px;
+/* Przyciski na panelach */
+.product-item button, .category-item button, #events button, #poll button, button {
+  background:#007acc !important; color:#fff !important;
+}
+.product-item button:hover, .category-item button:hover, #events button:hover, #poll button:hover, button:hover {
+  background:#005f99 !important;
 }
 
-/* (duplikat w oryginale) #poll button – zostawiamy, spójne wartości */
-#poll button {
-  background-color: #007acc;
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
+/* Artykuły */
+.post { border-bottom:1px solid #ddd !important; }
+.post h2 { color:#111 !important; }
+.post p { color:#333 !important; }
 
-#poll button:hover {
-  background-color: #005f99;
-}
-
-.donate-flex {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.donate-flex form {
-  margin: 0;
-}
-
-.articles {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.post {
-  margin-bottom: 50px;
-  border-bottom: 1px solid #ddd; /* BYŁO #444 */
-  padding-bottom: 30px;
-}
-
-.post h2 {
-  color: #111;                  /* BYŁO #ffcc00 (opcjonalnie zostaw, jeśli chcesz żółty) */
-}
-
-.post p {
-  color: #333;                  /* BYŁO #ccc */
-}
-
-/* DODANE: uniwersalna sekcja ciemna (np. Talent Spotlight / Nikola) */
-.section-dark {
-  background-color: #303030;
-  color: #f8f6f1;
-  padding: 40px 20px;
-}
-.section-dark h2 { color: #ffffff; }
-.section-dark p  { color: #ececec; }
+/* Sekcja Nikola (dodaj class="section-dark" w HTML) */
+.section-dark { background:#303030 !important; color:#f8f6f1 !important; padding:40px 20px; }
+.section-dark h2 { color:#fff !important; }
+.section-dark p  { color:#ececec !important; }
