@@ -140,4 +140,35 @@ nav a:hover{ color:#ffcc00 !important; }
 /* jeśli kiedyś daliśmy .section-dark itp., to niech nie psują tej karty */
 .flex .section-dark, section.talent-card{ background:initial !important; }
 
+/* Intro nad ramką */
+.intro-ig{
+  max-width:1100px; margin:40px auto 20px; text-align:center;
+}
+.intro-ig p{ margin:0; color:#222; }
+
+/* TALENT CARD – jaśniejsza szarość niż menu, tekst L / zdjęcie P */
+.talent-card{
+  background:#505050 !important;     /* jaśniejszy szary niż #303030 */
+  color:#f8f6f1 !important;
+  padding:24px !important;
+  border-radius:12px !important;
+  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
+  max-width:1100px !important;
+  margin:20px auto 36px !important;
+  display:flex !important; gap:24px !important; align-items:center !important;
+  flex-wrap:wrap !important;
+}
+.talent-card .half{ flex:1 1 420px !important; }
+.talent-card h3{ color:#fff !important; margin:0 0 10px !important; text-align:center; }
+.talent-card p{ color:#eaeaea !important; margin:0 !important; }
+.talent-card .half-image img{
+  width:90%; max-width:360px; display:block; margin:0 auto; border-radius:8px;
+}
+
+/* Mobile: obraz pod tekstem */
+@media (max-width:900px){
+  .talent-card{ padding:20px !important; }
+  .talent-card h3{ text-align:left; }
+}
+
 
