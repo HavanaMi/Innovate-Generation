@@ -224,7 +224,7 @@
     <p>Innovate Generation is a Community Interest Company (CIC) based in the UK. We organize creative and cultural events including fashion shows, photography exhibitions, sculpture showcases, canvas art, watercolors, sketches, and more – with opportunities for the public to purchase youth-made products. Our mission is to promote artists especially talented young people aged 14–25 and give them a platform to showcase their creative abilities.</p>
   </section>
 
-<section class="flex">
+<section class="flex talent-card">
   <div class="half">
     <h3>Talent Spotlight</h3>
     <p>
@@ -232,10 +232,40 @@
     </p>
   </div>
   <div class="half">
-<img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year"
-     style="width: 90%; max-width: 350px; display: block; margin: 0 auto; border-radius: 8px;" />
+    <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year"
+         style="width: 90%; max-width: 350px; display: block; margin: 0 auto; border-radius: 8px;" />
   </div>
 </section>
+
+<style>
+  .talent-card {
+    background: #303030;       /* szare tło jak w T-shirtach */
+    color: #f8f6f1;            /* jasny tekst */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    max-width: 1100px;
+    margin: 30px auto;
+    align-items: center;
+  }
+  .talent-card h3 {
+    color: #fff;
+    margin-top: 0;
+  }
+  .talent-card p {
+    color: #e8e8e8;
+  }
+  .talent-card .half {
+    flex: 1;
+    padding: 10px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+</style>
+
 
   <section>
     <h2>Our Goal</h2>
