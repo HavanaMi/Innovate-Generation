@@ -1,25 +1,28 @@
 /* Global Styles */
 body {
   margin: 0;
-  background-color: #111;
-  color: #f2f2f2;
+  background-color: #f8f6f1;  /* BYŁO #111 */
+  color: #222;                /* BYŁO #f2f2f2 */
   font-family: 'Segoe UI', sans-serif;
 }
 
 header, footer {
-  background-color: #1a1a1a;
+  background-color: #f8f6f1;  /* BYŁO #1a1a1a */
   text-align: center;
   padding: 40px 20px;
+  color: #222;
 }
 
 nav {
-  background-color: #222;
+  background-color: #f8f6f1;  /* BYŁO #222 */
   padding: 10px;
   text-align: center;
+  border-top: 1px solid #e6e2d9;
+  border-bottom: 1px solid #e6e2d9;
 }
 
 nav a {
-  color: #fff;
+  color: #333;                /* BYŁO #fff */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -37,7 +40,7 @@ section {
 #contact h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #fff;
+  color: #222;                /* BYŁO #fff */
 }
 
 form {
@@ -48,17 +51,17 @@ form {
 
 label {
   margin: 10px 0;
-  color: #fff;
+  color: #222;                /* BYŁO #fff */
 }
 
 input, textarea {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
-  background-color: #222;
-  color: #fff;
+  background-color: #ffffff;  /* BYŁO #222 */
+  color: #222;                /* BYŁO #fff */
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc;     /* BYŁO none */
 }
 
 textarea {
@@ -97,17 +100,19 @@ button:hover {
 /* Portfolio Page Styles */
 #portfolio {
   padding: 40px 20px;
-  background-color: #111;
+  background-color: transparent; /* BYŁO #111 */
 }
 
 #portfolio h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #222;
 }
 
 #portfolio p {
   text-align: center;
   margin-bottom: 40px;
+  color: #333;
 }
 
 .portfolio {
@@ -118,12 +123,12 @@ button:hover {
 }
 
 .portfolio-item {
-  background: #1f1f1f;
+  background: #303030;          /* BYŁO #1f1f1f */
   border-radius: 8px;
   width: 300px;
   text-align: center;
-  color: #eee;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  color: #f8f6f1;               /* BYŁO #eee */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* BYŁO z białym */
 }
 
 .portfolio-item img {
@@ -139,7 +144,7 @@ button:hover {
 
 #video-section h3,
 #image-gallery h3 {
-  color: #fff;
+  color: #222;                   /* BYŁO #fff */
   margin-bottom: 20px;
 }
 
@@ -149,7 +154,8 @@ button:hover {
 
 /* Categories Section */
 #categories-of-the-month {
-  background-color: #333;
+  background-color: #303030;     /* BYŁO #333 */
+  color: #f8f6f1;
 }
 
 .categories {
@@ -159,11 +165,13 @@ button:hover {
 }
 
 .category-item {
-  background: #444;
+  background: #303030;           /* BYŁO #444 */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   width: 200px;
+  color: #f0f0f0;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .category-item img {
@@ -189,21 +197,25 @@ button:hover {
 
 /* Featured Product Section */
 #featured-products {
-  background-color: #333;
+  background-color: #303030;     /* BYŁO #333 */
   display: flex;
   justify-content: space-between;
   padding: 20px;
   margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #f8f6f1;
 }
 
 .product-item {
-  background-color: #444;
+  background-color: #303030;     /* BYŁO #444 */
   padding: 20px;
   width: 22%;
+  min-width: 240px;
   text-align: center;
   border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12); /* naturalniejszy cień */
 }
 
 .product-item img {
@@ -233,8 +245,8 @@ button:hover {
 
 /* Events Section */
 #events {
-  background-color: #222;
-  color: white;
+  background-color: #303030;     /* BYŁO #222 */
+  color: #f8f6f1;
   text-align: center;
 }
 
@@ -263,7 +275,7 @@ button:hover {
 
 /* Poll Section */
 #poll {
-  background-color: #444;
+  background-color: #303030;     /* BYŁO #444 */
   color: white;
   text-align: center;
   padding: 20px;
@@ -300,7 +312,7 @@ button:hover {
 }
 
 .modal-content {
-  background-color: #222;
+  background-color: #303030;     /* BYŁO #222 */
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -326,6 +338,8 @@ button:hover {
   margin: 10px;
   border-radius: 5px;
 }
+
+/* (duplikat w oryginale) #poll button – zostawiamy, spójne wartości */
 #poll button {
   background-color: #007acc;
   color: white;
@@ -359,14 +373,23 @@ button:hover {
 
 .post {
   margin-bottom: 50px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ddd; /* BYŁO #444 */
   padding-bottom: 30px;
 }
 
 .post h2 {
-  color: #ffcc00;
+  color: #111;                  /* BYŁO #ffcc00 (opcjonalnie zostaw, jeśli chcesz żółty) */
 }
 
 .post p {
-  color: #ccc;
+  color: #333;                  /* BYŁO #ccc */
 }
+
+/* DODANE: uniwersalna sekcja ciemna (np. Talent Spotlight / Nikola) */
+.section-dark {
+  background-color: #303030;
+  color: #f8f6f1;
+  padding: 40px 20px;
+}
+.section-dark h2 { color: #ffffff; }
+.section-dark p  { color: #ececec; }
