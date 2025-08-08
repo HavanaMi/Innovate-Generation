@@ -119,3 +119,25 @@ nav a:hover{ color:#ffcc00 !important; }
 }
 #events a:hover{ color:#333 !important; }
 
+/* --- Talent card: szara ramka (jaśniejsza niż menu) --- */
+.talent-card{
+  background:#505050 !important;   /* jaśniejszy szary niż #303030 */
+  color:#f8f6f1 !important;
+  padding:20px !important;
+  border-radius:12px !important;
+  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
+  max-width:1100px !important;
+  margin:30px auto !important;
+  display:flex !important;
+  gap:20px !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+}
+.talent-card .half{ flex:1 1 300px !important; }
+.talent-card h3{ color:#fff !important; margin:0 0 8px !important; }
+.talent-card p{ color:#e8e8e8 !important; }
+
+/* jeśli kiedyś daliśmy .section-dark itp., to niech nie psują tej karty */
+.flex .section-dark, section.talent-card{ background:initial !important; }
+
+
