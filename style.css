@@ -1,191 +1,330 @@
-/* ===== HARD THEME OVERRIDES (musi być NA SAMYM KOŃCU) ===== */
+/* ===== HARD THEME OVERRIDES (FINAL, paste at the very end) ===== */
 
-/* Globalne tło + tekst */
-html, body { 
-  background-color:#f8f6f1 !important; 
-  color:#222 !important; 
-}
+/* Global – jasny motyw */
+html, body { background:#f8f6f1 !important; color:#222 !important; }
 
-/* Header / Nav / Footer */
-header, footer {
-  background-color:#f8f6f1 !important;
-  color:#222 !important;
+/* Header / Footer */
+header, footer{
+  background:#f8f6f1 !important; color:#222 !important;
   border-top:1px solid #e6e2d9 !important;
   border-bottom:1px solid #e6e2d9 !important;
 }
+
+/* NAV – szary pasek + białe linki */
 nav{
-  background:#303030 !important;
-  border-top:none !important;
-  border-bottom:none !important;
+  background:#303030 !important; color:#fff !important;
+  border-top:none !important; border-bottom:none !important;
   box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 nav a{ color:#fff !important; }
 nav a:hover{ color:#ffcc00 !important; }
 
-/* Jasne sekcje */
-section, #home, #about, #articles, #shop, #resources, #contact, #policy {
-  background-color:transparent !important;
-  color:#222 !important;
+/* Sekcje domyślnie jasne */
+section, #home, #about, #articles, #shop, #resources, #contact, #policy{
+  background:transparent !important; color:#222 !important;
 }
 
-/* Panele/kafle ciemne */
+/* Panele/kafle ciemne (jak w sklepie) */
 #portfolio, .portfolio-item,
 #categories-of-the-month, .category-item,
 #featured-products, .product-item,
 #events, #poll, .modal-content {
-  background-color:#303030 !important;
-  color:#f8f6f1 !important;
-  border-color: rgba(255,255,255,.08) !important;
-  box-shadow: 0 0 10px rgba(0,0,0,.12) !important;
+  background:#303030 !important; color:#f8f6f1 !important;
+  border-color:rgba(255,255,255,.08) !important;
+  box-shadow:0 0 10px rgba(0,0,0,.12) !important;
 }
-
-/* Teksty w panelach ciemnych */
 #portfolio h2, #portfolio h3, #portfolio .price,
 .category-item h2, .category-item h3,
 .product-item h2, .product-item h3,
-#events h2, #poll h2, .modal-content h2, .modal-content h3 {
-  color:#ffffff !important;
-}
-#portfolio p, .category-item p, .product-item p,
-#events p, #poll p, .modal-content p {
-  color:#e8e8e8 !important;
-}
+#events h2, #poll h2, .modal-content h2, .modal-content h3 { color:#fff !important; }
+#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p { color:#e8e8e8 !important; }
 
 /* Formularze */
-label { color:#222 !important; }
-input, textarea {
-  background:#ffffff !important; 
-  color:#222 !important;
+label{ color:#222 !important; }
+input, textarea{
+  background:#fff !important; color:#222 !important;
   border:1px solid #ccc !important;
 }
 
 /* Przyciski */
-.product-item button, .category-item button, 
-#events button, #poll button, button {
-  background:#007acc !important; 
-  color:#fff !important;
+button,
+.product-item button, .category-item button,
+#events button, #poll button{
+  background:#007acc !important; color:#fff !important;
 }
-.product-item button:hover, .category-item button:hover, 
-#events button:hover, #poll button:hover, button:hover {
-  background:#005f99 !important;
-}
+button:hover,
+.product-item button:hover, .category-item button:hover,
+#events button:hover, #poll button:hover{ background:#005f99 !important; }
 
 /* Artykuły */
-.post { border-bottom:1px solid #ddd !important; }
-.post h2 { color:#111 !important; }
-.post p { color:#333 !important; }
+.post{ border-bottom:1px solid #ddd !important; }
+.post h2{ color:#111 !important; }
+.post p{ color:#333 !important; }
 
-/* Sekcja ciemna / talent spotlight */
-.section-dark, #talent-spotlight {
-  background:#303030 !important;
-  color:#f8f6f1 !important;
-  padding:40px 24px !important;
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
-}
-.section-dark h2, #talent-spotlight h2 { color:#fff !important; }
-.section-dark p, #talent-spotlight p { color:#ececec !important; }
+/* Linki do eventów – ciemne */
+#events a{ color:#111 !important; text-decoration:underline; font-weight:600; }
+#events a:hover{ color:#333 !important; }
 
-/* Układ tekst + obraz */
-#talent-spotlight .grid-2, .section-dark .grid-2 {
-  display:grid; gap:24px; align-items:center;
-  grid-template-columns:1fr 1fr;
-}
-@media (max-width:900px){
-  #talent-spotlight .grid-2, .section-dark .grid-2 {
-    grid-template-columns:1fr;
-  }
-}
+/* ---------- Talent Spotlight (ramka) ---------- */
 
-/* Event Links */
-#events a {
-  color:#111 !important;
-  text-decoration: underline;
-  font-weight: 600;
-}
-#events a:hover { color:#333 !important; }
+/* Intro nad ramką */
+.intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
+.intro-ig p{ margin:0; color:#222; }
 
-/* --- Talent card: ramka --- */
+/* Szara karta – JAŚNIEJSZA niż menu (#6F7D7D) */
 .talent-card{
-  background:#6F7D7D !important;   /* jaśniejszy zielono-szary */
-  color:#f8f6f1 !important;
-  padding:20px !important;
-  border-radius:12px !important;
+  background:#6F7D7D !important; color:#f8f6f1 !important;
+  padding:24px !important; border-radius:12px !important;
   box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
-  max-width:1100px !important;
-  margin:30px auto !important;
-  display:flex !important;
-  gap:20px !important;
-  align-items:center !important;
-  flex-wrap:wrap !important;
-}
-
-/* TALENT CARD – jaśniejsza szarość niż menu, tekst L / zdjęcie P */
-.talent-card{
-  background:#6F7D7D !important;   /* jaśniejszy zielono-szary */
-  color:#f8f6f1 !important;
-  padding:24px !important;
-  border-radius:12px !important;
-  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
-  max-width:1100px !important;
-  margin:20px auto 36px !important;
+  max-width:1100px !important; margin:20px auto 36px !important;
   display:flex !important; gap:24px !important; align-items:center !important;
   flex-wrap:wrap !important;
 }
-
-.talent-card{
-  background:#6F7D7D !important;
-  color:#f8f6f1 !important;
-  padding:24px !important;
-  border-radius:12px !important;
-  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
-  max-width:1100px !important;
-  margin:20px auto 36px !important;
-  display:flex !important;
-  gap:24px !important;
-  align-items:center !important;
-  flex-wrap:wrap !important;
-}
-
 .talent-card .half{ flex:1 1 420px !important; }
 .talent-card h3{ color:#fff !important; margin:0 0 10px !important; text-align:center; }
 .talent-card p{ color:#eaeaea !important; margin:0 !important; }
+
+/* Obraz po prawej + limit rozmiaru */
+.talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
 .talent-card .half-image img{
-  width:90%;
-  max-width:360px;
-  display:block;
-  margin:0 auto;
-  border-radius:8px;
+  width:90%; max-width:360px; height:auto;
+  display:block; margin:0 auto; border-radius:8px;
 }
 
-
-/* Mobile – obraz pod tekstem */
+/* Mobile: obraz pod tekstem, ciaśniejsze paddingi */
 @media (max-width:900px){
   .talent-card{ padding:20px !important; }
   .talent-card h3{ text-align:left; }
 }
 
-/* Intro nad ramką */
-.intro-ig {
-  max-width:1100px; 
-  margin:40px auto 20px; 
-  text-align:center;
-}
-.intro-ig p { margin:0; color:#222; }
+/* ---------- Obrazki responsywne ---------- */
+img{ max-width:100%; height:auto; }
 
-/* Obrazki responsywne */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Wersja mobilna – powiększenie ważnych obrazów */
-@media (max-width: 768px) {
+/* Wersja mobilna – powiększ ważne obrazy do pełnej szerokości */
+@media (max-width:768px){
   .intro-ig img,
   .portfolio-item img,
-  .talent-card .half-image img {
-    width: 100% !important;
-    max-width: none !important;
+  .talent-card .half-image img{
+    width:100% !important; max-width:none !important;
   }
 }
+/* ===== HARD THEME OVERRIDES (FINAL, paste at the very end) ===== */
 
+/* Global – jasny motyw */
+html, body { background:#f8f6f1 !important; color:#222 !important; }
+
+/* Header / Footer */
+header, footer{
+  background:#f8f6f1 !important; color:#222 !important;
+  border-top:1px solid #e6e2d9 !important;
+  border-bottom:1px solid #e6e2d9 !important;
+}
+
+/* NAV – szary pasek + białe linki */
+nav{
+  background:#303030 !important; color:#fff !important;
+  border-top:none !important; border-bottom:none !important;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+nav a{ color:#fff !important; }
+nav a:hover{ color:#ffcc00 !important; }
+
+/* Sekcje domyślnie jasne */
+section, #home, #about, #articles, #shop, #resources, #contact, #policy{
+  background:transparent !important; color:#222 !important;
+}
+
+/* Panele/kafle ciemne (jak w sklepie) */
+#portfolio, .portfolio-item,
+#categories-of-the-month, .category-item,
+#featured-products, .product-item,
+#events, #poll, .modal-content {
+  background:#303030 !important; color:#f8f6f1 !important;
+  border-color:rgba(255,255,255,.08) !important;
+  box-shadow:0 0 10px rgba(0,0,0,.12) !important;
+}
+#portfolio h2, #portfolio h3, #portfolio .price,
+.category-item h2, .category-item h3,
+.product-item h2, .product-item h3,
+#events h2, #poll h2, .modal-content h2, .modal-content h3 { color:#fff !important; }
+#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p { color:#e8e8e8 !important; }
+
+/* Formularze */
+label{ color:#222 !important; }
+input, textarea{
+  background:#fff !important; color:#222 !important;
+  border:1px solid #ccc !important;
+}
+
+/* Przyciski */
+button,
+.product-item button, .category-item button,
+#events button, #poll button{
+  background:#007acc !important; color:#fff !important;
+}
+button:hover,
+.product-item button:hover, .category-item button:hover,
+#events button:hover, #poll button:hover{ background:#005f99 !important; }
+
+/* Artykuły */
+.post{ border-bottom:1px solid #ddd !important; }
+.post h2{ color:#111 !important; }
+.post p{ color:#333 !important; }
+
+/* Linki do eventów – ciemne */
+#events a{ color:#111 !important; text-decoration:underline; font-weight:600; }
+#events a:hover{ color:#333 !important; }
+
+/* ---------- Talent Spotlight (ramka) ---------- */
+
+/* Intro nad ramką */
+.intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
+.intro-ig p{ margin:0; color:#222; }
+
+/* Szara karta – JAŚNIEJSZA niż menu (#6F7D7D) */
+.talent-card{
+  background:#6F7D7D !important; color:#f8f6f1 !important;
+  padding:24px !important; border-radius:12px !important;
+  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
+  max-width:1100px !important; margin:20px auto 36px !important;
+  display:flex !important; gap:24px !important; align-items:center !important;
+  flex-wrap:wrap !important;
+}
+.talent-card .half{ flex:1 1 420px !important; }
+.talent-card h3{ color:#fff !important; margin:0 0 10px !important; text-align:center; }
+.talent-card p{ color:#eaeaea !important; margin:0 !important; }
+
+/* Obraz po prawej + limit rozmiaru */
+.talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
+.talent-card .half-image img{
+  width:90%; max-width:360px; height:auto;
+  display:block; margin:0 auto; border-radius:8px;
+}
+
+/* Mobile: obraz pod tekstem, ciaśniejsze paddingi */
+@media (max-width:900px){
+  .talent-card{ padding:20px !important; }
+  .talent-card h3{ text-align:left; }
+}
+
+/* ---------- Obrazki responsywne ---------- */
+img{ max-width:100%; height:auto; }
+
+/* Wersja mobilna – powiększ ważne obrazy do pełnej szerokości */
+@media (max-width:768px){
+  .intro-ig img,
+  .portfolio-item img,
+  .talent-card .half-image img{
+    width:100% !important; max-width:none !important;
+  }
+}
+/* ===== HARD THEME OVERRIDES (FINAL, paste at the very end) ===== */
+
+/* Global – jasny motyw */
+html, body { background:#f8f6f1 !important; color:#222 !important; }
+
+/* Header / Footer */
+header, footer{
+  background:#f8f6f1 !important; color:#222 !important;
+  border-top:1px solid #e6e2d9 !important;
+  border-bottom:1px solid #e6e2d9 !important;
+}
+
+/* NAV – szary pasek + białe linki */
+nav{
+  background:#303030 !important; color:#fff !important;
+  border-top:none !important; border-bottom:none !important;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+nav a{ color:#fff !important; }
+nav a:hover{ color:#ffcc00 !important; }
+
+/* Sekcje domyślnie jasne */
+section, #home, #about, #articles, #shop, #resources, #contact, #policy{
+  background:transparent !important; color:#222 !important;
+}
+
+/* Panele/kafle ciemne (jak w sklepie) */
+#portfolio, .portfolio-item,
+#categories-of-the-month, .category-item,
+#featured-products, .product-item,
+#events, #poll, .modal-content {
+  background:#303030 !important; color:#f8f6f1 !important;
+  border-color:rgba(255,255,255,.08) !important;
+  box-shadow:0 0 10px rgba(0,0,0,.12) !important;
+}
+#portfolio h2, #portfolio h3, #portfolio .price,
+.category-item h2, .category-item h3,
+.product-item h2, .product-item h3,
+#events h2, #poll h2, .modal-content h2, .modal-content h3 { color:#fff !important; }
+#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p { color:#e8e8e8 !important; }
+
+/* Formularze */
+label{ color:#222 !important; }
+input, textarea{
+  background:#fff !important; color:#222 !important;
+  border:1px solid #ccc !important;
+}
+
+/* Przyciski */
+button,
+.product-item button, .category-item button,
+#events button, #poll button{
+  background:#007acc !important; color:#fff !important;
+}
+button:hover,
+.product-item button:hover, .category-item button:hover,
+#events button:hover, #poll button:hover{ background:#005f99 !important; }
+
+/* Artykuły */
+.post{ border-bottom:1px solid #ddd !important; }
+.post h2{ color:#111 !important; }
+.post p{ color:#333 !important; }
+
+/* Linki do eventów – ciemne */
+#events a{ color:#111 !important; text-decoration:underline; font-weight:600; }
+#events a:hover{ color:#333 !important; }
+
+/* ---------- Talent Spotlight (ramka) ---------- */
+
+/* Intro nad ramką */
+.intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
+.intro-ig p{ margin:0; color:#222; }
+
+/* Szara karta – JAŚNIEJSZA niż menu (#6F7D7D) */
+.talent-card{
+  background:#6F7D7D !important; color:#f8f6f1 !important;
+  padding:24px !important; border-radius:12px !important;
+  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
+  max-width:1100px !important; margin:20px auto 36px !important;
+  display:flex !important; gap:24px !important; align-items:center !important;
+  flex-wrap:wrap !important;
+}
+.talent-card .half{ flex:1 1 420px !important; }
+.talent-card h3{ color:#fff !important; margin:0 0 10px !important; text-align:center; }
+.talent-card p{ color:#eaeaea !important; margin:0 !important; }
+
+/* Obraz po prawej + limit rozmiaru */
+.talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
+.talent-card .half-image img{
+  width:90%; max-width:360px; height:auto;
+  display:block; margin:0 auto; border-radius:8px;
+}
+
+/* Mobile: obraz pod tekstem, ciaśniejsze paddingi */
+@media (max-width:900px){
+  .talent-card{ padding:20px !important; }
+  .talent-card h3{ text-align:left; }
+}
+
+/* ---------- Obrazki responsywne ---------- */
+img{ max-width:100%; height:auto; }
+
+/* Wersja mobilna – powiększ ważne obrazy do pełnej szerokości */
+@media (max-width:768px){
+  .intro-ig img,
+  .portfolio-item img,
+  .talent-card .half-image img{
+    width:100% !important; max-width:none !important;
+  }
+}
