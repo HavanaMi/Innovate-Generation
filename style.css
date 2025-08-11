@@ -172,3 +172,20 @@ input, textarea {
   text-align:center;
 }
 .intro-ig p { margin:0; color:#222; }
+
+/* Obrazki responsywne */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wersja mobilna – powiększenie ważnych obrazów */
+@media (max-width: 768px) {
+  .intro-ig img,
+  .portfolio-item img,
+  .talent-card .half-image img {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
