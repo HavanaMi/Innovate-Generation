@@ -263,60 +263,72 @@
   </p>
 </section>
 
-<style>
-  /* TALENT CARD */
-  .talent-card {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
+/* === Talent Spotlight (Cameo Coral) === */
+.talent-card{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:20px;
 
-    background: #EF9D8A;        /* spójna szarość */
-    color: #f8f6f1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,.12);
-    max-width: 1100px;
-    margin: 30px auto 10px auto; /* mniejszy dolny margines = mniejszy gap do Our Goal */
-  }
+  background:#EF9D8A;           /* Cameo Coral */
+  color:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  max-width:1100px;
+  margin:30px auto 10px;        /* mniejszy dolny margines -> mniejszy gap do Our Goal */
+}
 
-  .talent-card h3 {
-    color: #fff;
-    margin: 0 0 10px 0;          /* brak górnego marginesu, mały odstęp pod tytułem */
-    font-size: 1.4rem;
-  }
+.talent-card .half{
+  flex:1 1 320px;
+  padding:10px;
+}
 
-  .talent-card p {
-    color: #e8e8e8;
-    margin: 0;                   /* usunięcie zbędnych przerw wewnątrz karty */
-    line-height: 1.55;
-  }
+.talent-card h3{
+  margin:0 0 10px;
+  font-size:1.5rem;
+  line-height:1.2;
+  color:#fff;
+}
 
-  .talent-card .half {
-    flex: 1 1 320px;             /* elastyczne kolumny, min. szerokość */
-    padding: 10px;
-  }
+.talent-card p{
+  margin:0;
+  line-height:1.6;
+  color:#fff;                   /* lepszy kontrast na tle coral */
+}
 
-  .talent-card .half-image img {
-    width: 100%;
-    height: auto;
-    max-height: 360px;           /* ograniczenie wysokości obrazu */
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
-  }
+.talent-card .half-image img{
+  width:100%;
+  height:auto;
+  max-height:360px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
 
-  /* OUR GOAL – redukcja gapa nad h2 i spójne szerokości */
-  .goal-section {
-    max-width: 1100px;
-    margin: 0 auto 30px auto;    /* brak dużego górnego marginesu, standardowy dolny */
-    padding: 0 10px;
-  }
+/* === Our Goal (zbicie górnego marginesu nagłówka) === */
+.goal-section{
+  max-width:1100px;
+  margin:0 auto 30px;
+  padding:0 10px;
+}
 
-  .goal-section h2 {
-    margin-top: 0;               /* klucz: usuwa domyślny margin-top nagłówka */
-    margin-bottom: 10px;
-  }
+.goal-section h2{
+  margin:0 0 10px;
+}
+
+.goal-section p{
+  margin:0;
+  line-height:1.6;
+}
+
+/* === Mobile tweaks === */
+@media (max-width:640px){
+  .talent-card{ padding:16px; gap:12px; }
+  .talent-card .half{ padding:6px; }
+  .talent-card h3{ font-size:1.25rem; }
+}
+
 
   .goal-section p {
     margin: 0;
@@ -337,7 +349,6 @@
     }
   }
 </style>
-
 
 <img src="images/Culture.png" alt="Culture Illustration" style="width: 75%; max-width: 750px; display: block; margin: 20px auto; border-radius: 8px;" />
 
