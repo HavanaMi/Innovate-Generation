@@ -1,4 +1,4 @@
-/* ===== HARD THEME OVERRIDES — FINAL (paste at the very end) ===== */
+/* ===== HARD THEME OVERRIDES — FINAL ===== */
 
 /* Global – jasny motyw */
 html, body { background:#f8f6f1 !important; color:#222 !important; }
@@ -24,7 +24,7 @@ section, #home, #about, #articles, #shop, #resources, #contact, #policy{
   background:transparent !important; color:#222 !important;
 }
 
-/* Panele/kafle ciemne (jak w sklepie) */
+/* Panele/kafle ciemne */
 #portfolio, .portfolio-item,
 #categories-of-the-month, .category-item,
 #featured-products, .product-item,
@@ -61,136 +61,39 @@ button:hover,
 .post h2{ color:#111 !important; }
 .post p{ color:#333 !important; }
 
-/* Linki do eventów – ciemne */
+/* Linki do eventów */
 #events a{ color:#111 !important; text-decoration:underline; font-weight:600; }
 #events a:hover{ color:#333 !important; }
 
-/* ---------- Talent Spotlight (Cameo Coral) ---------- */
+/* ---------- Talent Spotlight (jasne tło + ramka Cameo Coral) ---------- */
 
-/* Intro nad ramką */
 .intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
 .intro-ig p{ margin:0; color:#222; }
 
-/* Karta Talent Spotlight */
 .talent-card{
-  display:flex !important;
-  flex-wrap:wrap !important;
-  align-items:center !important;
-  gap:24px !important;
-
-  background:#EF9D8A !important;      /* Cameo Coral */
-  color:#fff !important;
-  padding:24px !important;
-  border-radius:12px !important;
-  box-shadow:0 6px 20px rgba(0,0,0,.12) !important;
-  max-width:1100px !important;
-  margin:20px auto 20px !important;   /* mniejszy gap do kolejnej sekcji */
+  display:flex; flex-wrap:wrap; align-items:center; gap:24px;
+  background:#fff !important;           /* środek jasny */
+  color:#000 !important;                 /* czarny tekst */
+  padding:24px;
+  border:5px solid #EF9D8A !important;   /* ramka Cameo Coral */
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  max-width:1100px; margin:20px auto;
 }
-.talent-card .half{ flex:1 1 420px !important; padding:10px !important; }
-.talent-card h3{ color:#fff !important; margin:0 0 10px !important; text-align:center; font-size:1.5rem !important; }
-.talent-card p{ color:#fff !important; margin:0 !important; line-height:1.6 !important; }
-
-/* Obraz po prawej + limit rozmiaru */
-.talent-card .half-image{ display:flex !important; justify-content:center !important; align-items:center !important; }
+.talent-card .half{ flex:1 1 420px; padding:10px; }
+.talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#000 !important; text-align:center; }
+.talent-card p{ margin:0; line-height:1.6; color:#000 !important; }
+.talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
 .talent-card .half-image img{
-  width:90% !important; max-width:360px !important; height:auto !important;
-  display:block !important; margin:0 auto !important; border-radius:8px !important;
+  width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover;
 }
 
-/* ---------- Obrazki responsywne ---------- */
-img{ max-width:100%; height:auto; }
-
-/* Mobile: obraz pod tekstem, ciaśniejsze paddingi */
-@media (max-width:900px){
-  .talent-card{ padding:20px !important; }
-  .talent-card h3{ text-align:left !important; }
-}
-@media (max-width:768px){
-  .intro-ig img,
-  .portfolio-item img,
-  .talent-card .half-image img{
-    width:100% !important; max-width:none !important;
-  }
-}
-
-/* ---------- Our Goal (zbicie marginesu nagłówka) ---------- */
-.goal-section{
-  max-width:1100px;
-  margin:0 auto 30px;
-  padding:0 10px;
-}
+/* ---------- Our Goal ---------- */
+.goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
 .goal-section h2{ margin:0 0 10px; }
 .goal-section p{ margin:0; line-height:1.6; }
 
-/* === Talent Spotlight (jasne tło + ramka Cameo Coral) === */
-.talent-card{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:24px;
-
-  background:#fff; /* jasne tło środka */
-  color:#000; /* czarny tekst */
-  padding:24px;
-  border:5px solid #EF9D8A; /* ramka Cameo Coral */
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
-  max-width:1100px;
-  margin:20px auto;
-}
-
-.talent-card .half{
-  flex:1 1 420px;
-  padding:10px;
-}
-
-.talent-card h3{
-  margin:0 0 10px;
-  font-size:1.5rem;
-  line-height:1.2;
-  color:#000;
-  text-align:center;
-}
-
-.talent-card p{
-  margin:0;
-  line-height:1.6;
-  color:#000;
-}
-
-.talent-card .half-image{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.talent-card .half-image img{
-  width:90%;
-  max-width:360px;
-  height:auto;
-  display:block;
-  margin:0 auto;
-  border-radius:8px;
-  object-fit:cover;
-}
-
-/* Our Goal — zbicie marginesu nagłówka */
-.goal-section{
-  max-width:1100px;
-  margin:0 auto 30px;
-  padding:0 10px;
-}
-
-.goal-section h2{
-  margin:0 0 10px;
-}
-
-.goal-section p{
-  margin:0;
-  line-height:1.6;
-}
-
-/* Mobile tweaks */
+/* ---------- Mobile tweaks ---------- */
 @media (max-width:900px){
   .talent-card{ padding:20px; gap:16px; }
   .talent-card h3{ text-align:left; }
