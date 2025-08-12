@@ -253,68 +253,91 @@
   </div>
 </section>
 
+<section class="goal-section">
+  <h2>Our Goal</h2>
+  <p>
+    Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines.
+    We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events.
+    Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in
+    building skills, confidence, and new futures.
+  </p>
+</section>
+
 <style>
+  /* TALENT CARD */
   .talent-card {
-    background: #505050;       /* jaśniejsza szarość niż w menu */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    background: #303030;        /* spójna szarość */
     color: #f8f6f1;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,.12);
     max-width: 1100px;
-    margin: 30px auto;
-    align-items: center;
+    margin: 30px auto 10px auto; /* mniejszy dolny margines = mniejszy gap do Our Goal */
   }
+
   .talent-card h3 {
     color: #fff;
-    margin-top: 0;
+    margin: 0 0 10px 0;          /* brak górnego marginesu, mały odstęp pod tytułem */
+    font-size: 1.4rem;
   }
+
   .talent-card p {
     color: #e8e8e8;
+    margin: 0;                   /* usunięcie zbędnych przerw wewnątrz karty */
+    line-height: 1.55;
   }
+
   .talent-card .half {
-    flex: 1;
+    flex: 1 1 320px;             /* elastyczne kolumny, min. szerokość */
     padding: 10px;
   }
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+
+  .talent-card .half-image img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;           /* ograniczenie wysokości obrazu */
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+
+  /* OUR GOAL – redukcja gapa nad h2 i spójne szerokości */
+  .goal-section {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;    /* brak dużego górnego marginesu, standardowy dolny */
+    padding: 0 10px;
+  }
+
+  .goal-section h2 {
+    margin-top: 0;               /* klucz: usuwa domyślny margin-top nagłówka */
+    margin-bottom: 10px;
+  }
+
+  .goal-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* MOBILE TWEAKS */
+  @media (max-width: 640px) {
+    .talent-card {
+      padding: 16px;
+      gap: 12px;
+    }
+    .talent-card .half {
+      padding: 6px;
+    }
+    .talent-card h3 {
+      font-size: 1.25rem;
+    }
   }
 </style>
 
-<style>
-  .talent-card {
-    background: #303030;       /* szare tło jak w T-shirtach */
-    color: #f8f6f1;            /* jasny tekst */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,.12);
-    max-width: 1100px;
-    margin: 30px auto;
-    align-items: center;
-  }
-  .talent-card h3 {
-    color: #fff;
-    margin-top: 0;
-  }
-  .talent-card p {
-    color: #e8e8e8;
-  }
-  .talent-card .half {
-    flex: 1;
-    padding: 10px;
-  }
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
-</style>
-  
-  <section>
-    <h2>Our Goal</h2>
-    <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
-  </section>
 
 <img src="images/Culture.png" alt="Culture Illustration" style="width: 75%; max-width: 750px; display: block; margin: 20px auto; border-radius: 8px;" />
 
@@ -338,14 +361,16 @@
     </div>
 </section>
 
-<section class="donate-section">
-  <h2>Buy Me Breakfast / Lunch</h2>
-  <img src="images/Lunch_blank.png" alt="Lunch Illustration" style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
+<section class="donate-section" style="margin-top:0; padding-top:0;">
+  <h2 style="margin-top:0;">Buy Me Breakfast / Lunch</h2>
+  <img src="images/Lunch_blank.png" alt="Lunch Illustration" 
+       style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
   <p>
     Want to support our youth? Donate the cost of a breakfast or lunch to help volunteers and creatives stay nourished during events and workshops.
     A snack break during the course, particularly while working, and in case the teenager hasn’t had breakfast at home.
   </p>
-  <div class="donate-buttons" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+  <div class="donate-buttons" 
+       style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
 
     <a href="https://buy.stripe.com/3cIbJ02NPbsR4K48u95sA03" 
        target="_blank" 
