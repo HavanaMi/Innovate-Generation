@@ -121,3 +121,39 @@ img{ max-width:100%; height:auto; }
 }
 .goal-section h2{ margin:0 0 10px; }
 .goal-section p{ margin:0; line-height:1.6; }
+
+/* === Talent Spotlight (Cameo Coral) — FINAL === */
+.talent-card{
+  display:flex; flex-wrap:wrap; align-items:center; gap:24px;
+  background:#EF9D8A; /* Cameo Coral */
+  color:#fff;
+  padding:24px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  max-width:1100px;
+  margin:20px auto; /* mały gap nad/pod kartą */
+}
+.talent-card .half{ flex:1 1 420px; padding:10px; }
+.talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#fff; text-align:center; }
+.talent-card p{ margin:0; line-height:1.6; color:#fff; }
+.talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
+.talent-card .half-image img{
+  width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover;
+}
+
+/* Our Goal — zbicie marginesu nagłówka i szerokość */
+.goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
+.goal-section h2{ margin:0 0 10px; }
+.goal-section p{ margin:0; line-height:1.6; }
+
+/* Mobile tweaks */
+@media (max-width:900px){
+  .talent-card{ padding:20px; gap:16px; }
+  .talent-card h3{ text-align:left; }
+}
+@media (max-width:640px){
+  .talent-card{ padding:16px; gap:12px; }
+  .talent-card .half{ padding:6px; }
+  .talent-card h3{ font-size:1.25rem; }
+}
+
