@@ -5,222 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation</title>
 
-<!-- Primary Meta Tags -->
-<title>Innovate Generation – Empowering Youth Creators</title>
-<meta name="title" content="Innovate Generation – Empowering Youth Creators">
-<meta name="description" content="A London-based CIC promoting youth in art, fashion, photography & events. Discover, support, and showcase the next generation of creative talent.">
-<link rel="canonical" href="https://www.innovategeneration.com/">
+  <!-- Primary Meta Tags -->
+  <title>Innovate Generation – Empowering Youth Creators</title>
+  <meta name="title" content="Innovate Generation – Empowering Youth Creators">
+  <meta name="description" content="A London-based CIC promoting youth in art, fashion, photography & events. Discover, support, and showcase the next generation of creative talent.">
+  <link rel="canonical" href="https://www.innovategeneration.com/">
   <meta name="description" content="Innovate Generation CIC – wspieramy młodych twórców w Londynie poprzez modę, muzykę, sztukę, eventy i mentoring. Dołącz do naszej społeczności.">
-<meta name="keywords" content="Innovate Generation, London, moda, muzyka, eventy, sztuka, mentoring, CIC">
+  <meta name="keywords" content="Innovate Generation, London, moda, muzyka, eventy, sztuka, mentoring, CIC">
 
- <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
-<meta property="og:title" content="Innovate Generation – Empowering Young Creatives" />
-<meta property="og:description" content="Join our movement – workshops, events, and shows that give young creatives a voice." />
-<meta property="og:image" content="https://innovategeneration.com/images/Banner%20index_1.jpg" />
-<meta property="og:url" content="https://innovategeneration.com" />
-<meta property="og:type" content="website" />
-  
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.innovategeneration.com/">
-<meta name="twitter:title" content="Innovate Generation – Empowering Youth Creators">
-<meta name="twitter:description" content="Support youth talent in art, design, and fashion. Join us in our mission.">
-<meta name="twitter:image" content="https://www.innovategeneration.com/images/Banner%20index_1.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Innovate Generation – Empowering Young Creatives" />
+  <meta property="og:description" content="Join our movement – workshops, events, and shows that give young creatives a voice." />
+  <meta property="og:image" content="https://innovategeneration.com/images/Banner%20index_1.jpg" />
+  <meta property="og:url" content="https://innovategeneration.com" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.innovategeneration.com/">
+  <meta name="twitter:title" content="Innovate Generation – Empowering Youth Creators">
+  <meta name="twitter:description" content="Support youth talent in art, design, and fashion. Join us in our mission.">
+  <meta name="twitter:image" content="https://www.innovategeneration.com/images/Banner%20index_1.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css?v=5">
+
+  <!-- Minimal inline styles kept (light theme + modules).
+       Talent Spotlight/Goal styling is INCLUDED here to działa od razu. -->
   <style>
-    body {
-      margin: 0;
-      background-color: #111;
-      color: #f2f2f2;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    /* Light theme base */
+    body { margin:0; background:#f8f6f1; color:#222; font-family:'Segoe UI',sans-serif; }
+    header, footer { background:#f8f6f1; text-align:center; padding:20px 15px; color:#222; }
+    nav { background:#303030; padding:6px; text-align:center; font-size:1.1em; }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:#ffcc00; }
+    section { padding:20px; max-width:1200px; margin:0 auto; }
+    h1,h2,h3,h4 { text-align:center; }
 
-    header, footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 20px 15px;
-    }
+    /* Products / donate (zostawiamy jak było) */
+    .product-row{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .product-item{ background:#1f1f1f; padding:20px; border-radius:8px; width:250px; text-align:center; color:#fff; }
+    .product-item img{ width:100%; height:200px; object-fit:cover; border-radius:4px; }
+    .product-item a, .product-item button{ margin-top:10px; background:#007acc; color:#fff; padding:10px 20px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; display:inline-block; }
+    .product-item a:hover, .product-item button:hover{ background:#005f99; }
 
-    nav {
-      background-color: #222;
-      padding: 6px;
-      text-align: center;
-      font-size: 1.1em;
-    }
+    .donate-section{ max-width:600px; margin:0 auto; text-align:center; }
+    .donate-buttons{ display:flex; justify-content:center; gap:20px; margin-top:20px; flex-wrap:wrap; }
+    .donate-buttons a, .donate-buttons button{ background:#007acc; color:#fff; padding:12px 24px; border:none; border-radius:6px; cursor:pointer; text-decoration:none; font-weight:bold; }
+    .donate-buttons a:hover, .donate-buttons button:hover{ background:#005f99; }
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    form{ max-width:700px; margin:0 auto; }
+    form input, form textarea, form button{ width:100%; margin:10px 0; padding:10px; border-radius:6px; border:1px solid #ccc; }
+    form button{ background:#007acc; color:#fff; cursor:pointer; }
+    form button:hover{ background:#005f99; }
 
-    nav a:hover {
-      color: #ffcc00;
-    }
+    ul.event-links{ list-style:none; padding:0; text-align:center; }
+    ul.event-links li{ margin:10px 0; }
+    ul.event-links a{ color:#004080; font-weight:bold; text-decoration:underline; }
+    ul.event-links a:hover{ color:#ffcc00; }
 
-    section {
-      padding: 20px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* ---------- Talent Spotlight (jasne tło + ramka Cameo Coral + czarny tekst) ---------- */
+    .talent-card{
+      display:flex; flex-wrap:wrap; align-items:center; gap:24px;
+      background:#fff; color:#000;
+      padding:24px; border-radius:12px;
+      border:5px solid #EF9D8A;             /* Cameo Coral frame */
+      box-shadow:0 6px 20px rgba(0,0,0,.12);
+      max-width:1100px; margin:20px auto;
     }
+    .talent-card .half{ flex:1 1 420px; padding:10px; }
+    .talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#000; text-align:center; }
+    .talent-card p{ margin:0; line-height:1.6; color:#000; }
+    .talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
+    .talent-card .half-image img{ width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover; }
 
-    h1, h2, h3, h4 {
-      text-align: center;
+    /* Our Goal – zbicie marginesu nagłówka */
+    .goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
+    .goal-section h2{ margin:0 0 10px; }
+    .goal-section p{ margin:0; line-height:1.6; }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .talent-card{ padding:20px; gap:16px; }
+      .talent-card h3{ text-align:left; }
     }
-
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+    @media (max-width:768px){
+      .donate-buttons{ flex-direction:column; align-items:center; }
     }
-
-    .half {
-      flex: 1 1 300px;
-    }
-
-    .product-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .product-item {
-      background: #1f1f1f;
-      padding: 20px;
-      border-radius: 8px;
-      width: 250px;
-      text-align: center;
-    }
-
-    .product-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    .product-item button {
-      margin-top: 10px;
-      background: #007acc;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .product-item button:hover {
-      background: #005f99;
-    }
-
-    .donate-section {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .donate-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .donate-buttons button,
-    .donate-buttons a {
-      background-color: #007acc;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .donate-buttons a:hover,
-    .donate-buttons button:hover {
-      background-color: #005f99;
-    }
-
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    form input, form textarea, form button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    form button {
-      background: #007acc;
-      color: white;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #005f99;
-    }
-
-    ul.event-links {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    ul.event-links li {
-      margin: 10px 0;
-    }
-
-    ul.event-links a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    ul.event-links a:hover {
-      color: #ffcc00;
-    }
-
-    @media screen and (max-width: 768px) {
-      .donate-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
+    @media (max-width:640px){
+      .talent-card{ padding:16px; gap:12px; }
+      .talent-card .half{ padding:6px; }
+      .talent-card h3{ font-size:1.25rem; }
     }
   </style>
 </head>
-<!-- BODY CONTENT CONTINUES FROM HERE -->
 
 <body>
 <header>
-  <img src="images/Banner%20index_1.jpg" alt="Innovate Generation banner"
-       style="max-width: 100%; height: auto; margin-bottom: 10px;" />
-  <h1 style="font-size: 3em; margin: 10px 0 5px;">Innovate Generation</h1>
-  <p style="font-size: 1.4em; margin: 0;">Social Innovation. Real Impact.</p>
+  <img src="images/Banner%20index_1.jpg" alt="Innovate Generation banner" style="max-width:100%; height:auto; margin-bottom:10px;" />
+  <h1 style="font-size:3em; margin:10px 0 5px;">Innovate Generation</h1>
+  <p style="font-size:1.4em; margin:0;">Social Innovation. Real Impact.</p>
 </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="articles.html">Articles</a>
-    <a href="shop.html">Shop</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
-    <a href="policy.html">Policy</a> <!-- Dodany link -->
-  </nav>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="articles.html">Articles</a>
+  <a href="shop.html">Shop</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+  <a href="policy.html">Policy</a>
+</nav>
 
 <!-- Intro / opis Innovate Generation (NAD ramką) -->
 <section class="intro-ig">
@@ -228,13 +126,12 @@
     <strong>Innovate Generation</strong> UK-based CIC hosting creative events — fashion shows, art and photography exhibitions — offering the public a chance to buy youth-made works.
     We promote artists, especially ages 14–25, by giving them a platform to showcase their talent.
   </p>
-<img src="images/what_offer.png" 
-     alt="What We Offer" 
-     style="width:90%; display:block; margin:20px auto; border-radius:8px;" />
-  
-    <p>
-    <strong>We Offer</strong> creative production services, including video and photography, tailored workshops, and individual training. Our work supports young talent by providing skills, guidance, and opportunities to present their creativity to wider audiences.
+  <img src="images/what_offer.png" alt="What We Offer" style="width:90%; display:block; margin:20px auto; border-radius:8px;" />
+  <p>
+    <strong>We Offer</strong> creative production services, including video and photography, tailored workshops, and individual training.
+    Our work supports young talent by providing skills, guidance, and opportunities to present their creativity to wider audiences.
   </p>
+</section> <!-- ✅ brakowało zamknięcia -->
 
 <!-- Talent Spotlight -->
 <section>
@@ -254,24 +151,25 @@
   </div>
 </section>
 
-    <section style="background-color:#f5f5f5; padding:30px 15px; margin:40px 0; text-align:center; border-radius:10px;">
-    <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
-        <img src="images/Jensen_Huang_Nvidia.jpg" alt="Jensen Huang" 
-             style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-        <div style="max-width:700px;">
-            <p style="font-size:22px; font-style:italic; font-weight:bold; text-transform:uppercase; color:#333; margin:0;">
-                "If you take care of people, everything else takes care of itself."
-            </p>
-            <p style="font-size:14px; color:#777; margin-top:5px;">
-                – Jensen Huang, CEO & Co-Founder of NVIDIA
-            </p>
-            <p style="font-size:14px; color:#555; margin-top:10px;">
-                Jensen Huang shared this belief during a company-wide compensation review at NVIDIA. 
-                He explained that by prioritising the well-being and growth of employees, 
-                all other aspects of the business naturally fall into place.
-            </p>
-        </div>
+<!-- Jensen Huang quote block -->
+<section style="background-color:#f5f5f5; padding:30px 15px; margin:30px 0; text-align:center; border-radius:10px;">
+  <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <img src="images/Jensen_Huang_Nvidia.jpg" alt="Jensen Huang"
+         style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    <div style="max-width:700px;">
+      <p style="font-size:22px; font-style:italic; font-weight:bold; text-transform:uppercase; color:#333; margin:0;">
+        "If you take care of people, everything else takes care of itself."
+      </p>
+      <p style="font-size:14px; color:#777; margin-top:5px;">
+        – Jensen Huang, CEO & Co-Founder of NVIDIA
+      </p>
+      <p style="font-size:14px; color:#555; margin-top:10px;">
+        Jensen Huang shared this belief during a company-wide compensation review at NVIDIA.
+        He explained that by prioritising the well-being and growth of employees,
+        all other aspects of the business naturally fall into place.
+      </p>
     </div>
+  </div>
 </section>
 
 <!-- Our Goal -->
@@ -285,178 +183,110 @@
   </p>
 </section>
 
-<img src="images/Culture.png" alt="Culture Illustration" style="width: 75%; max-width: 750px; display: block; margin: 20px auto; border-radius: 8px;" />
+<img src="images/Culture.png" alt="Culture Illustration"
+     style="width:75%; max-width:750px; display:block; margin:20px auto; border-radius:8px;" />
 
 <section class="donate-section" style="margin-top:0; padding-top:0;">
   <h2 style="margin-top:0;">Buy Me Breakfast / Lunch</h2>
-  <img src="images/Lunch_blank.png" alt="Lunch Illustration" 
-       style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
+  <img src="images/Lunch_blank.png" alt="Lunch Illustration"
+       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
   <p>
     Want to support our youth? Donate the cost of a breakfast or lunch to help volunteers and creatives stay nourished during events and workshops.
     A snack break during the course, particularly while working, and in case the teenager hasn’t had breakfast at home.
   </p>
-  <div class="donate-buttons" 
-       style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-
-    <a href="https://buy.stripe.com/3cIbJ02NPbsR4K48u95sA03" 
-       target="_blank" 
-       style="background: #007acc; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-      Donate £5
-    </a>
-
-    <a href="https://buy.stripe.com/cNibJ060140p3G0aCh5sA04" 
-       target="_blank" 
-       style="background: #007acc; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-      Donate £15
-    </a>
-
-    <a href="https://buy.stripe.com/28EcN4copfJ7foIaCh5sA05" 
-       target="_blank" 
-       style="background: #007acc; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-      Donate £30
-    </a>
-
+  <div class="donate-buttons" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+    <a href="https://buy.stripe.com/3cIbJ02NPbsR4K48u95sA03" target="_blank">Donate £5</a>
+    <a href="https://buy.stripe.com/cNibJ060140p3G0aCh5sA04" target="_blank">Donate £15</a>
+    <a href="https://buy.stripe.com/28EcN4copfJ7foIaCh5sA05" target="_blank">Donate £30</a>
   </div>
 </section>
 
 <section>
-  <img src="images/Merchandise.png" alt="Merchandise Illustration" style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
-  <h2 style="text-align: center;">Shop – Youth-Created Products</h2>
+  <img src="images/Merchandise.png" alt="Merchandise Illustration"
+       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
+  <h2 style="text-align:center;">Shop – Youth-Created Products</h2>
 
-  <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
-    
-    <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/MugArch.png" alt="Mug Arch" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
+  <div class="product-row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px;">
+    <div class="product-item">
+      <img src="images/MugArch.png" alt="Mug Arch" onclick="openPopup(this.src)" style="cursor:zoom-in;">
       <h4>White Mug</h4>
       <p>Arch Ceramic Mug. <strong>£35.00</strong></p>
-      <a 
-        href="https://buy.stripe.com/bJebJ0agh1ShdgAcKp5sA0u" 
-        target="_blank" 
-        style="display: inline-block; margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-        Buy with Card
-      </a>
+      <a href="https://buy.stripe.com/bJebJ0agh1ShdgAcKp5sA0u" target="_blank">Buy with Card</a>
     </div>
 
-    <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/TshirtPerfectlyFineWhite.png" alt="T-shirt" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
+    <div class="product-item">
+      <img src="images/TshirtPerfectlyFineWhite.png" alt="T-shirt" onclick="openPopup(this.src)" style="cursor:zoom-in;">
       <h4>T-shirt</h4>
       <p>Perfectly Fine White – Cotton. <strong>£36.99</strong></p>
-      <a 
-        href="https://buy.stripe.com/28EaEW6017cBgsMbGl5sA0x" 
-        target="_blank" 
-        style="display: inline-block; margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-        Buy with Card
-      </a>
+      <a href="https://buy.stripe.com/28EaEW6017cBgsMbGl5sA0x" target="_blank">Buy with Card</a>
     </div>
 
-    <div class="product-item" style="background: #1f1f1f; padding: 20px; border-radius: 8px; width: 250px; text-align: center;">
-      <img src="images/TshirtPerfectlyFineBlack.png" alt="T-shirt" onclick="openPopup(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; cursor: zoom-in;">
+    <div class="product-item">
+      <img src="images/TshirtPerfectlyFineBlack.png" alt="T-shirt" onclick="openPopup(this.src)" style="cursor:zoom-in;">
       <h4>T-shirt</h4>
       <p>Perfectly Fine Black – Cotton. <strong>£36.99</strong></p>
-      <a 
-        href="https://buy.stripe.com/00w28qewxaoN5O85hX5sA0y2" 
-        target="_blank" 
-        style="display: inline-block; margin-top: 10px; background: #007acc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-        Buy with Card
-      </a>
+      <a href="https://buy.stripe.com/00w28qewxaoN5O85hX5sA0y2" target="_blank">Buy with Card</a>
     </div>
-
   </div>
 </section>
 
 <!-- Image Popup -->
-<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;">
-  <span onclick="closePopup()" style="position: absolute; top: 20px; right: 30px; font-size: 40px; color: white; cursor: pointer;">&times;</span>
-  <img id="popup-img" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
+<div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.8); justify-content:center; align-items:center; z-index:9999;">
+  <span onclick="closePopup()" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
+  <img id="popup-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
 </div>
 
 <script>
-  function openPopup(src) {
-    document.getElementById("popup-img").src = src;
-    document.getElementById("popup").style.display = "flex";
-  }
-
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
+  function openPopup(src){ document.getElementById("popup-img").src = src; document.getElementById("popup").style.display = "flex"; }
+  function closePopup(){ document.getElementById("popup").style.display = "none"; }
 </script>
 
 <section>
-  <img src="images/Upcoming%20events_1.png" alt="Events Illustration" style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
+  <img src="images/Upcoming%20events_1.png" alt="Events Illustration"
+       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
   <h2>Event Links</h2>
-  <ul class="event-links" style="list-style: none; padding-left: 0; text-align: center;">
-    <li style="margin: 10px 0;">
-      <a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank" style="color: #004080; font-weight: bold; text-decoration: underline;">
-        Find Art Events on Eventbrite
-      </a>
-    </li>
-    <li style="margin: 10px 0;">
-      <a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank" style="color: #004080; font-weight: bold; text-decoration: underline;">
-        Find Concerts on Ticketmaster
-      </a>
-    </li>
+  <ul class="event-links">
+    <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
+    <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
   </ul>
 </section>
 
-<section style="max-width: 900px; margin: 0 auto;">
-  <img src="images/Join%20Us.png" alt="Join Illustration" 
-       style="width: 80%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;" />
-  
+<section style="max-width:900px; margin:0 auto;">
+  <img src="images/Join%20Us.png" alt="Join Illustration"
+       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
   <h2>Apply for Mentoring or Workshops</h2>
-  <p>Are you talented and want to grow your experience in art, photography, fashion design, or sculpture? Or maybe want to volunteer with us? Join our free programs today! Meetings will be accessible both online via Zoom and in person at a physical venue, such as a school room or similar location. </p>
-  
-  <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain" 
-        style="max-width: 700px; margin: 0 auto;">
-    <input type="text" name="name" placeholder="Your Name" required 
-           style="width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-    <input type="email" name="email" placeholder="Your Email" required 
-           style="width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-    <textarea name="message" placeholder="Tell us what you're interested in…" rows="7" 
-              style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
-    <button type="submit" 
-            style="margin-top: 12px; padding: 12px 24px; border: none; border-radius: 6px; background-color: #007acc; color: #fff; font-size: 1em;">
-      Submit
-    </button>
+  <p>Are you talented and want to grow your experience in art, photography, fashion design, or sculpture? Or maybe want to volunteer with us? Join our free programs today! Meetings will be accessible both online via Zoom and in person at a physical venue, such as a school room or similar location.</p>
+
+  <form action="mailto:innovategen@mail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell us what you're interested in…" rows="7"></textarea>
+    <button type="submit">Submit</button>
   </form>
 </section>
 
-
-<section id="resources" style="padding: 40px 20px;">
+<section id="resources" style="padding:40px 20px;">
   <h2>📥 Downloadable Resources</h2>
   <p>Click below to download the necessary documents:</p>
-  <ul style="list-style-type: none; padding-left: 0;">
+  <ul style="list-style-type:none; padding-left:0;">
     <li>
-      <a href="resources/Consent_Form.pdf" download style="
-        display: inline-block;
-        margin: 10px 0;
-        padding: 10px 20px;
-        background-color: #ffcc00;
-        color: #000;
-        font-weight: bold;
-        border-radius: 10px;
-        text-decoration: none;">
+      <a href="resources/Consent_Form.pdf" download
+         style="display:inline-block; margin:10px 0; padding:10px 20px; background:#ffcc00; color:#000; font-weight:bold; border-radius:10px; text-decoration:none;">
         📄 Download Consent Form
       </a>
     </li>
     <li>
-      <a href="resources/event_schedule.pdf" download style="
-        display: inline-block;
-        margin: 10px 0;
-        padding: 10px 20px;
-        background-color: #ffcc00;
-        color: #000;
-        font-weight: bold;
-        border-radius: 10px;
-        text-decoration: none;">
+      <a href="resources/event_schedule.pdf" download
+         style="display:inline-block; margin:10px 0; padding:10px 20px; background:#ffcc00; color:#000; font-weight:bold; border-radius:10px; text-decoration:none;">
         📄 Download Event Schedule
       </a>
     </li>
   </ul>
 </section>
 
-  
-  <footer>
-    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+</footer>
 </body>
 </html>
+
