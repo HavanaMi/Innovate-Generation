@@ -236,15 +236,16 @@
     <strong>We Offer</strong> creative production services, including video and photography, tailored workshops, and individual training. Our work supports young talent by providing skills, guidance, and opportunities to present their creativity to wider audiences.
   </p>
 
-<!-- Talent Spotlight – SZARA RAMKA, tekst lewo / obraz prawo -->
+<!-- Talent Spotlight -->
 <section>
   <div class="talent-card">
     <div class="half half-text">
       <h3>Talent Spotlight</h3>
       <p>
-        Each year, we hold a special award event to recognize the most exceptional talents from our programs. Nikola is one of
-        our shining stars, known for her artistic skills and outstanding academic achievements. Her paintings and creative energy
-        serve as an inspiring example for other youth in our community. We’re proud to share her artwork with the world.
+        Each year, we hold a special award event to recognize the most exceptional talents from our programs.
+        Nikola is one of our shining stars, known for her artistic skills and outstanding academic achievements.
+        Her paintings and creative energy serve as an inspiring example for other youth in our community.
+        We’re proud to share her artwork with the world.
       </p>
     </div>
     <div class="half half-image">
@@ -253,6 +254,7 @@
   </div>
 </section>
 
+<!-- Our Goal -->
 <section class="goal-section">
   <h2>Our Goal</h2>
   <p>
@@ -262,93 +264,6 @@
     building skills, confidence, and new futures.
   </p>
 </section>
-
-/* === Talent Spotlight (Cameo Coral) === */
-.talent-card{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:20px;
-
-  background:#EF9D8A;           /* Cameo Coral */
-  color:#fff;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-  max-width:1100px;
-  margin:30px auto 10px;        /* mniejszy dolny margines -> mniejszy gap do Our Goal */
-}
-
-.talent-card .half{
-  flex:1 1 320px;
-  padding:10px;
-}
-
-.talent-card h3{
-  margin:0 0 10px;
-  font-size:1.5rem;
-  line-height:1.2;
-  color:#fff;
-}
-
-.talent-card p{
-  margin:0;
-  line-height:1.6;
-  color:#fff;                   /* lepszy kontrast na tle coral */
-}
-
-.talent-card .half-image img{
-  width:100%;
-  height:auto;
-  max-height:360px;
-  object-fit:cover;
-  border-radius:8px;
-  display:block;
-}
-
-/* === Our Goal (zbicie górnego marginesu nagłówka) === */
-.goal-section{
-  max-width:1100px;
-  margin:0 auto 30px;
-  padding:0 10px;
-}
-
-.goal-section h2{
-  margin:0 0 10px;
-}
-
-.goal-section p{
-  margin:0;
-  line-height:1.6;
-}
-
-/* === Mobile tweaks === */
-@media (max-width:640px){
-  .talent-card{ padding:16px; gap:12px; }
-  .talent-card .half{ padding:6px; }
-  .talent-card h3{ font-size:1.25rem; }
-}
-
-
-  .goal-section p {
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  /* MOBILE TWEAKS */
-  @media (max-width: 640px) {
-    .talent-card {
-      padding: 16px;
-      gap: 12px;
-    }
-    .talent-card .half {
-      padding: 6px;
-    }
-    .talent-card h3 {
-      font-size: 1.25rem;
-    }
-  }
-</style>
 
 <img src="images/Culture.png" alt="Culture Illustration" style="width: 75%; max-width: 750px; display: block; margin: 20px auto; border-radius: 8px;" />
 
