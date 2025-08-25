@@ -1,10 +1,10 @@
-# Innovate-Generation
+# Inno-Gen
 
-Website. 
+Project html. 
 
 ## Technologies
 
-The website is built using modern web technologies and hosted on GitHub Pages, ensuring fast performance and easy accessibility.
+The modern web technologies and hosted on GitHub Pages, ensuring fast performance and easy accessibility.
 
 ---
 
@@ -12,4 +12,4 @@ We invite you to collaborate and join us in creating a better world!
 
 ---
 
-*Project created by Innovate Generation*
+*Project created by Inno Gen*
