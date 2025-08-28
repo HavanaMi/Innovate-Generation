@@ -6,37 +6,164 @@
 <title>Your Cart – Innovate Generation</title>
 <link rel="stylesheet" href="style.css" />
 <style>
-  :root{--bg:#111;--panel:#1f1f1f;--accent:#007acc;--accent2:#005f99;--text:#fff}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,Arial,sans-serif}
-  nav{background:#222;padding:10px;text-align:center}
-  nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:700}
-  nav a:hover{color:#ffcc00}
-  header,footer{background:#1a1a1a;text-align:center;padding:28px 16px}
-  main{max-width:1000px;margin:24px auto;padding:0 16px}
-  .card{background:var(--panel);border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-  table{width:100%;border-collapse:collapse}
-  th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
-  th{text-transform:uppercase;font-size:.85rem;letter-spacing:.02em;opacity:.9}
-  td img{width:64px;height:64px;object-fit:cover;border-radius:8px}
-  .qty{display:flex;align-items:center;gap:6px}
-  .qty button{width:28px;height:28px;border:none;border-radius:6px;background:#333;color:#fff;cursor:pointer}
-  .qty input{width:44px;text-align:center;border:none;border-radius:6px;background:#2a2a2a;color:#fff;padding:6px}
-  .right{text-align:right}
-  .actions button{border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}
-  .btn{background:var(--accent);color:#fff}
-  .btn:hover{background:var(--accent2)}
-  .ghost{background:#333;color:#fff}
-  .empty{opacity:.85;text-align:center;padding:24px}
-  .totals{display:flex;justify-content:flex-end;gap:24px;margin-top:12px}
-  .totals div{min-width:220px}
-  .muted{opacity:.8}
+  /* ====== Theme ====== */
+  :root{
+    --bg:#f5f6f8;
+    --text:#111;
+    --muted:#555;
+    --panel:#ffffff;
+    --panel-border:#e7e8eb;
+    --thead:#f0f2f5;
+    --accent:#0a7bdc;
+    --accent-2:#075ea7;
+    --btn-ghost:#eef1f5;
+  }
+
+  /* ====== Base ====== */
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  }
+
+  /* ====== Top Nav (as requested) ====== */
+  nav{
+    position:sticky; top:0; z-index:10;
+    background:#1f1f1f;
+    padding:12px 10px;
+    text-align:center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  }
+  nav a{
+    color:#fff;
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:600;
+  }
+  nav a:hover{ color:#ffd95a; }
+  .cart-pill{
+    display:inline-block;
+    min-width:18px;
+    padding:2px 6px;
+    border-radius:999px;
+    background:#ffd95a;
+    color:#000;
+    font-size:.8rem;
+    line-height:1;
+    vertical-align:middle;
+    margin-left:4px;
+  }
+
+  /* ====== Header / Footer ====== */
+  header, footer{
+    text-align:center;
+    padding:28px 16px;
+    background:#fff;
+    border-block:1px solid var(--panel-border);
+  }
+  header h1{ margin:0 0 8px; }
+
+  /* ====== Layout ====== */
+  main{ max-width:1100px; margin:24px auto; padding:0 16px; }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:14px;
+    padding:16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  }
+
+  /* ====== Table ====== */
+  table{ width:100%; border-collapse:collapse; }
+  thead th{
+    background:var(--thead);
+    border-bottom:1px solid var(--panel-border);
+    padding:12px 10px;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:.85rem;
+    letter-spacing:.02em;
+  }
+  tbody td{
+    padding:14px 10px;
+    border-bottom:1px solid var(--panel-border);
+    vertical-align:middle;
+  }
+  tbody tr:hover{ background:#fafbfc; }
+
+  td img{
+    width:70px; height:70px; object-fit:cover; border-radius:10px;
+    border:1px solid var(--panel-border);
+    background:#fff;
+  }
+  .item-title{ font-weight:700; }
+  .item-sub{ color:var(--muted); font-size:.92rem; }
+
+  .right{text-align:right;}
+
+  /* ====== Qty controls ====== */
+  .qty{ display:flex; align-items:center; gap:6px; }
+  .qty button{
+    width:30px; height:30px; border:none; border-radius:8px;
+    background:var(--btn-ghost); color:var(--text);
+    cursor:pointer; font-size:1rem;
+  }
+  .qty button:active{ transform:translateY(1px); }
+  .qty input{
+    width:48px; text-align:center;
+    border:1px solid var(--panel-border);
+    border-radius:8px;
+    background:#fff; color:var(--text);
+    padding:6px 4px;
+  }
+
+  /* ====== Buttons ====== */
+  .actions{ display:flex; gap:10px; justify-content:flex-end; }
+  .btn{
+    border:none; border-radius:10px; padding:12px 16px;
+    background:var(--accent); color:#fff; font-weight:700; cursor:pointer;
+  }
+  .btn:hover{ background:var(--accent-2); }
+  .ghost{
+    border:1px solid var(--panel-border);
+    background:#fff; color:var(--text);
+    border-radius:10px; padding:12px 16px; cursor:pointer;
+  }
+  .ghost.alt{ background:var(--btn-ghost); }
+
+  /* ====== Totals ====== */
+  .totals{
+    display:flex; justify-content:flex-end; margin-top:14px;
+  }
+  .totals-box{
+    min-width:280px;
+    padding:14px;
+    border:1px solid var(--panel-border);
+    border-radius:12px;
+    background:#fff;
+  }
+  .row{ display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .muted{ color:var(--muted); }
+
+  /* Empty state */
+  .empty{ text-align:center; padding:30px 10px; color:var(--muted); }
+  .empty a{ text-decoration:none; }
 </style>
 </head>
 <body>
 
+<!-- ====== NAV (full menu) ====== -->
 <nav>
   <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="articles.html">Articles</a>
   <a href="shop.html">Shop</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+  <a href="policy.html">Policy</a>
+  <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
 </nav>
 
 <header>
@@ -54,20 +181,30 @@
 <footer><p>&copy; 2025 Innovate Generation.</p></footer>
 
 <script>
-const CART_KEY='ig_cart_v1';
-const getCart=()=>JSON.parse(localStorage.getItem(CART_KEY)||'[]');
-const setCart=c=>localStorage.setItem(CART_KEY, JSON.stringify(c));
+/* ====== Simple cart store ====== */
+const CART_KEY = 'ig_cart_v1';
+const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+const setCart = (c) => localStorage.setItem(CART_KEY, JSON.stringify(c));
 
-function currency(n){ return '£'+(Math.round(n*100)/100).toFixed(2); }
+function currency(n){ return '£' + (Math.round(n*100)/100).toFixed(2); }
+
+function updateCartCount(){
+  const span = document.getElementById('cart-count');
+  const cart = getCart();
+  const count = cart.reduce((a,i)=>a + (i.qty||1), 0);
+  if(span) span.textContent = count;
+}
 
 function render(){
-  const root=document.getElementById('cart-root');
-  const cart=getCart();
-  if(cart.length===0){
+  const root = document.getElementById('cart-root');
+  const cart = getCart();
+  updateCartCount();
+
+  if(cart.length === 0){
     root.innerHTML = `
       <div class="empty">
         <p>Your cart is empty.</p>
-        <p><a href="shop.html" class="btn" style="display:inline-block;padding:10px 14px;border-radius:8px;background:#007acc;color:#fff;text-decoration:none;">Go to Shop</a></p>
+        <p><a href="shop.html" class="btn">Go to Shop</a></p>
       </div>`;
     return;
   }
@@ -79,45 +216,44 @@ function render(){
     <table>
       <thead>
         <tr>
-          <th>Item</th><th>Price</th><th>Qty</th><th class="right">Total</th><th></th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th class="right">Total</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         ${cart.map((i,idx)=>`
           <tr>
             <td>
-              <div style="display:flex;align-items:center;gap:12px;">
+              <div style="display:flex;align-items:center;gap:14px;">
                 <img src="${i.image}" alt="${i.name}">
                 <div>
-                  <div style="font-weight:700">${i.name}</div>
-                  <div class="muted" style="font-size:.9rem">${i.id}</div>
+                  <div class="item-title">${i.name}</div>
+                  <div class="item-sub">${i.description || i.id || ''}</div>
                 </div>
               </div>
             </td>
             <td>${currency(i.price)}</td>
             <td class="qty">
-              <button data-act="dec" data-idx="${idx}">−</button>
-              <input data-idx="${idx}" type="number" min="1" max="99" value="${i.qty||1}">
-              <button data-act="inc" data-idx="${idx}">+</button>
+              <button data-act="dec" data-idx="${idx}" aria-label="Decrease quantity">−</button>
+              <input data-idx="${idx}" type="number" min="1" max="99" value="${i.qty||1}" inputmode="numeric">
+              <button data-act="inc" data-idx="${idx}" aria-label="Increase quantity">+</button>
             </td>
             <td class="right">${currency((i.price||0)*(i.qty||1))}</td>
-            <td class="right"><button class="ghost" data-act="rm" data-idx="${idx}">Remove</button></td>
+            <td class="right"><button class="ghost alt" data-act="rm" data-idx="${idx}">Remove</button></td>
           </tr>`).join('')}
       </tbody>
     </table>
 
     <div class="totals">
-      <div>
-        <div style="display:flex;justify-content:space-between;">
-          <span>Subtotal</span><strong>${currency(subtotal)}</strong>
-        </div>
-        <div class="muted" style="display:flex;justify-content:space-between;margin-top:6px;">
-          <span>Shipping</span><span>Added at checkout</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:1.15rem;">
-          <span>Total (est.)</span><strong>${currency(subtotal)}</strong>
-        </div>
-        <div class="actions" style="margin-top:14px;display:flex;gap:10px;justify-content:flex-end;">
+      <div class="totals-box">
+        <div class="row"><span>Subtotal</span><strong>${currency(subtotal)}</strong></div>
+        <div class="row muted" style="margin-top:6px;"><span>Shipping</span><span>Added at checkout</span></div>
+        <hr style="border:none;border-top:1px solid var(--panel-border); margin:10px 0;">
+        <div class="row" style="font-size:1.1rem;"><span>Total (est.)</span><strong>${currency(subtotal)}</strong></div>
+        <div class="actions" style="margin-top:14px;">
           <button class="ghost" onclick="window.location='shop.html'">Continue shopping</button>
           <button id="checkout" class="btn">Pay by card</button>
         </div>
@@ -126,48 +262,49 @@ function render(){
   `;
 }
 
+/* ====== Events ====== */
 document.addEventListener('input', (e)=>{
   if(e.target.matches('input[type="number"][data-idx]')){
-    const idx=+e.target.dataset.idx;
-    const cart=getCart();
-    let v=parseInt(e.target.value,10);
+    const idx = +e.target.dataset.idx;
+    const cart = getCart();
+    let v = parseInt(e.target.value,10);
     if(isNaN(v)||v<1) v=1;
     if(v>99) v=99;
-    cart[idx].qty=v;
+    cart[idx].qty = v;
     setCart(cart);
     render();
   }
 });
 
 document.addEventListener('click', async (e)=>{
-  const btn=e.target;
+  const btn = e.target;
 
   if(btn.dataset.act==='inc' || btn.dataset.act==='dec'){
-    const idx=+btn.dataset.idx;
-    const cart=getCart();
-    let q=cart[idx].qty||1;
-    q += (btn.dataset.act==='inc'? 1 : -1);
+    const idx = +btn.dataset.idx;
+    const cart = getCart();
+    let q = cart[idx].qty || 1;
+    q += (btn.dataset.act==='inc' ? 1 : -1);
     if(q<1) q=1;
-    cart[idx].qty=q;
+    cart[idx].qty = q;
     setCart(cart);
     render();
   }
 
   if(btn.dataset.act==='rm'){
-    const idx=+btn.dataset.idx;
-    const cart=getCart();
+    const idx = +btn.dataset.idx;
+    const cart = getCart();
     cart.splice(idx,1);
     setCart(cart);
     render();
   }
 
   if(btn.id==='checkout'){
-    const cart=getCart();
+    const cart = getCart();
     if(cart.length===0) return;
 
     btn.disabled=true; const old=btn.textContent; btn.textContent='Redirecting…';
 
-    // zredukuj do { priceId, qty }
+    // Reduce to priceId & qty for backend/Stripe
     const items = cart.map(i=>({ priceId:i.priceId, qty:i.qty||1 }));
 
     try{
@@ -178,8 +315,7 @@ document.addEventListener('click', async (e)=>{
       });
       const data = await res.json();
       if(res.ok && data.url){
-        // nie czyścimy koszyka dopóki Stripe nie powie "success"
-        window.location = data.url;
+        window.location = data.url; // do not clear cart yet
       }else{
         alert(data.error || 'Checkout error');
         btn.disabled=false; btn.textContent=old;
