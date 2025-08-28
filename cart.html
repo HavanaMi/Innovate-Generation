@@ -308,7 +308,8 @@ document.addEventListener('click', async (e)=>{
     const items = cart.map(i=>({ priceId:i.priceId, qty:i.qty||1 }));
 
     try{
-      const res = await fetch('/api/create-checkout-session', {
+const API_BASE = "https://inno-gen-dusky.vercel.app";  // <- Twój adres projektu na Vercel
+const res = await fetch(`${API_BASE}/api/create-checkout-session`, {
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ items })
