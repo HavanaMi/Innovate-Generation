@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Cart – Innovate Generation</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  :root{--bg:#111;--panel:#1f1f1f;--accent:#007acc;--accent2:#005f99;--text:#fff}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,Arial,sans-serif}
+  nav{background:#222;padding:10px;text-align:center}
+  nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:700}
+  nav a:hover{color:#ffcc00}
+  header,footer{background:#1a1a1a;text-align:center;padding:28px 16px}
+  main{max-width:1000px;margin:24px auto;padding:0 16px}
+  .card{background:var(--panel);border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+  th{text-transform:uppercase;font-size:.85rem;letter-spacing:.02em;opacity:.9}
+  td img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+  .qty{display:flex;align-items:center;gap:6px}
+  .qty button{width:28px;height:28px;border:none;border-radius:6px;background:#333;color:#fff;cursor:pointer}
+  .qty input{width:44px;text-align:center;border:none;border-radius:6px;background:#2a2a2a;color:#fff;padding:6px}
+  .right{text-align:right}
+  .actions button{border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}
+  .btn{background:var(--accent);color:#fff}
+  .btn:hover{background:var(--accent2)}
+  .ghost{background:#333;color:#fff}
+  .empty{opacity:.85;text-align:center;padding:24px}
+  .totals{display:flex;justify-content:flex-end;gap:24px;margin-top:12px}
+  .totals div{min-width:220px}
+  .muted{opacity:.8}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+</nav>
+
+<header>
+  <h1>Your Cart</h1>
+  <p>Review your items and proceed to secure payment.</p>
+</header>
+
+<main>
+  <div class="card">
+    <div id="cart-root"></div>
+  </div>
+  <p class="muted" style="margin-top:8px;">* Shipping is added at checkout in Stripe.</p>
+</main>
+
+<footer><p>&copy; 2025 Innovate Generation.</p></footer>
+
+<script>
+const CART_KEY='ig_cart_v1';
+const getCart=()=>JSON.parse(localStorage.getItem(CART_KEY)||'[]');
+const setCart=c=>localStorage.setItem(CART_KEY, JSON.stringify(c));
+
+function currency(n){ return '£'+(Math.round(n*100)/100).toFixed(2); }
+
+function render(){
+  const root=document.getElementById('cart-root');
+  const cart=getCart();
+  if(cart.length===0){
+    root.innerHTML = `
+      <div class="empty">
+        <p>Your cart is empty.</p>
+        <p><a href="shop.html" class="btn" style="display:inline-block;padding:10px 14px;border-radius:8px;background:#007acc;color:#fff;text-decoration:none;">Go to Shop</a></p>
+      </div>`;
+    return;
+  }
+
+  let subtotal = 0;
+  cart.forEach(i => subtotal += (i.price || 0) * (i.qty || 1));
+
+  root.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th><th>Price</th><th>Qty</th><th class="right">Total</th><th></th>
+        </tr>
+      </thead>
+      <tbody>
+        ${cart.map((i,idx)=>`
+          <tr>
+            <td>
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img src="${i.image}" alt="${i.name}">
+                <div>
+                  <div style="font-weight:700">${i.name}</div>
+                  <div class="muted" style="font-size:.9rem">${i.id}</div>
+                </div>
+              </div>
+            </td>
+            <td>${currency(i.price)}</td>
+            <td class="qty">
+              <button data-act="dec" data-idx="${idx}">−</button>
+              <input data-idx="${idx}" type="number" min="1" max="99" value="${i.qty||1}">
+              <button data-act="inc" data-idx="${idx}">+</button>
+            </td>
+            <td class="right">${currency((i.price||0)*(i.qty||1))}</td>
+            <td class="right"><button class="ghost" data-act="rm" data-idx="${idx}">Remove</button></td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div>
+        <div style="display:flex;justify-content:space-between;">
+          <span>Subtotal</span><strong>${currency(subtotal)}</strong>
+        </div>
+        <div class="muted" style="display:flex;justify-content:space-between;margin-top:6px;">
+          <span>Shipping</span><span>Added at checkout</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:1.15rem;">
+          <span>Total (est.)</span><strong>${currency(subtotal)}</strong>
+        </div>
+        <div class="actions" style="margin-top:14px;display:flex;gap:10px;justify-content:flex-end;">
+          <button class="ghost" onclick="window.location='shop.html'">Continue shopping</button>
+          <button id="checkout" class="btn">Pay by card</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener('input', (e)=>{
+  if(e.target.matches('input[type="number"][data-idx]')){
+    const idx=+e.target.dataset.idx;
+    const cart=getCart();
+    let v=parseInt(e.target.value,10);
+    if(isNaN(v)||v<1) v=1;
+    if(v>99) v=99;
+    cart[idx].qty=v;
+    setCart(cart);
+    render();
+  }
+});
+
+document.addEventListener('click', async (e)=>{
+  const btn=e.target;
+
+  if(btn.dataset.act==='inc' || btn.dataset.act==='dec'){
+    const idx=+btn.dataset.idx;
+    const cart=getCart();
+    let q=cart[idx].qty||1;
+    q += (btn.dataset.act==='inc'? 1 : -1);
+    if(q<1) q=1;
+    cart[idx].qty=q;
+    setCart(cart);
+    render();
+  }
+
+  if(btn.dataset.act==='rm'){
+    const idx=+btn.dataset.idx;
+    const cart=getCart();
+    cart.splice(idx,1);
+    setCart(cart);
+    render();
+  }
+
+  if(btn.id==='checkout'){
+    const cart=getCart();
+    if(cart.length===0) return;
+
+    btn.disabled=true; const old=btn.textContent; btn.textContent='Redirecting…';
+
+    // zredukuj do { priceId, qty }
+    const items = cart.map(i=>({ priceId:i.priceId, qty:i.qty||1 }));
+
+    try{
+      const res = await fetch('/api/create-checkout-session', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ items })
+      });
+      const data = await res.json();
+      if(res.ok && data.url){
+        // nie czyścimy koszyka dopóki Stripe nie powie "success"
+        window.location = data.url;
+      }else{
+        alert(data.error || 'Checkout error');
+        btn.disabled=false; btn.textContent=old;
+      }
+    }catch(err){
+      console.error(err);
+      alert('Network error.');
+      btn.disabled=false; btn.textContent=old;
+    }
+  }
+});
+
+render();
+</script>
+</body>
+</html>
