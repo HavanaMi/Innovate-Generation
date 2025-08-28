@@ -5,52 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation - Shop</title>
 
-  <meta name="description" content="Innovate Generation is a London-based CIC empowering young creatives in art, music, fashion and events through workshops, mentoring, and showcases.">
-  <meta name="keywords" content="Innovate Generation, CIC, London, youth, art, music, fashion, workshops, mentoring, creative projects">
-  <meta name="author" content="Innovate Generation">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.innovategeneration.com/portfolio.html">
+  <!-- SEO -->
+  <link rel="canonical" href="https://www.innovategeneration.com/shop.html" />
+  <meta name="description" content="Support youth creators by purchasing art-inspired products from Innovate Generation CIC." />
+  <meta name="keywords" content="Innovate Generation, youth creators, shop, t-shirt, tote bag, mug, canvas, London CIC" />
+  <meta name="author" content="Innovate Generation" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Innovate Generation – Shop">
-  <meta property="og:description" content="Support youth creators by purchasing art-inspired products.">
-  <meta property="og:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
-  <meta property="og:url" content="https://www.innovategeneration.com/shop.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Innovate Generation – Shop" />
+  <meta property="og:description" content="Support youth creators by purchasing art-inspired products." />
+  <meta property="og:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png" />
+  <meta property="og:url" content="https://www.innovategeneration.com/shop.html" />
+  <meta property="og:type" content="website" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Innovate Generation – Shop">
-  <meta name="twitter:description" content="Support youth creators by purchasing art-inspired products.">
-  <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Innovate Generation – Shop" />
+  <meta name="twitter:description" content="Support youth creators by purchasing art-inspired products." />
+  <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    body { margin:0; background:#111; color:#fff; font-family:'Segoe UI',sans-serif; }
-    header, footer { background:#1a1a1a; text-align:center; padding:40px 20px; }
-    nav { background:#222; padding:10px; text-align:center; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#ffcc00; }
-    section { padding:40px 20px; }
-    h1,h2,h3,h4 { text-align:center; }
+    /* Base */
+    :root { --bg:#111; --panel:#1f1f1f; --nav:#222; --accent:#007acc; --accent-2:#005f99; --text:#fff; --muted:#e8e8e8; }
+    * { box-sizing:border-box }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+    header,footer{background:#1a1a1a;text-align:center;padding:40px 20px}
+    h1,h2,h3,h4{margin:0 0 12px;text-align:center}
 
-    .product-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
-      max-width:1200px; margin:0 auto; }
-    .product-item { background:#1f1f1f; padding:20px; border-radius:8px; width:250px;
-      text-align:center; box-sizing:border-box; }
-    .product-item img { width:100%; height:200px; object-fit:cover; border-radius:4px; cursor:zoom-in; }
-    .product-item button { margin-top:10px; background:#007acc; color:#fff; padding:10px 20px;
-      border:none; border-radius:5px; cursor:pointer; }
-    .product-item button:hover { background:#005f99; }
+    /* Nav */
+    nav{background:var(--nav);padding:10px;text-align:center;position:sticky;top:0;z-index:50}
+    nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:700}
+    nav a:hover{color:#ffcc00}
+    .cart-pill{background:var(--accent);color:#fff;padding:2px 8px;border-radius:999px;margin-left:6px;display:inline-inline;min-width:20px;text-align:center;font-weight:700}
 
-    #popup { display:none; position:fixed; inset:0; background:rgba(0,0,0,.8);
-      justify-content:center; align-items:center; z-index:9999; }
-    #popup img { max-width:90%; max-height:90%; border-radius:10px; }
-    #popup span { position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer; }
+    /* Section */
+    section{padding:32px 16px}
+    .lead{max-width:1100px;margin:0 auto 24px;font-size:1.05rem;line-height:1.6;color:var(--muted)}
 
-    .cart-pill{background:#007acc;color:#fff;padding:2px 8px;border-radius:999px;margin-left:6px;display:inline-block;min-width:20px;text-align:center;font-weight:600}
+    /* Grid */
+    .product-grid{display:grid;gap:20px;max-width:1200px;margin:0 auto;
+      grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:800px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.product-grid{grid-template-columns:1fr}}
+
+    .product-item{background:var(--panel);padding:18px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.25);text-align:center}
+    .product-item img{width:100%;height:200px;object-fit:cover;border-radius:8px;cursor:zoom-in}
+    .thumb{margin-top:10px;height:110px}
+    .product-item p{color:#dcdcdc;margin:8px 0 0}
+    .product-item h4{margin:10px 0 6px}
+    .product-item button{margin-top:12px;background:var(--accent);color:#fff;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700}
+    .product-item button:hover{background:var(--accent-2)}
+
+    /* Image popup */
+    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;z-index:9999}
+    #popup img{max-width:92%;max-height:92%;border-radius:12px}
+    #popup .close{position:absolute;top:16px;right:22px;font-size:38px;color:#fff;cursor:pointer;line-height:1}
   </style>
 </head>
+
 <body>
   <header>
     <h1>Innovate Generation Shop</h1>
@@ -66,125 +82,192 @@
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
     <a href="policy.html">Policy</a>
-    <a href="cart.html">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
+    <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
   </nav>
 
   <section>
     <h2>Our Products</h2>
-    <div style="max-width:1200px;margin:0 auto;font-size:1.1em;">
-      <p>
-        Every item supports youth-led programs and creative development through Innovate Generation CIC.
-        <br><br>
-        Our shop features unique products — including mugs printed with visual artworks created by our talented young artists.
-        By purchasing, you directly support the next generation of creatives. Our prices are set to support artists who rely on selling their work to make a living.
-        It's a meaningful cause — by purchasing, you're not just buying a product, you're taking part in something bigger. The more you give, the more you get.
-        <br><br>
-        <em>*Shipping cost is added at checkout.</em>
-      </p>
-    </div>
+    <p class="lead">
+      Every item supports youth-led programs and creative development through Innovate Generation CIC.
+      Our shop features unique products — including apparel and mugs designed from artworks by our young artists.
+      <em>Shipping cost is added at checkout.</em>
+    </p>
 
     <div class="product-grid">
-      <!-- 1 -->
-      <!-- price_1RtxYNBaMwJkUgdcPtZRzUYw -->
-      <div class="product-item">
-        <img src="images/POSTER_Where_bark_becomes_brilliance.png" alt="Poster Front" loading="lazy" onclick="openPopup(this.src)">
-        <img src="images/bark_canvas50x40.jpg" alt="Poster Back" class="poster-img" loading="lazy" onclick="openPopup(this.src)">
-        <h4>Wall Canvas – Where Bark Becomes Brilliance; Unframed slim style. £89.99 + postage costs.</h4>
-        <p>Artistic 24''x16'' [50cm x 40cm] with original Signature. <strong>£90.99</strong></p>
-        <button class="add-to-cart"
-                data-id="canvas-bark"
-                data-price-id="price_1RtxYNBaMwJkUgdcPtZRzUYw"
-                data-name="Wall Canvas – Where Bark Becomes Brilliance"
-                data-price="90.99"
-                data-image="images/POSTER_Where_bark_becomes_brilliance.png">
-          Add to cart
-        </button>
+      <!-- 1 Canvas -->
+      <div class="product-item" data-id="canvas-bark" data-price-id="price_1RtxYNBaMwJkUgdcPtZRzUYw" data-name="Wall Canvas – Where Bark Becomes Brilliance" data-price="90.99" data-image="images/POSTER_Where_bark_becomes_brilliance.png">
+        <img loading="lazy" src="images/POSTER_Where_bark_becomes_brilliance.png" alt="Wall Canvas – Where Bark Becomes Brilliance (front)" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/bark_canvas50x40.jpg" alt="Canvas side view" onclick="openPopup(this.src)">
+        <h4>Wall Canvas – Where Bark Becomes Brilliance</h4>
+        <p>Unframed slim style (24&quot;x16&quot;/50×40cm) with original signature.</p>
+        <p><strong>£90.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
       </div>
 
-      <!-- 2 -->
-      <!-- price_1Rtwp2BaMwJkUgdcnoJXrMxy -->
-      <div class="product-item">
-        <img src="images/White%20Tshirt%20Lady.png" alt="T-shirt Front" loading="lazy" onclick="openPopup(this.src)">
-        <img src="images/TshirtWhiteLadyPoster.png" alt="T-shirt Poster" class="poster-img" loading="lazy" onclick="openPopup(this.src)">
+      <!-- 2 Tee Inspiration White -->
+      <div class="product-item" data-id="tee-inspiration-white" data-price-id="price_1Rtwp2BaMwJkUgdcnoJXrMxy" data-name="T-shirt; Cotton – Inspiration White (M)" data-price="36.99" data-image="images/White%20Tshirt%20Lady.png">
+        <img loading="lazy" src="images/White%20Tshirt%20Lady.png" alt="Inspiration White T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/TshirtWhiteLadyPoster.png" alt="Inspiration White T-shirt poster" onclick="openPopup(this.src)">
         <h4>T-shirt; Cotton</h4>
-        <p>Inspiration White T-shirt. Regular M Size. <strong>£36.99</strong></p>
-        <button class="add-to-cart"
-                data-id="tee-inspiration-white"
-                data-price-id="price_1Rtwp2BaMwJkUgdcnoJXrMxy"
-                data-name="T-shirt; Cotton – Inspiration White (M)"
-                data-price="36.99"
-                data-image="images/White%20Tshirt%20Lady.png">
-          Add to cart
-        </button>
+        <p>Inspiration White — regular M size cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
       </div>
 
-      <!-- 3 -->
-      <!-- price_1RtwnUBaMwJkUgdc7JTJahTg -->
-      <div class="product-item">
-        <img src="images/WhiteTshirtWhiteBlack.png" alt="T-shirt Front" loading="lazy" onclick="openPopup(this.src)">
-        <img src="images/WhiteTshirtWhiteBlackPoster.png" alt="T-shirt Poster" class="poster-img" loading="lazy" onclick="openPopup(this.src)">
+      <!-- 3 Tee Urban City White -->
+      <div class="product-item" data-id="tee-urban-city-white" data-price-id="price_1RtwnUBaMwJkUgdc7JTJahTg" data-name="T-shirt – Urban City White (M)" data-price="36.99" data-image="images/WhiteTshirtWhiteBlack.png">
+        <img loading="lazy" src="images/WhiteTshirtWhiteBlack.png" alt="Urban City White T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/WhiteTshirtWhiteBlackPoster.png" alt="Urban City White T-shirt poster" onclick="openPopup(this.src)">
         <h4>T-shirt</h4>
-        <p>Urban City White T-shirt; M size Cotton. <strong>£36.99</strong></p>
-        <button class="add-to-cart"
-                data-id="tee-urban-city-white"
-                data-price-id="price_1RtwnUBaMwJkUgdc7JTJahTg"
-                data-name="T-shirt – Urban City White (M)"
-                data-price="36.99"
-                data-image="images/WhiteTshirtWhiteBlack.png">
-          Add to cart
-        </button>
+        <p>Urban City White — M size cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
       </div>
 
-      <!-- ... (pozostałe produkty analogicznie) ... -->
+      <!-- 4 Tee Safe Earth White -->
+      <div class="product-item" data-id="tee-safe-earth-white" data-price-id="price_1RtwjjBaMwJkUgdcDfcOKnXK" data-name="T-shirt – Safe Earth (M, White)" data-price="36.99" data-image="images/TsirtZOLWwhite.png">
+        <img loading="lazy" src="images/TsirtZOLWwhite.png" alt="Safe Earth white T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/TsirtZOLWwhitePoster.png" alt="Safe Earth white T-shirt poster" onclick="openPopup(this.src)">
+        <h4>T-shirt</h4>
+        <p>Safe Earth — M size, white cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 5 Tee Safe Planet White -->
+      <div class="product-item" data-id="tee-safe-planet-white" data-price-id="price_1RtwiIBaMwJkUgdcP9oiRwTQ" data-name="T-shirt – Safe Planet (M, White)" data-price="36.99" data-image="images/TshirtSafePlanetWhite.png">
+        <img loading="lazy" src="images/TshirtSafePlanetWhite.png" alt="Safe Planet white T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/TshirtSafePlanetWhitePoster.png" alt="Safe Planet white T-shirt poster" onclick="openPopup(this.src)">
+        <h4>T-shirt</h4>
+        <p>Safe Planet — M size, white cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 6 Tee Japan Black -->
+      <div class="product-item" data-id="tee-japan-black" data-price-id="price_1RtwgpBaMwJkUgdccWLBTDHb" data-name="T-shirt – Stylish Japan (M, Black)" data-price="36.99" data-image="images/TshirtRedJapan.png">
+        <img loading="lazy" src="images/TshirtRedJapan.png" alt="Stylish Japan black T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/TshirtRedJapanPoster.png" alt="Stylish Japan black T-shirt poster" onclick="openPopup(this.src)">
+        <h4>T-shirt</h4>
+        <p>Stylish Japan — M size, black cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 7 Tee Safe Earth Black -->
+      <div class="product-item" data-id="tee-safe-earth-black" data-price-id="price_1RtwcDBaMwJkUgdcwLI3DObA" data-name="T-shirt – Safe Earth (M, Black)" data-price="36.99" data-image="images/TshirtEarthBlack.png">
+        <img loading="lazy" src="images/TshirtEarthBlack.png" alt="Safe Earth black T-shirt front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/TshirtEarthBlackPoster.png" alt="Safe Earth black T-shirt poster" onclick="openPopup(this.src)">
+        <h4>T-shirt</h4>
+        <p>Safe Earth — M size, black cotton.</p>
+        <p><strong>£36.99</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 8 Tote City -->
+      <div class="product-item" data-id="tote-city" data-price-id="price_1RtwYiBaMwJkUgdcJ80SKa1Q" data-name="Tote City – Black Cotton" data-price="35.00" data-image="images/ToteCityFront.png">
+        <img loading="lazy" src="images/ToteCityFront.png" alt="Tote City bag front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/ToteCityPoster.png" alt="Tote City poster" onclick="openPopup(this.src)">
+        <h4>Tote City</h4>
+        <p>Shoulder bag, regular size, black cotton.</p>
+        <p><strong>£35.00</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 9 Tote City 2 -->
+      <div class="product-item" data-id="tote-city-2" data-price-id="price_1RtwX3BaMwJkUgdcmIe8FgqK" data-name="Tote City 2 – Black Cotton" data-price="35.00" data-image="images/ToteCity2front.png">
+        <img loading="lazy" src="images/ToteCity2front.png" alt="Tote City 2 bag front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/ToteCity_2Poster.png" alt="Tote City 2 poster" onclick="openPopup(this.src)">
+        <h4>Tote City_2</h4>
+        <p>Shoulder bag, regular size, black cotton.</p>
+        <p><strong>£35.00</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 10 Mug Oreo -->
+      <div class="product-item" data-id="mug-oreo" data-price-id="price_1RtwQVBaMwJkUgdcQHLgqlPx" data-name="Oreo Mug – 12oz White Ceramic" data-price="35.00" data-image="images/mug2front.png">
+        <img loading="lazy" src="images/mug2front.png" alt="Oreo mug front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/mug2back.png" alt="Oreo mug back" onclick="openPopup(this.src)">
+        <h4>Oreo Mug</h4>
+        <p>White ceramic, 12oz / 340 ml.</p>
+        <p><strong>£35.00</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+
+      <!-- 11 Mug Artist -->
+      <div class="product-item" data-id="mug-artist" data-price-id="price_1RtwG8BaMwJkUgdcnV26Rq2G" data-name="Artist Mug – 12oz White Ceramic" data-price="35.00" data-image="images/MugArtistfront.png">
+        <img loading="lazy" src="images/MugArtistfront.png" alt="Artist mug front" onclick="openPopup(this.src)">
+        <img loading="lazy" class="thumb" src="images/MugArtistback.png" alt="Artist mug back" onclick="openPopup(this.src)">
+        <h4>Artist Mug</h4>
+        <p>White ceramic, 12oz / 340 ml.</p>
+        <p><strong>£35.00</strong></p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
     </div>
   </section>
 
-  <div id="popup">
-    <span onclick="closePopup()">&times;</span>
-    <img id="popup-img" src="">
+  <!-- Image popup -->
+  <div id="popup" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span class="close" onclick="closePopup()" aria-label="Close">&times;</span>
+    <img id="popup-img" src="" alt="Zoomed product image">
   </div>
 
   <footer>
     <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
   </footer>
 
+  <!-- Popup JS -->
   <script>
-    function openPopup(src){ document.getElementById('popup-img').src=src; document.getElementById('popup').style.display='flex'; }
-    function closePopup(){ document.getElementById('popup').style.display='none'; }
+    function openPopup(src){
+      const img=document.getElementById('popup-img');
+      img.src=src;
+      document.getElementById('popup').style.display='flex';
+    }
+    function closePopup(){
+      document.getElementById('popup').style.display='none';
+      document.getElementById('popup-img').src='';
+    }
+    // zamykanie Esc/klik w tło
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePopup(); });
+    document.getElementById('popup').addEventListener('click',e=>{
+      if(e.target.id==='popup') closePopup();
+    });
   </script>
 
-  <!-- SKRYPT KOSZYKA -->
+  <!-- CART (localStorage) -->
   <script>
     const CART_KEY='ig_cart_v1';
     const getCart=()=>JSON.parse(localStorage.getItem(CART_KEY)||'[]');
     const setCart=c=>localStorage.setItem(CART_KEY, JSON.stringify(c));
-
     function updateCartBadge(){
       const n=getCart().reduce((s,i)=>s+(i.qty||1),0);
       const el=document.getElementById('cart-count');
       if(el) el.textContent=n;
     }
-
+    // add-to-cart
     document.addEventListener('click',e=>{
-      if(e.target.matches('.add-to-cart')){
-        const b=e.target;
-        const item={
-          id:b.dataset.id,
-          priceId:b.dataset.priceId,
-          name:b.dataset.name,
-          price:parseFloat(b.dataset.price),
-          image:b.dataset.image,
-          qty:1
-        };
-        const cart=getCart();
-        const ex=cart.find(i=>i.id===item.id);
-        ex ? ex.qty++ : cart.push(item);
-        setCart(cart); updateCartBadge();
-        b.textContent='Added ✓'; setTimeout(()=>b.textContent='Add to cart',900);
-      }
+      if(!e.target.classList.contains('add-to-cart')) return;
+      const card=e.target.closest('.product-item');
+      const item={
+        id:card.dataset.id,
+        priceId:card.dataset.priceId,
+        name:card.dataset.name,
+        price:parseFloat(card.dataset.price),
+        image:card.dataset.image,
+        qty:1
+      };
+      const cart=getCart();
+      const ex=cart.find(i=>i.id===item.id);
+      ex ? ex.qty++ : cart.push(item);
+      setCart(cart);
+      updateCartBadge();
+      // feedback
+      const btn=e.target; const old=btn.textContent;
+      btn.textContent='Added ✓'; btn.disabled=true;
+      setTimeout(()=>{ btn.textContent=old; btn.disabled=false; },900);
     });
-
     window.addEventListener('DOMContentLoaded', updateCartBadge);
   </script>
 </body>
 </html>
+
