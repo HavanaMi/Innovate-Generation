@@ -1,55 +1,57 @@
-// api/create-checkout-session.js
-import Stripe from 'stripe';
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+// /api/checkout.js
+const Stripe = require('stripe');
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2024-06-20',
+});
 
-export default async function handler(req, res) {
-  // --- CORS (front na innovategeneration.com, API na Vercel) ---
-  const allowed = (process.env.CORS_ORIGIN || 'https://www.innovategeneration.com,https://innovategeneration.com')
-    .split(',')
-    .map(s => s.trim());
-  const origin = req.headers.origin;
-  if (allowed.includes(origin)) res.setHeader('Access-Control-Allow-Origin', origin);
-  res.setHeader('Vary', 'Origin');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.status(200).end();
-  // -------------------------------------------------------------
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+/**
+ * POST /api/checkout
+ * body: { items: [{ priceId: 'price_xxx', qty: number }] }
+ */
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
   try {
     const { items } = req.body || {};
     if (!Array.isArray(items) || items.length === 0) {
-      return res.status(400).json({ error: 'No items' });
+      return res.status(400).json({ error: 'Cart is empty' });
     }
 
-    // oczekujemy: [{ priceId, qty }]
-    const line_items = items.map(({ priceId, qty }) => ({
-      price: priceId,
-      quantity: Math.max(1, parseInt(qty || 1, 10)),
-      adjustable_quantity: { enabled: true, minimum: 1, maximum: 10 }
-    }));
+    const line_items = items.map((it) => {
+      if (typeof it.priceId !== 'string' || !/^price_[A-Za-z0-9]+$/.test(it.priceId)) {
+        throw new Error('Invalid priceId: ' + String(it.priceId));
+      }
+      const qty = Math.max(1, Math.min(10, parseInt(it.qty || 1, 10)));
+      return { price: it.priceId, quantity: qty };
+    });
+
+    const host = req.headers['x-forwarded-host'] || req.headers.host;
+    const proto = (req.headers['x-forwarded-proto'] || 'https');
+    const origin = `${proto}://${host}`;
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      payment_method_types: ['card'],
       line_items,
-      billing_address_collection: 'auto',
-      shipping_address_collection: {
-        allowed_countries: (process.env.ALLOWED_COUNTRIES || 'GB').split(',')
-      },
-      // użyj stawki wysyłki z ENV (ID: shr_...)
-      shipping_options: [
-        { shipping_rate: process.env.SHIPPING_RATE_STANDARD }
-      ],
-      success_url: process.env.SUCCESS_URL,
-      cancel_url:  process.env.CANCEL_URL
+      success_url: `${origin}/success.html`,
+      cancel_url: `${origin}/cart.html`,
+
+      // Jeśli sprzedajesz fizyczne produkty – adres wysyłki:
+      shipping_address_collection: { allowed_countries: ['GB', 'IE', 'FR', 'DE', 'ES', 'IT', 'PL', 'NL', 'BE', 'US', 'AE'] },
+
+      // Opcjonalnie: stała stawka wysyłki ze Stripe (podaj ID w ENV)
+      shipping_options: process.env.SHIPPING_RATE_ID
+        ? [{ shipping_rate: process.env.SHIPPING_RATE_ID }]
+        : undefined,
+
+      invoice_creation: { enabled: true },
     });
 
     return res.status(200).json({ url: session.url });
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ error: err.message || 'Server error' });
+    return res.status(400).json({ error: err.message || 'Checkout error' });
   }
-}
-
+};
