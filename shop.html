@@ -5,53 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innovate Generation - Shop</title>
 
-  <!-- SEO -->
   <link rel="canonical" href="https://www.innovategeneration.com/shop.html" />
   <meta name="description" content="Support youth creators by purchasing art-inspired products from Innovate Generation CIC." />
   <meta name="keywords" content="Innovate Generation, youth creators, shop, t-shirt, tote bag, mug, canvas, London CIC" />
   <meta name="author" content="Innovate Generation" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Innovate Generation – Shop" />
   <meta property="og:description" content="Support youth creators by purchasing art-inspired products." />
   <meta property="og:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png" />
   <meta property="og:url" content="https://www.innovategeneration.com/shop.html" />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Innovate Generation – Shop" />
   <meta name="twitter:description" content="Support youth creators by purchasing art-inspired products." />
   <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png" />
 
   <link rel="stylesheet" href="style.css" />
-
   <style>
-    /* Base */
     :root { --bg:#111; --panel:#1f1f1f; --nav:#222; --accent:#007acc; --accent-2:#005f99; --text:#fff; --muted:#e8e8e8; }
     * { box-sizing:border-box }
     body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
     header,footer{background:#1a1a1a;text-align:center;padding:40px 20px}
     h1,h2,h3,h4{margin:0 0 12px;text-align:center}
-
-    /* Nav */
     nav{background:var(--nav);padding:10px;text-align:center;position:sticky;top:0;z-index:50}
     nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:700}
     nav a:hover{color:#ffcc00}
-    .cart-pill{background:var(--accent);color:#fff;padding:2px 8px;border-radius:999px;margin-left:6px;display:inline-inline;min-width:20px;text-align:center;font-weight:700}
-
-    /* Section */
+    .cart-pill{background:var(--accent);color:#fff;padding:2px 8px;border-radius:999px;margin-left:6px;min-width:20px;display:inline-block;text-align:center;font-weight:700}
     section{padding:32px 16px}
     .lead{max-width:1100px;margin:0 auto 24px;font-size:1.05rem;line-height:1.6;color:var(--muted)}
-
-    /* Grid */
-    .product-grid{display:grid;gap:20px;max-width:1200px;margin:0 auto;
-      grid-template-columns:repeat(4,minmax(0,1fr))}
+    .product-grid{display:grid;gap:20px;max-width:1200px;margin:0 auto;grid-template-columns:repeat(4,minmax(0,1fr))}
     @media (max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr)}}
     @media (max-width:800px){.product-grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:520px){.product-grid{grid-template-columns:1fr}}
-
     .product-item{background:var(--panel);padding:18px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.25);text-align:center}
     .product-item img{width:100%;height:200px;object-fit:cover;border-radius:8px;cursor:zoom-in}
     .thumb{margin-top:10px;height:110px}
@@ -59,14 +46,11 @@
     .product-item h4{margin:10px 0 6px}
     .product-item button{margin-top:12px;background:var(--accent);color:#fff;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700}
     .product-item button:hover{background:var(--accent-2)}
-
-    /* Image popup */
     #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;z-index:9999}
     #popup img{max-width:92%;max-height:92%;border-radius:12px}
     #popup .close{position:absolute;top:16px;right:22px;font-size:38px;color:#fff;cursor:pointer;line-height:1}
   </style>
 </head>
-
 <body>
   <header>
     <h1>Innovate Generation Shop</h1>
@@ -89,7 +73,6 @@
     <h2>Our Products</h2>
     <p class="lead">
       Every item supports youth-led programs and creative development through Innovate Generation CIC.
-      Our shop features unique products — including apparel and mugs designed from artworks by our young artists.
       <em>Shipping cost is added at checkout.</em>
     </p>
 
@@ -104,8 +87,8 @@
         <button class="add-to-cart">Add to cart</button>
       </div>
 
-      <!-- 2 Tee Inspiration White -->
-      <div class="product-item" data-id="tee-inspiration-white" data-price-id="priceId: "price_1RtyDPBaMwJkUgdcEeNCNmLv" " data-name="T-shirt; Cotton – Inspiration White (M)" data-price="36.99" data-image="images/White%20Tshirt%20Lady.png">
+      <!-- 2 Tee Inspiration White (FIXED price-id) -->
+      <div class="product-item" data-id="tee-inspiration-white" data-price-id="price_1RtyDPBaMwJkUgdcEeNCNmLv" data-name="T-shirt; Cotton – Inspiration White (M)" data-price="36.99" data-image="images/White%20Tshirt%20Lady.png">
         <img loading="lazy" src="images/White%20Tshirt%20Lady.png" alt="Inspiration White T-shirt front" onclick="openPopup(this.src)">
         <img loading="lazy" class="thumb" src="images/TshirtWhiteLadyPoster.png" alt="Inspiration White T-shirt poster" onclick="openPopup(this.src)">
         <h4>T-shirt; Cotton</h4>
@@ -206,45 +189,26 @@
     </div>
   </section>
 
-  <!-- Image popup -->
   <div id="popup" role="dialog" aria-modal="true" aria-label="Image viewer">
     <span class="close" onclick="closePopup()" aria-label="Close">&times;</span>
     <img id="popup-img" src="" alt="Zoomed product image">
   </div>
 
-  <footer>
-    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
-  </footer>
+  <footer><p>&copy; 2025 Innovate Generation. All rights reserved.</p></footer>
 
-  <!-- Popup JS -->
   <script>
-    function openPopup(src){
-      const img=document.getElementById('popup-img');
-      img.src=src;
-      document.getElementById('popup').style.display='flex';
-    }
-    function closePopup(){
-      document.getElementById('popup').style.display='none';
-      document.getElementById('popup-img').src='';
-    }
-    // zamykanie Esc/klik w tło
+    function openPopup(src){ document.getElementById('popup-img').src=src; document.getElementById('popup').style.display='flex'; }
+    function closePopup(){ document.getElementById('popup').style.display='none'; document.getElementById('popup-img').src=''; }
     document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePopup(); });
-    document.getElementById('popup').addEventListener('click',e=>{
-      if(e.target.id==='popup') closePopup();
-    });
-  </script>
+    document.getElementById('popup').addEventListener('click',e=>{ if(e.target.id==='popup') closePopup(); });
 
-  <!-- CART (localStorage) -->
-  <script>
-    const CART_KEY='ig_cart_v1';
+    const CART_KEY='ig_cart_v2';
     const getCart=()=>JSON.parse(localStorage.getItem(CART_KEY)||'[]');
     const setCart=c=>localStorage.setItem(CART_KEY, JSON.stringify(c));
     function updateCartBadge(){
       const n=getCart().reduce((s,i)=>s+(i.qty||1),0);
-      const el=document.getElementById('cart-count');
-      if(el) el.textContent=n;
+      const el=document.getElementById('cart-count'); if(el) el.textContent=n;
     }
-    // add-to-cart
     document.addEventListener('click',e=>{
       if(!e.target.classList.contains('add-to-cart')) return;
       const card=e.target.closest('.product-item');
@@ -259,15 +223,11 @@
       const cart=getCart();
       const ex=cart.find(i=>i.id===item.id);
       ex ? ex.qty++ : cart.push(item);
-      setCart(cart);
-      updateCartBadge();
-      // feedback
-      const btn=e.target; const old=btn.textContent;
-      btn.textContent='Added ✓'; btn.disabled=true;
+      setCart(cart); updateCartBadge();
+      const btn=e.target, old=btn.textContent; btn.textContent='Added ✓'; btn.disabled=true;
       setTimeout(()=>{ btn.textContent=old; btn.disabled=false; },900);
     });
     window.addEventListener('DOMContentLoaded', updateCartBadge);
   </script>
 </body>
 </html>
-
