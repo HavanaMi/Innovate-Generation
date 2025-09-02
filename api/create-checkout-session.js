@@ -1,3 +1,27 @@
+const ALLOWED_ORIGINS = [
+  'https://www.innovategeneration.com',
+  'https://innovategeneration.com',
+  'https://inno-gen-dusky.vercel.app'
+];
+
+function setCors(req, res) {
+  const origin = req.headers.origin || '';
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Vary', 'Origin');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+}
+
+module.exports = async (req, res) => {
+  setCors(req, res);
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+  // ...dalej Twój kod tworzenia session (bez zmian)
+
+
 // /api/checkout.js
 const Stripe = require('stripe');
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -50,3 +74,5 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: err.message || 'Checkout error' });
   }
 };
+
+
