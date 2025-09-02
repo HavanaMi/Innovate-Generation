@@ -4,10 +4,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2024-06-20',
 });
 
-/**
- * POST /api/checkout
- * body: { items: [{ priceId: 'price_xxx', qty: number }] }
- */
+// POST /api/checkout
+// body: { items: [{ priceId: 'price_xxx', qty: number }] }
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -29,7 +27,7 @@ module.exports = async (req, res) => {
     });
 
     const host = req.headers['x-forwarded-host'] || req.headers.host;
-    const proto = (req.headers['x-forwarded-proto'] || 'https');
+    const proto = req.headers['x-forwarded-proto'] || 'https';
     const origin = `${proto}://${host}`;
 
     const session = await stripe.checkout.sessions.create({
@@ -37,15 +35,12 @@ module.exports = async (req, res) => {
       line_items,
       success_url: `${origin}/success.html`,
       cancel_url: `${origin}/cart.html`,
-
-      // Jeśli sprzedajesz fizyczne produkty – adres wysyłki:
-      shipping_address_collection: { allowed_countries: ['GB', 'IE', 'FR', 'DE', 'ES', 'IT', 'PL', 'NL', 'BE', 'US', 'AE'] },
-
-      // Opcjonalnie: stała stawka wysyłki ze Stripe (podaj ID w ENV)
+      shipping_address_collection: {
+        allowed_countries: ['GB','IE','FR','DE','ES','IT','PL','NL','BE','US','AE'],
+      },
       shipping_options: process.env.SHIPPING_RATE_ID
         ? [{ shipping_rate: process.env.SHIPPING_RATE_ID }]
         : undefined,
-
       invoice_creation: { enabled: true },
     });
 
