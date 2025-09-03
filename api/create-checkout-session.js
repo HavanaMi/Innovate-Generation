@@ -1,9 +1,8 @@
-// api/create-checkout-session.js  (albo api/checkout.js – patrz uwaga powyżej)
 'use strict';
 
 const Stripe = require('stripe');
 
-// Domeny, z których wolno wołać API
+// Dozwolone domeny frontendu
 const ALLOWED_ORIGINS = [
   'https://www.innovategeneration.com',
   'https://innovategeneration.com',
@@ -18,57 +17,42 @@ function setCors(req, res) {
   res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // opcjonalnie: max-age dla preflight
   res.setHeader('Access-Control-Max-Age', '86400');
 }
 
 module.exports = async (req, res) => {
   setCors(req, res);
-
-  // Preflight
-  if (req.method === 'OPTIONS') {
-    return res.status(204).end();
-  }
-
+  if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST, OPTIONS');
-    res.setHeader('Content-Type', 'application/json');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   try {
-    // Parsowanie body (Vercel zwykle już parsuje JSON)
     const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
     const { items } = body;
-
     if (!Array.isArray(items) || items.length === 0) {
-      res.setHeader('Content-Type', 'application/json');
       return res.status(400).json({ error: 'Cart is empty' });
     }
 
-    // Walidacja pozycji
+    // Walidacja i mapowanie pozycji
     const line_items = items.map((it) => {
       if (typeof it.priceId !== 'string' || !/^price_[A-Za-z0-9]+$/.test(it.priceId)) {
         throw new Error('Invalid priceId: ' + String(it.priceId));
       }
-      const quantity = Math.max(1, Math.min(10, parseInt(it.qty || 1, 10)));
-      return { price: it.priceId, quantity };
+      const qty = Math.max(1, Math.min(10, parseInt(it.qty || 1, 10)));
+      return { price: it.priceId, quantity: qty };
     });
 
-    // Ustalenie originu do powrotu z checkoutu
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2024-06-20' });
+
+    // Ustal adres powrotu (ta sama domena co frontend, jeśli jest na liście)
     const proto = req.headers['x-forwarded-proto'] || 'https';
     const host = req.headers['x-forwarded-host'] || req.headers.host;
     const apiOrigin = `${proto}://${host}`;
-
     const originHeader = req.headers.origin || '';
     const uiOrigin = ALLOWED_ORIGINS.includes(originHeader) ? originHeader : apiOrigin;
-
-    // Stripe
-    const secret = process.env.STRIPE_SECRET_KEY;
-    if (!secret) {
-      throw new Error('Missing STRIPE_SECRET_KEY env var');
-    }
-
-    const stripe = new Stripe(secret, { apiVersion: '2024-06-20' });
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
@@ -84,14 +68,12 @@ module.exports = async (req, res) => {
       invoice_creation: { enabled: true },
     });
 
-    res.setHeader('Content-Type', 'application/json');
     return res.status(200).json({ url: session.url });
-
   } catch (err) {
-    console.error('[checkout] error:', err);
-    res.setHeader('Content-Type', 'application/json');
+    // Zwróć czytelną informację – przydatne do diagnostyki
     return res.status(400).json({ error: err.message || 'Checkout error' });
   }
 };
+
 
 
