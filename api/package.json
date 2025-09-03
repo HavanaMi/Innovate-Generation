@@ -1,0 +1,8 @@
+{
+  "name": "ig-api",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "stripe": "^16.5.0"
+  }
+}
