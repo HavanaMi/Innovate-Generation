@@ -5,7 +5,8 @@ const Stripe = require('stripe');
 module.exports = async (req, res) => {
   const sk = process.env.STRIPE_SECRET_KEY || '';
   let account = 'unknown';
-  const mode = sk.startsWith('sk_live_') ? 'LIVE' : sk.startsWith('sk_test_') ? 'TEST' : 'unknown';
+  const mode = sk.startsWith('sk_live_') ? 'LIVE' :
+               sk.startsWith('sk_test_') ? 'TEST' : 'unknown';
 
   try {
     const stripe = new Stripe(sk);
@@ -14,10 +15,11 @@ module.exports = async (req, res) => {
   } catch {}
 
   res.status(200).json({
-    vercelEnv: process.env.VERCEL_ENV,     // production / preview / development
+    vercelEnv: process.env.VERCEL_ENV,
     projectUrl: process.env.VERCEL_URL,
-    account,                                // <- tu MUSI być acct_1RsOPp…
+    account,                 // ← tu zobaczysz acct_…
     mode,
     sk_prefix: sk ? sk.slice(0, 12) + '…' : null
   });
 };
+
