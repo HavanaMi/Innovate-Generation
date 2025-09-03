@@ -114,7 +114,7 @@
     width:48px; text-align:center;
     border:1px solid var(--panel-border);
     border-radius:8px;
-    background:#fff; color:#text;
+    background:#fff; color:var(--text);
     padding:6px 4px;
   }
 
@@ -271,7 +271,7 @@ function render(){
         <div class="row" style="font-size:1.1rem;"><span>Total (est.)</span><strong>${currency(subtotal)}</strong></div>
         <div class="actions" style="margin-top:14px;">
           <button class="ghost" onclick="window.location='shop.html'">Continue shopping</button>
-          <button id="checkout" class="btn">Pay by card</button>
+          <button id="checkout" type="button" class="btn">Pay by card</button>
         </div>
       </div>
     </div>
@@ -315,6 +315,9 @@ document.addEventListener('click', async (e)=>{
   }
 
   if(btn.id==='checkout'){
+    e.preventDefault();
+    e.stopPropagation();
+
     const cart = getCart();
     if(cart.length===0) return;
 
@@ -324,8 +327,8 @@ document.addEventListener('click', async (e)=>{
     const items = cart.map(i=>({ priceId:i.priceId, qty:i.qty||1 }));
 
     try{
-      // Jeśli front jest na innovategeneration.com → użyj Vercel hosta,
-      // jeśli na *.vercel.app → użyj ścieżki względnej
+      // jeśli front na innovategeneration.com -> użyj hosta Vercel
+      // jeśli na *.vercel.app -> użyj ścieżki względnej
       const API_BASE = location.hostname.endsWith('innovategeneration.com')
         ? 'https://inno-gen-dusky.vercel.app'
         : '';
@@ -337,7 +340,7 @@ document.addEventListener('click', async (e)=>{
       });
       const data = await res.json();
       if(res.ok && data.url){
-        window.location = data.url; // do not clear cart yet
+        window.location = data.url; // nie czyścimy koszyka tutaj
       }else{
         alert(data.error || 'Checkout error');
         btn.disabled=false; btn.textContent=old;
@@ -371,4 +374,5 @@ render();
 
 </body>
 </html>
+
 
