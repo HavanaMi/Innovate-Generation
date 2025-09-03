@@ -103,3 +103,45 @@ button:hover,
   .talent-card .half{ padding:6px; }
   .talent-card h3{ font-size:1.25rem; }
 }
+
+/* === Quote block (centered) === */
+.quote {
+  background:#f5f5f5;
+  padding:32px 16px;
+  margin:30px auto;
+  border-radius:10px;
+  text-align:center;
+  max-width:1100px;
+}
+.quote .row{
+  display:flex;
+  align-items:center;
+  justify-content:center;     /* pełne wyśrodkowanie */
+  gap:24px;
+  flex-wrap:wrap;
+}
+.quote img{
+  width:120px;                /* było 100px → trochę większe */
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+.quote .text{ max-width:760px; margin:0 auto; }
+.quote .line{
+  font-size:24px;
+  font-style:italic;
+  font-weight:800;
+  text-transform:uppercase;
+  color:#333;
+  margin:0;
+}
+.quote .by{ font-size:14px; color:#777; margin:6px 0 0; }
+.quote .desc{ font-size:14px; color:#555; margin-top:10px; }
+
+@media (max-width:520px){
+  .quote img{ width:110px; height:110px; }
+  .quote .line{ font-size:20px; }
+}
+
+
