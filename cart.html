@@ -333,7 +333,17 @@ const res = await fetch(`${API_BASE}/api/checkout`, {
 render();
 </script>
 
-  
+<script>
+(function(){
+  const V1='ig_cart_v1', V2='ig_cart_v2';
+  try{
+    if(!localStorage.getItem(V2) && localStorage.getItem(V1)){
+      localStorage.setItem(V2, localStorage.getItem(V1));
+    }
+  }catch(e){}
+})();
+</script>
+
   <script>
 (function(){
   const KEY='ig_cart_v2';
