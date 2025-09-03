@@ -27,7 +27,7 @@
     font-family: "Segoe UI", system-ui, Arial, sans-serif;
   }
 
-  /* ====== Top Nav (as requested) ====== */
+  /* ====== Top Nav ====== */
   nav{
     position:sticky; top:0; z-index:10;
     background:#1f1f1f;
@@ -114,7 +114,7 @@
     width:48px; text-align:center;
     border:1px solid var(--panel-border);
     border-radius:8px;
-    background:#fff; color:var(--text);
+    background:#fff; color:#text;
     padding:6px 4px;
   }
 
@@ -127,7 +127,7 @@
   .btn:hover{ background:var(--accent-2); }
   .ghost{
     border:1px solid var(--panel-border);
-    background:#fff; color:var(--text);
+    background:#fff; color:#000;
     border-radius:10px; padding:12px 16px; cursor:pointer;
   }
   .ghost.alt{ background:var(--btn-ghost); }
@@ -153,7 +153,7 @@
 </head>
 <body>
 
-<!-- ====== NAV (full menu) ====== -->
+<!-- ====== NAV ====== -->
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -180,10 +180,26 @@
 
 <footer><p>&copy; 2025 Innovate Generation.</p></footer>
 
+<!-- ====== MIGRACJA v1 -> v2 (musi być PRZED użyciem koszyka) ====== -->
+<script>
+(function(){
+  const V1='ig_cart_v1', V2='ig_cart_v2';
+  try{
+    if(!localStorage.getItem(V2) && localStorage.getItem(V1)){
+      localStorage.setItem(V2, localStorage.getItem(V1));
+    }
+  }catch(e){}
+})();
+</script>
+
 <script>
 /* ====== Simple cart store ====== */
-const CART_KEY = 'ig_cart_v1';
-const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+const CART_KEY = 'ig_cart_v2';
+
+function getCart(){
+  try{ return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
+  catch(e){ localStorage.removeItem(CART_KEY); return []; }
+}
 const setCart = (c) => localStorage.setItem(CART_KEY, JSON.stringify(c));
 
 function currency(n){ return '£' + (Math.round(n*100)/100).toFixed(2); }
@@ -308,9 +324,13 @@ document.addEventListener('click', async (e)=>{
     const items = cart.map(i=>({ priceId:i.priceId, qty:i.qty||1 }));
 
     try{
-const API_BASE = 'https://inno-gen-dusky.vercel.app';
-const res = await fetch(`${API_BASE}/api/checkout`, {
+      // Jeśli front jest na innovategeneration.com → użyj Vercel hosta,
+      // jeśli na *.vercel.app → użyj ścieżki względnej
+      const API_BASE = location.hostname.endsWith('innovategeneration.com')
+        ? 'https://inno-gen-dusky.vercel.app'
+        : '';
 
+      const res = await fetch(`${API_BASE}/api/create-checkout-session`, {
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ items })
@@ -333,18 +353,8 @@ const res = await fetch(`${API_BASE}/api/checkout`, {
 render();
 </script>
 
+<!-- Badge „Cart” zawsze aktualny po wejściu na stronę -->
 <script>
-(function(){
-  const V1='ig_cart_v1', V2='ig_cart_v2';
-  try{
-    if(!localStorage.getItem(V2) && localStorage.getItem(V1)){
-      localStorage.setItem(V2, localStorage.getItem(V1));
-    }
-  }catch(e){}
-})();
-</script>
-
-  <script>
 (function(){
   const KEY='ig_cart_v2';
   function update(){
@@ -358,6 +368,7 @@ render();
   document.addEventListener('DOMContentLoaded', update);
 })();
 </script>
-  
+
 </body>
 </html>
+
