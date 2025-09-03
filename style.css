@@ -139,5 +139,46 @@ button:hover, .category-item button:hover, #events button:hover, #poll button:ho
 /* ---------- Obrazki z width/height – anty-rozciąganie ---------- */
 img[width][height]{ height:auto; }       /* np. Merchandise.png nie będzie „wyciągany” w pionie */
 
+/* === 1) Downloadable Resources — wyśrodkowanie === */
+#resources { text-align: center; }
+#resources p { text-align: center; }
+#resources ul { padding-left: 0; margin: 10px 0 0; }
+#resources li { display: inline-block; margin: 10px 12px; }
+
+/* === 2) Sklep na stronie głównej — powrót do poprzednich kolorów === */
+/* Użyj #home-shop tylko jeśli dodałaś ten id do sekcji z 3 produktami */
+#home-shop .product-row .product-item{
+  background: #1f1f1f !important;
+  color: #fff !important;
+  border: 1px solid #2b2b2b !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+#home-shop .product-row .product-item h4{ color:#fff !important; }
+#home-shop .product-row .product-item p{ color: rgba(255,255,255,.85) !important; }
+#home-shop .product-row .product-item img{ border-radius:10px; }
+
+#home-shop .product-row .product-item .add-to-cart{
+  background:#0a7bdc !important;
+  color:#fff !important;
+  border:none;
+  border-radius:10px;
+  padding:10px 16px;
+  font-weight:700;
+  cursor:pointer;
+}
+#home-shop .product-row .product-item .add-to-cart:hover{
+  background:#075ea7 !important;
+}
+
+/* === 3) Talent Spotlight — delikatniej (mniejsza ramka/padding) === */
+.talent-card{
+  border-width: 3px !important;   /* było 5px */
+  padding: 18px !important;       /* było 24px */
+  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+}
+.talent-card .half-image img{ max-width: 340px; } /* subtelnie mniejszy obrazek */
+
+
 
 
