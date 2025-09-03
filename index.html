@@ -3,110 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innovate Generation</title>
-
-  <!-- Primary Meta Tags -->
   <title>Innovate Generation – Empowering Youth Creators</title>
-  <meta name="title" content="Innovate Generation – Empowering Youth Creators">
-  <meta name="description" content="A London-based CIC promoting youth in art, fashion, photography & events. Discover, support, and showcase the next generation of creative talent.">
-  <link rel="canonical" href="https://www.innovategeneration.com/">
-  <meta name="description" content="Innovate Generation CIC – wspieramy młodych twórców w Londynie poprzez modę, muzykę, sztukę, eventy i mentoring. Dołącz do naszej społeczności.">
-  <meta name="keywords" content="Innovate Generation, London, moda, muzyka, eventy, sztuka, mentoring, CIC">
 
-  <!-- Open Graph -->
+  <!-- SEO -->
+  <link rel="canonical" href="https://www.innovategeneration.com/">
+  <meta name="description" content="Innovate Generation CIC – supporting young creatives in London through fashion, photography, art and events." />
+  <meta name="keywords" content="Innovate Generation, London, fashion, music, art, events, mentoring, CIC" />
+
+  <!-- OG/Twitter -->
   <meta property="og:title" content="Innovate Generation – Empowering Young Creatives" />
   <meta property="og:description" content="Join our movement – workshops, events, and shows that give young creatives a voice." />
   <meta property="og:image" content="https://innovategeneration.com/images/Banner%20index_1.jpg" />
   <meta property="og:url" content="https://innovategeneration.com" />
   <meta property="og:type" content="website" />
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.innovategeneration.com/">
-  <meta name="twitter:title" content="Innovate Generation – Empowering Youth Creators">
-  <meta name="twitter:description" content="Support youth talent in art, design, and fashion. Join us in our mission.">
-  <meta name="twitter:image" content="https://www.innovategeneration.com/images/Banner%20index_1.jpg">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
-
-  <!-- External stylesheet -->
   <link rel="stylesheet" href="style.css?v=5">
 
-  <!-- Minimal inline styles kept (light theme + modules).
-       Talent Spotlight/Goal styling is INCLUDED here to działa od razu. -->
   <style>
-    /* Light theme base */
-    body { margin:0; background:#f8f6f1; color:#222; font-family:'Segoe UI',sans-serif; }
-    header, footer { background:#f8f6f1; text-align:center; padding:20px 15px; color:#222; }
-    nav { background:#303030; padding:6px; text-align:center; font-size:1.1em; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#ffcc00; }
-    section { padding:20px; max-width:1200px; margin:0 auto; }
-    h1,h2,h3,h4 { text-align:center; }
+    /* Base */
+    body{margin:0;background:#f8f6f1;color:#222;font-family:'Segoe UI',system-ui,Arial,sans-serif}
+    header,footer{background:#f8f6f1;text-align:center;padding:20px 15px;color:#222}
+    nav{background:#303030;padding:6px;text-align:center;font-size:1.1em}
+    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:700}
+    nav a:hover{color:#ffcc00}
+    section{padding:20px;max-width:1200px;margin:0 auto}
+    h1,h2,h3,h4{text-align:center}
 
-    /* Products / donate (zostawiamy jak było) */
-    .product-row{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .product-item{ background:#1f1f1f; padding:20px; border-radius:8px; width:250px; text-align:center; color:#fff; }
-    .product-item img{ width:100%; height:200px; object-fit:cover; border-radius:4px; }
-    .product-item a, .product-item button{ margin-top:10px; background:#007acc; color:#fff; padding:10px 20px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; display:inline-block; }
-    .product-item a:hover, .product-item button:hover{ background:#005f99; }
+    /* Product row */
+    .product-row{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+    .product-item{background:#fff;border:1px solid #e7e8eb;border-radius:12px;padding:14px;width:260px;text-align:center;color:#111;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .product-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;cursor:zoom-in}
+    .product-item button{margin-top:10px;background:#0a7bdc;color:#fff;padding:10px 14px;border:none;border-radius:10px;font-weight:700;cursor:pointer}
+    .product-item button:hover{background:#075ea7}
 
-    .donate-section{ max-width:600px; margin:0 auto; text-align:center; }
-    .donate-buttons{ display:flex; justify-content:center; gap:20px; margin-top:20px; flex-wrap:wrap; }
-    .donate-buttons a, .donate-buttons button{ background:#007acc; color:#fff; padding:12px 24px; border:none; border-radius:6px; cursor:pointer; text-decoration:none; font-weight:bold; }
-    .donate-buttons a:hover, .donate-buttons button:hover{ background:#005f99; }
+    .donate-section{max-width:600px;margin:0 auto;text-align:center}
+    .donate-buttons{display:flex;justify-content:center;gap:20px;margin-top:20px;flex-wrap:wrap}
+    .donate-buttons a{background:#007acc;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700}
+    .donate-buttons a:hover{background:#005f99}
 
-    form{ max-width:700px; margin:0 auto; }
-    form input, form textarea, form button{ width:100%; margin:10px 0; padding:10px; border-radius:6px; border:1px solid #ccc; }
-    form button{ background:#007acc; color:#fff; cursor:pointer; }
-    form button:hover{ background:#005f99; }
+    form{max-width:700px;margin:0 auto}
+    form input,form textarea,form button{width:100%;margin:10px 0;padding:10px;border-radius:6px;border:1px solid #ccc}
+    form button{background:#007acc;color:#fff;cursor:pointer}
+    form button:hover{background:#005f99}
 
-    ul.event-links{ list-style:none; padding:0; text-align:center; }
-    ul.event-links li{ margin:10px 0; }
-    ul.event-links a{ color:#004080; font-weight:bold; text-decoration:underline; }
-    ul.event-links a:hover{ color:#ffcc00; }
+    ul.event-links{list-style:none;padding:0;text-align:center}
+    ul.event-links li{margin:10px 0}
+    ul.event-links a{color:#004080;font-weight:700;text-decoration:underline}
+    ul.event-links a:hover{color:#ffcc00}
 
-    /* ---------- Talent Spotlight (jasne tło + ramka Cameo Coral + czarny tekst) ---------- */
+    /* Talent Spotlight – pomniejszone */
     .talent-card{
-      display:flex; flex-wrap:wrap; align-items:center; gap:24px;
-      background:#fff; color:#000;
-      padding:24px; border-radius:12px;
-      border:5px solid #EF9D8A;             /* Cameo Coral frame */
-      box-shadow:0 6px 20px rgba(0,0,0,.12);
-      max-width:1100px; margin:20px auto;
+      display:flex;flex-wrap:wrap;align-items:center;gap:16px;
+      background:#fff;color:#000;padding:18px;border-radius:12px;
+      border:3px solid #EF9D8A;box-shadow:0 6px 18px rgba(0,0,0,.10);
+      max-width:1000px;margin:16px auto;
     }
-    .talent-card .half{ flex:1 1 420px; padding:10px; }
-    .talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#000; text-align:center; }
-    .talent-card p{ margin:0; line-height:1.6; color:#000; }
-    .talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
-    .talent-card .half-image img{ width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover; }
+    .talent-card .half{flex:1 1 380px;padding:6px}
+    .talent-card h3{margin:0 0 8px;font-size:1.35rem;line-height:1.25;color:#000;text-align:center}
+    .talent-card p{margin:0;line-height:1.55;color:#000}
+    .talent-card .half-image{display:flex;justify-content:center;align-items:center}
+    .talent-card .half-image img{width:80%;max-width:300px;height:auto;display:block;margin:0 auto;border-radius:8px;object-fit:cover}
 
-    /* Our Goal – zbicie marginesu nagłówka */
-    .goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
-    .goal-section h2{ margin:0 0 10px; }
-    .goal-section p{ margin:0; line-height:1.6; }
+    /* “Our Goal” – ciaśniej */
+    .goal-section{max-width:1000px;margin:0 auto 24px;padding:0 10px}
+    .goal-section h2{margin:0 0 8px}
+    .goal-section p{margin:0;line-height:1.55}
 
-    /* Responsive */
-    @media (max-width:900px){
-      .talent-card{ padding:20px; gap:16px; }
-      .talent-card h3{ text-align:left; }
+    /* Hero/ilustracje – brak rozciągania, ograniczona max-wysokość */
+    .hero-img{
+      width:min(80%, 900px);
+      height:auto;
+      object-fit:contain;
+      display:block;margin:20px auto;border-radius:8px;
+      max-height:min(60vh, 520px);
     }
-    @media (max-width:768px){
-      .donate-buttons{ flex-direction:column; align-items:center; }
-    }
-    @media (max-width:640px){
-      .talent-card{ padding:16px; gap:12px; }
-      .talent-card .half{ padding:6px; }
-      .talent-card h3{ font-size:1.25rem; }
-    }
+
+    /* Lightbox (popup) */
+    #popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;z-index:9999;padding:20px}
+    #popup img{max-width:92%;max-height:92%;border-radius:10px;display:block}
+    #popup .close{position:absolute;top:16px;right:22px;font-size:38px;color:#fff;cursor:pointer;line-height:1}
   </style>
 </head>
 
 <body>
 <header>
-  <img src="images/Banner%20index_1.jpg" alt="Innovate Generation banner" style="max-width:100%; height:auto; margin-bottom:10px;" />
-  <h1 style="font-size:3em; margin:10px 0 5px;">Innovate Generation</h1>
-  <p style="font-size:1.4em; margin:0;">Social Innovation. Real Impact.</p>
+  <img src="images/Banner%20index_1.jpg" alt="Innovate Generation banner" style="max-width:100%;height:auto;margin-bottom:10px" />
+  <h1 style="font-size:3em;margin:10px 0 5px">Innovate Generation</h1>
+  <p style="font-size:1.3em;margin:0">Social Innovation. Real Impact.</p>
 </header>
 
 <nav>
@@ -121,113 +106,67 @@
   <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
 </nav>
 
-<!-- Intro / opis Innovate Generation (NAD ramką) -->
 <section class="intro-ig">
-  <p>
-    <strong>Innovate Generation</strong> UK-based CIC hosting creative events — fashion shows, art and photography exhibitions — offering the public a chance to buy youth-made works.
-    We promote artists, especially ages 14–25, by giving them a platform to showcase their talent.
-  </p>
-  <img src="images/what_offer.png" alt="What We Offer" style="width:90%; display:block; margin:20px auto; border-radius:8px;" />
-  <p>
-    <strong>We Offer</strong> creative production services, including video and photography, tailored workshops, and individual training.
-    Our work supports young talent by providing skills, guidance, and opportunities to present their creativity to wider audiences.
-  </p>
-</section> <!-- ✅ brakowało zamknięcia -->
+  <p><strong>Innovate Generation</strong> UK-based CIC hosting creative events — fashion shows, art and photography exhibitions — offering the public a chance to buy youth-made works. We promote artists, especially ages 14–25, by giving them a platform to showcase their talent.</p>
+  <img src="images/what_offer.png" alt="What We Offer" class="hero-img" />
+  <p><strong>We Offer</strong> creative production services, including video and photography, tailored workshops, and individual training. Our work supports young talent by providing skills, guidance, and opportunities to present their creativity to wider audiences.</p>
+</section>
 
-<!-- Talent Spotlight -->
 <section>
   <div class="talent-card">
     <div class="half half-text">
       <h3>Talent Spotlight</h3>
-      <p>
-As our organisation continues to grow and welcome more participants, we plan to introduce awards in various categories to recognise outstanding talent and commitment. 
-        While this initiative is still in development, future recipients will be selected based on consistent dedication and achievements. 
-        Nikola is a great example of someone who could be considered for such recognition in the future — she is known for her artistic skills and strong academic performance. 
-        Her paintings and creative energy serve as an inspiring example for other youth in our community. 
-        We’re proud to share her beautiful artwork with the world, and each year we aim to celebrate exceptional talents from our programs.
-      </p>
+      <p>As our organisation continues to grow and welcome more participants, we plan to introduce awards in various categories to recognise outstanding talent and commitment. While this initiative is still in development, future recipients will be selected based on consistent dedication and achievements. Nikola is a great example of someone who could be considered for such recognition in the future — she is known for her artistic skills and strong academic performance. Her paintings and creative energy serve as an inspiring example for other youth in our community.</p>
     </div>
     <div class="half half-image">
-      <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year">
+      <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
 
-<!-- Jensen Huang quote block -->
-<section style="background-color:#f5f5f5; padding:30px 15px; margin:30px 0; text-align:center; border-radius:10px;">
-  <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
-    <img src="images/Jensen_Huang_Nvidia.jpg" alt="Jensen Huang"
-         style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-    <div style="max-width:700px;">
-      <p style="font-size:22px; font-style:italic; font-weight:bold; text-transform:uppercase; color:#333; margin:0;">
-        "If you take care of people, everything else takes care of itself."
-      </p>
-      <p style="font-size:14px; color:#777; margin-top:5px;">
-        – Jensen Huang, CEO & Co-Founder of NVIDIA
-      </p>
-      <p style="font-size:14px; color:#555; margin-top:10px;">
-        Jensen Huang shared this belief during a company-wide compensation review at NVIDIA.
-        He explained that by prioritising the well-being and growth of employees,
-        all other aspects of the business naturally fall into place.
-      </p>
+<section style="background:#f5f5f5;padding:30px 15px;margin:30px 0;border-radius:10px;text-align:center">
+  <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap">
+    <img src="images/Jensen_Huang_Nvidia.jpg" alt="Jensen Huang" style="width:100px;height:100px;border-radius:50%;object-fit:cover;box-shadow:0 4px 8px rgba(0,0,0,.2)" loading="lazy" decoding="async">
+    <div style="max-width:700px">
+      <p style="font-size:22px;font-style:italic;font-weight:700;text-transform:uppercase;color:#333;margin:0">"If you take care of people, everything else takes care of itself."</p>
+      <p style="font-size:14px;color:#777;margin-top:5px">– Jensen Huang, CEO & Co-Founder of NVIDIA</p>
+      <p style="font-size:14px;color:#555;margin-top:10px">Jensen Huang shared this belief during a company-wide compensation review at NVIDIA. He explained that by prioritising the well-being and growth of employees, all other aspects of the business naturally fall into place.</p>
     </div>
   </div>
 </section>
 
-<!-- Our Goal -->
 <section class="goal-section">
   <h2>Our Goal</h2>
-  <p>
-    Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines.
-    We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events.
-    Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in
-    building skills, confidence, and new futures.
-  </p>
+  <p>Our aim is to create collaboration, offer professional development, and promote young talent across artistic disciplines. We offer free mentoring, creative workshops, and the chance for participants to sell their work through exhibitions and events. Whether it’s fashion, photography, painting, sculpture or more – our programs are here to support emerging creators in building skills, confidence, and new futures.</p>
 </section>
 
-<img src="images/Culture.png" alt="Culture Illustration"
-     style="width:75%; max-width:750px; display:block; margin:20px auto; border-radius:8px;" />
+<img src="images/Culture.png" alt="Culture Illustration" class="hero-img" loading="lazy" decoding="async" />
 
-<section class="donate-section" style="margin-top:0; padding-top:0;">
-  <h2 style="margin-top:0;">Buy Me Breakfast / Lunch</h2>
-  <img src="images/Lunch_blank.png" alt="Lunch Illustration"
-       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
-  <p>
-    Want to support our youth? Donate the cost of a breakfast or lunch to help volunteers and creatives stay nourished during events and workshops.
-    A snack break during the course, particularly while working, and in case the teenager hasn’t had breakfast at home.
-  </p>
-  <div class="donate-buttons" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
-    <a href="https://buy.stripe.com/3cIbJ02NPbsR4K48u95sA03" target="_blank">Donate £5</a>
-    <a href="https://buy.stripe.com/cNibJ060140p3G0aCh5sA04" target="_blank">Donate £15</a>
-    <a href="https://buy.stripe.com/28EcN4copfJ7foIaCh5sA05" target="_blank">Donate £30</a>
+<section class="donate-section" style="margin-top:0;padding-top:0">
+  <h2 style="margin-top:0">Buy Me Breakfast / Lunch</h2>
+  <img src="images/Lunch_blank.png" alt="Lunch Illustration" class="hero-img" loading="lazy" decoding="async" />
+  <p>Want to support our youth? Donate the cost of a breakfast or lunch to help volunteers and creatives stay nourished during events and workshops. A snack break during the course, particularly while working, and in case the teenager hasn’t had breakfast at home.</p>
+  <div class="donate-buttons">
+    <a href="https://buy.stripe.com/3cIbJ02NPbsR4K48u95sA03" target="_blank" rel="noopener">Donate £5</a>
+    <a href="https://buy.stripe.com/cNibJ060140p3G0aCh5sA04" target="_blank" rel="noopener">Donate £15</a>
+    <a href="https://buy.stripe.com/28EcN4copfJ7foIaCh5sA05" target="_blank" rel="noopener">Donate £30</a>
   </div>
 </section>
 
 <section>
-  <img
-    src="images/Merchandise.png"
-    alt="Merchandise Illustration"
-    data-zoom
-    loading="lazy" decoding="async" width="800" height="420"
-    style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
+  <img src="images/Merchandise.png" alt="Merchandise Illustration" class="hero-img" data-zoom loading="lazy" decoding="async" />
 
-  <h2 style="text-align:center;">Shop – Youth-Created Products</h2>
+  <h2>Shop – Youth-Created Products</h2>
 
-  <div class="product-row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px;">
+  <div class="product-row">
 
     <!-- Mug Arch -->
-    <article class="product-item" style="width:260px; background:#fff; border:1px solid #e7e8eb; border-radius:12px; padding:14px; text-align:center;">
+    <article class="product-item">
       <figure style="margin:0">
-        <img
-          src="images/MugArch.png"
-          alt="White Mug – Arch"
-          data-zoom
-          loading="lazy" decoding="async" width="260" height="220"
-          style="cursor:zoom-in; width:100%; height:220px; object-fit:cover; border-radius:10px;">
-        <figcaption style="display:none">White Mug – Arch</figcaption>
+        <img src="images/MugArch.png" alt="White Mug – Arch" data-zoom loading="lazy" decoding="async">
       </figure>
-      <h4 style="margin:10px 0 6px;">White Mug</h4>
-      <p style="margin:0 0 10px; color:#555;">Arch Ceramic Mug. <strong>£35.00</strong></p>
+      <h4 style="margin:10px 0 6px">White Mug</h4>
+      <p style="margin:0 0 10px;color:#555">Arch Ceramic Mug. <strong>£35.00</strong></p>
       <button class="add-to-cart"
         data-id="white-mug-arch"
         data-name="White Mug – Arch"
@@ -235,25 +174,16 @@ As our organisation continues to grow and welcome more participants, we plan to 
         data-price="35.00"
         data-priceid="price_1Rty8IBaMwJkUgdcrvKbIt9F"
         data-image="images/MugArch.png"
-        data-qty="1"
-        style="border:none; background:#0a7bdc; color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer;">
-        Add to cart
-      </button>
+        data-qty="1">Add to cart</button>
     </article>
 
     <!-- T-shirt White -->
-    <article class="product-item" style="width:260px; background:#fff; border:1px solid #e7e8eb; border-radius:12px; padding:14px; text-align:center;">
+    <article class="product-item">
       <figure style="margin:0">
-        <img
-          src="images/TshirtPerfectlyFineWhite.png"
-          alt="T-shirt – Perfectly Fine (White)"
-          data-zoom
-          loading="lazy" decoding="async" width="260" height="220"
-          style="cursor:zoom-in; width:100%; height:220px; object-fit:cover; border-radius:10px;">
-        <figcaption style="display:none">T-shirt – Perfectly Fine (White)</figcaption>
+        <img src="images/TshirtPerfectlyFineWhite.png" alt="T-shirt – Perfectly Fine (White)" data-zoom loading="lazy" decoding="async">
       </figure>
-      <h4 style="margin:10px 0 6px;">T-shirt</h4>
-      <p style="margin:0 0 10px; color:#555;">Perfectly Fine White – Cotton. <strong>£36.99</strong></p>
+      <h4 style="margin:10px 0 6px">T-shirt</h4>
+      <p style="margin:0 0 10px;color:#555">Perfectly Fine White – Cotton. <strong>£36.99</strong></p>
       <button class="add-to-cart"
         data-id="tee-perfectly-fine-white"
         data-name="T-shirt – Perfectly Fine (White)"
@@ -261,25 +191,16 @@ As our organisation continues to grow and welcome more participants, we plan to 
         data-price="36.99"
         data-priceid="price_1RtyDPBaMwJkUgdcEeNCNmLv"
         data-image="images/TshirtPerfectlyFineWhite.png"
-        data-qty="1"
-        style="border:none; background:#0a7bdc; color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer;">
-        Add to cart
-      </button>
+        data-qty="1">Add to cart</button>
     </article>
 
     <!-- T-shirt Black -->
-    <article class="product-item" style="width:260px; background:#fff; border:1px solid #e7e8eb; border-radius:12px; padding:14px; text-align:center;">
+    <article class="product-item">
       <figure style="margin:0">
-        <img
-          src="images/TshirtPerfectlyFineBlack.png"
-          alt="T-shirt – Perfectly Fine (Black)"
-          data-zoom
-          loading="lazy" decoding="async" width="260" height="220"
-          style="cursor:zoom-in; width:100%; height:220px; object-fit:cover; border-radius:10px;">
-        <figcaption style="display:none">T-shirt – Perfectly Fine (Black)</figcaption>
+        <img src="images/TshirtPerfectlyFineBlack.png" alt="T-shirt – Perfectly Fine (Black)" data-zoom loading="lazy" decoding="async">
       </figure>
-      <h4 style="margin:10px 0 6px;">T-shirt</h4>
-      <p style="margin:0 0 10px; color:#555;">Perfectly Fine Black – Cotton. <strong>£36.99</strong></p>
+      <h4 style="margin:10px 0 6px">T-shirt</h4>
+      <p style="margin:0 0 10px;color:#555">Perfectly Fine Black – Cotton. <strong>£36.99</strong></p>
       <button class="add-to-cart"
         data-id="tee-perfectly-fine-black"
         data-name="T-shirt – Perfectly Fine (Black)"
@@ -287,43 +208,23 @@ As our organisation continues to grow and welcome more participants, we plan to 
         data-price="36.99"
         data-priceid="price_1RtyI2BaMwJkUgdcrqvdqmeu"
         data-image="images/TshirtPerfectlyFineBlack.png"
-        data-qty="1"
-        style="border:none; background:#0a7bdc; color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer;">
-        Add to cart
-      </button>
+        data-qty="1">Add to cart</button>
     </article>
 
   </div>
 </section>
 
-
-  </div>
-</section>
-
-<!-- Image Popup -->
-<div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.8); justify-content:center; align-items:center; z-index:9999;">
-  <span onclick="closePopup()" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
-  <img id="popup-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
-</div>
-
-<script>
-  function openPopup(src){ document.getElementById("popup-img").src = src; document.getElementById("popup").style.display = "flex"; }
-  function closePopup(){ document.getElementById("popup").style.display = "none"; }
-</script>
-
 <section>
-  <img src="images/Upcoming%20events_1.png" alt="Events Illustration"
-       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
+  <img src="images/Upcoming%20events_1.png" alt="Events Illustration" class="hero-img" loading="lazy" decoding="async" />
   <h2>Event Links</h2>
   <ul class="event-links">
-    <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank">Find Art Events on Eventbrite</a></li>
-    <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank">Find Concerts on Ticketmaster</a></li>
+    <li><a href="https://www.eventbrite.co.uk/d/online/art-events/" target="_blank" rel="noopener">Find Art Events on Eventbrite</a></li>
+    <li><a href="https://www.ticketmaster.co.uk/browse/concerts-catid-10001" target="_blank" rel="noopener">Find Concerts on Ticketmaster</a></li>
   </ul>
 </section>
 
-<section style="max-width:900px; margin:0 auto;">
-  <img src="images/Join%20Us.png" alt="Join Illustration"
-       style="width:80%; max-width:800px; display:block; margin:20px auto; border-radius:8px;" />
+<section style="max-width:900px;margin:0 auto">
+  <img src="images/Join%20Us.png" alt="Join Illustration" class="hero-img" loading="lazy" decoding="async" />
   <h2>Apply for Mentoring or Workshops</h2>
   <p>Are you talented and want to grow your experience in art, photography, fashion design, or sculpture? Or maybe want to volunteer with us? Join our free programs today! Meetings will be accessible both online via Zoom and in person at a physical venue, such as a school room or similar location.</p>
 
@@ -335,44 +236,70 @@ As our organisation continues to grow and welcome more participants, we plan to 
   </form>
 </section>
 
-<section id="resources" style="padding:40px 20px;">
+<section id="resources" style="padding:40px 20px">
   <h2>📥 Downloadable Resources</h2>
   <p>Click below to download the necessary documents:</p>
-  <ul style="list-style-type:none; padding-left:0;">
-    <li>
-      <a href="resources/Consent_Form.pdf" download
-         style="display:inline-block; margin:10px 0; padding:10px 20px; background:#ffcc00; color:#000; font-weight:bold; border-radius:10px; text-decoration:none;">
-        📄 Download Consent Form
-      </a>
-    </li>
-    <li>
-      <a href="resources/event_schedule.pdf" download
-         style="display:inline-block; margin:10px 0; padding:10px 20px; background:#ffcc00; color:#000; font-weight:bold; border-radius:10px; text-decoration:none;">
-        📄 Download Event Schedule
-      </a>
-    </li>
+  <ul style="list-style:none;padding-left:0">
+    <li><a href="resources/Consent_Form.pdf" download style="display:inline-block;margin:10px 0;padding:10px 20px;background:#ffcc00;color:#000;font-weight:700;border-radius:10px;text-decoration:none">📄 Download Consent Form</a></li>
+    <li><a href="resources/event_schedule.pdf" download style="display:inline-block;margin:10px 0;padding:10px 20px;background:#ffcc00;color:#000;font-weight:700;border-radius:10px;text-decoration:none">📄 Download Event Schedule</a></li>
   </ul>
 </section>
 
-<footer>
-  <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
-</footer>
+<footer><p>&copy; 2025 Innovate Generation. All rights reserved.</p></footer>
 
+<!-- Lightbox -->
+<div id="popup" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <span class="close" aria-label="Close">&times;</span>
+  <img id="popup-img" src="" alt="">
+</div>
+
+<!-- JS: cart + lightbox + badge -->
 <script>
+/* ====== CART CORE (ig_cart_v2) ====== */
+const CART_KEY='ig_cart_v2';
+function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch(e){localStorage.removeItem(CART_KEY);return[]}}
+function setCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c))}
+function updateCartCount(){try{const n=getCart().reduce((s,i)=>s+(i.qty||1),0);const el=document.getElementById('cart-count');if(el)el.textContent=n}catch(e){}}
+function toast(msg){const el=document.createElement('div');el.textContent=msg;el.style.cssText='position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:10px 14px;border-radius:10px;font:600 14px system-ui;box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:10000;opacity:0;transition:.25s';document.body.appendChild(el);requestAnimationFrame(()=>{el.style.opacity='1'});setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.remove(),250)},1600)}
+
+document.addEventListener('click',(e)=>{
+  const btn=e.target.closest('.add-to-cart'); if(!btn) return;
+  const priceId=btn.dataset.priceid;
+  if(!priceId || !/^price_[A-Za-z0-9]+$/.test(priceId)){ alert('Product is missing a valid priceId.'); return; }
+  const item={
+    id:btn.dataset.id||priceId,
+    name:btn.dataset.name||'Item',
+    description:btn.dataset.description||'',
+    priceId,
+    price:Number(btn.dataset.price)||0,
+    image:btn.dataset.image||'',
+    qty:Math.max(1,parseInt(btn.dataset.qty||1,10))
+  };
+  const cart=getCart();
+  const ex=cart.find(i=>i.priceId===item.priceId);
+  ex?ex.qty+=item.qty:cart.push(item);
+  setCart(cart);
+  updateCartCount();
+  toast('Added to cart');
+});
+
+document.addEventListener('DOMContentLoaded', updateCartCount);
+
+/* ====== LIGHTBOX dla [data-zoom] ====== */
 (function(){
-  const KEY='ig_cart_v2';
-  function update(){
-    try{
-      const cart = JSON.parse(localStorage.getItem(KEY) || '[]');
-      const n = cart.reduce((s,i)=>s+(i.qty||1),0);
-      const el = document.getElementById('cart-count');
-      if (el) el.textContent = n;
-    }catch(e){}
-  }
-  document.addEventListener('DOMContentLoaded', update);
+  const popup=document.getElementById('popup');
+  const img=document.getElementById('popup-img');
+  function open(src){ img.src=src; popup.style.display='flex'; }
+  function close(){ popup.style.display='none'; img.src=''; }
+  document.addEventListener('click',e=>{
+    const target=e.target.closest('[data-zoom]');
+    if(target && target.tagName==='IMG'){ open(target.getAttribute('data-zoom-src')||target.src); }
+    if(e.target.classList.contains('close')) close();
+    if(e.target===popup) close();
+  });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
 })();
 </script>
-
 </body>
 </html>
 
