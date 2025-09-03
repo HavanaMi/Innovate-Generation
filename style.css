@@ -1,88 +1,96 @@
-/* ===== HARD THEME OVERRIDES — FINAL ===== */
+/* ===== HARD THEME OVERRIDES — FINAL (fixed) ===== */
 
 /* Global – jasny motyw */
-html, body { background:#f8f6f1 !important; color:#222 !important; }
+html, body { background:#f8f6f1; color:#222; }
 
 /* Header / Footer */
 header, footer{
-  background:#f8f6f1 !important; color:#222 !important;
-  border-top:1px solid #e6e2d9 !important;
-  border-bottom:1px solid #e6e2d9 !important;
+  background:#f8f6f1; color:#222;
+  border-top:1px solid #e6e2d9;
+  border-bottom:1px solid #e6e2d9;
 }
 
 /* NAV – szary pasek + białe linki */
 nav{
-  background:#303030 !important; color:#fff !important;
-  border-top:none !important; border-bottom:none !important;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  background:#303030; color:#fff;
+  border:0; box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
-nav a{ color:#fff !important; }
-nav a:hover{ color:#ffcc00 !important; }
+nav a{ color:#fff; }
+nav a:hover{ color:#ffcc00; }
 
 /* Sekcje domyślnie jasne */
 section, #home, #about, #articles, #shop, #resources, #contact, #policy{
-  background:transparent !important; color:#222 !important;
+  background:transparent; color:#222;
 }
 
-/* Panele/kafle ciemne */
+/* Panele/kafle ciemne (BEZ globalnego .product-item!) */
 #portfolio, .portfolio-item,
 #categories-of-the-month, .category-item,
-#featured-products, .product-item,
+#featured-products, /* tylko ten kontener, nie .product-item globalnie */
 #events, #poll, .modal-content{
-  background:#303030 !important; color:#f8f6f1 !important;
-  border-color:rgba(255,255,255,.08) !important;
-  box-shadow:0 0 10px rgba(0,0,0,.12) !important;
+  background:#303030; color:#f8f6f1;
+  border-color:rgba(255,255,255,.08);
+  box-shadow:0 0 10px rgba(0,0,0,.12);
 }
 #portfolio h2, #portfolio h3, #portfolio .price,
 .category-item h2, .category-item h3,
-.product-item h2, .product-item h3,
-#events h2, #poll h2, .modal-content h2, .modal-content h3{ color:#fff !important; }
-#portfolio p, .category-item p, .product-item p, #events p, #poll p, .modal-content p{ color:#e8e8e8 !important; }
+#events h2, #poll h2, .modal-content h2, .modal-content h3{ color:#fff; }
+#portfolio p, .category-item p, #events p, #poll p, .modal-content p{ color:#e8e8e8; }
 
 /* Formularze */
-label{ color:#222 !important; }
+label{ color:#222; }
 input, textarea{
-  background:#fff !important; color:#222 !important;
-  border:1px solid #ccc !important;
+  background:#fff; color:#222; border:1px solid #ccc;
 }
 
 /* Przyciski */
-button,
-.product-item button, .category-item button,
-#events button, #poll button{
-  background:#007acc !important; color:#fff !important;
+button, .category-item button, #events button, #poll button{
+  background:#007acc; color:#fff; border:0;
 }
-button:hover,
-.product-item button:hover, .category-item button:hover,
-#events button:hover, #poll button:hover{ background:#005f99 !important; }
+button:hover, .category-item button:hover, #events button:hover, #poll button:hover{
+  background:#005f99;
+}
 
 /* Artykuły */
-.post{ border-bottom:1px solid #ddd !important; }
-.post h2{ color:#111 !important; }
-.post p{ color:#333 !important; }
+.post{ border-bottom:1px solid #ddd; }
+.post h2{ color:#111; }
+.post p{ color:#333; }
 
 /* Linki do eventów */
-#events a{ color:#111 !important; text-decoration:underline; font-weight:600; }
-#events a:hover{ color:#333 !important; }
+#events a{ color:#111; text-decoration:underline; font-weight:600; }
+#events a:hover{ color:#333; }
 
-/* ---------- Talent Spotlight (jasne tło + ramka Cameo Coral) ---------- */
+/* ---------- KARTY PRODUKTÓW (jasne na stronie głównej/sklepie) ---------- */
+.product-item{
+  background:#fff; color:#111;
+  border:1px solid #e7e8eb; border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+}
+.product-item h2, .product-item h3, .product-item p{ color:#111; }
+.product-item button{
+  background:#0a7bdc; color:#fff; border:0; border-radius:10px;
+}
+.product-item button:hover{ background:#075ea7; }
 
+/* Obrazki w kartach */
+.product-item img{
+  width:100%; height:220px; object-fit:cover; border-radius:10px;
+}
+
+/* ---------- Talent Spotlight ---------- */
 .intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
 .intro-ig p{ margin:0; color:#222; }
 
 .talent-card{
   display:flex; flex-wrap:wrap; align-items:center; gap:24px;
-  background:#fff !important;           /* środek jasny */
-  color:#000 !important;                 /* czarny tekst */
-  padding:24px;
-  border:5px solid #EF9D8A !important;   /* ramka Cameo Coral */
-  border-radius:12px;
+  background:#fff; color:#000;
+  padding:24px; border:5px solid #EF9D8A; border-radius:12px;
   box-shadow:0 6px 20px rgba(0,0,0,.12);
   max-width:1100px; margin:20px auto;
 }
 .talent-card .half{ flex:1 1 420px; padding:10px; }
-.talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#000 !important; text-align:center; }
-.talent-card p{ margin:0; line-height:1.6; color:#000 !important; }
+.talent-card h3{ margin:0 0 10px; font-size:1.5rem; line-height:1.2; color:#000; text-align:center; }
+.talent-card p{ margin:0; line-height:1.6; color:#000; }
 .talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
 .talent-card .half-image img{
   width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover;
@@ -92,6 +100,26 @@ button:hover,
 .goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
 .goal-section h2{ margin:0 0 10px; }
 .goal-section p{ margin:0; line-height:1.6; }
+
+/* ---------- Quote block (centered) ---------- */
+.quote{
+  background:#f5f5f5; padding:28px 16px; margin:30px auto;
+  border-radius:10px; text-align:center; max-width:1100px;
+}
+.quote .row{ display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; }
+
+/* Avatar (nie podlega globalnemu img { width:100% }) */
+.quote-avatar{
+  width:110px; height:110px; border-radius:9999px; object-fit:cover;
+  box-shadow:0 4px 8px rgba(0,0,0,.2); flex:0 0 auto;
+}
+.quote .text{ max-width:760px; margin:0 auto; }
+.quote .line{
+  font-size:22px; font-style:italic; font-weight:800; text-transform:uppercase;
+  color:#333; margin:0;
+}
+.quote .by{ font-size:14px; color:#777; margin:6px 0 0; }
+.quote .desc{ font-size:14px; color:#555; margin-top:10px; }
 
 /* ---------- Mobile tweaks ---------- */
 @media (max-width:900px){
@@ -103,49 +131,13 @@ button:hover,
   .talent-card .half{ padding:6px; }
   .talent-card h3{ font-size:1.25rem; }
 }
-
-/* === Quote block (centered) – FIX avatar size === */
-.quote {
-  background:#f5f5f5;
-  padding:28px 16px;
-  margin:30px auto;
-  border-radius:10px;
-  text-align:center;
-  max-width:1100px;
-}
-.quote .row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-/* Tylko avatar w cytacie – nadpisuje globalne img { width:100% } */
-.quote-avatar{
-  width:110px !important;
-  height:110px !important;
-  border-radius:9999px;
-  object-fit:cover;
-  box-shadow:0 4px 8px rgba(0,0,0,.2);
-  flex:0 0 auto;
-}
-
-.quote .text{ max-width:760px; margin:0 auto; }
-.quote .line{
-  font-size:22px;
-  font-style:italic;
-  font-weight:800;
-  text-transform:uppercase;
-  color:#333;
-  margin:0;
-}
-.quote .by{ font-size:14px; color:#777; margin:6px 0 0; }
-.quote .desc{ font-size:14px; color:#555; margin-top:10px; }
-
 @media (max-width:520px){
-  .quote-avatar{ width:96px !important; height:96px !important; }
+  .quote-avatar{ width:96px; height:96px; }
   .quote .line{ font-size:19px; }
 }
+
+/* ---------- Obrazki z width/height – anty-rozciąganie ---------- */
+img[width][height]{ height:auto; }       /* np. Merchandise.png nie będzie „wyciągany” w pionie */
+
 
 
