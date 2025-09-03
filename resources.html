@@ -113,3 +113,19 @@
     <li><a href="resources/workshop_guide.pdf" class="download-btn" download>📄 Workshop Guide</a></li>
   </ul>
 </section>
+
+  
+  <script>
+(function(){
+  const KEY='ig_cart_v2';
+  function update(){
+    try{
+      const cart = JSON.parse(localStorage.getItem(KEY) || '[]');
+      const n = cart.reduce((s,i)=>s+(i.qty||1),0);
+      const el = document.getElementById('cart-count');
+      if (el) el.textContent = n;
+    }catch(e){}
+  }
+  document.addEventListener('DOMContentLoaded', update);
+})();
+</script>
