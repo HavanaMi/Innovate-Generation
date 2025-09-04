@@ -1,6 +1,6 @@
-/* ===== HARD THEME OVERRIDES — FINAL (fixed) ===== */
+/* ===== HARD THEME OVERRIDES — CLEAN ===== */
 
-/* Global – jasny motyw */
+/* Global – jasny motyw wszędzie */
 html, body { background:#f8f6f1; color:#222; }
 
 /* Header / Footer */
@@ -18,24 +18,25 @@ nav{
 nav a{ color:#fff; }
 nav a:hover{ color:#ffcc00; }
 
-/* Sekcje domyślnie jasne */
-section, #home, #about, #articles, #shop, #resources, #contact, #policy{
+/* Sekcje domyślnie jasne na wszystkich stronach */
+section, main, article, aside,
+#home, #about, #articles, #shop, #resources, #contact, #policy, #portfolio {
   background:transparent; color:#222;
 }
 
-/* Panele/kafle ciemne (BEZ globalnego .product-item!) */
+/* Panele/kafle – PRZYWRÓCONE NA JASNE (wcześniej były ściemnione) */
 #portfolio, .portfolio-item,
 #categories-of-the-month, .category-item,
-#featured-products, /* tylko ten kontener, nie .product-item globalnie */
+#featured-products,
 #events, #poll, .modal-content{
-  background:#303030; color:#f8f6f1;
-  border-color:rgba(255,255,255,.08);
-  box-shadow:0 0 10px rgba(0,0,0,.12);
+  background:#ffffff; color:#222;
+  border:1px solid #e7e8eb;
+  box-shadow:0 0 10px rgba(0,0,0,.06);
 }
-#portfolio h2, #portfolio h3, #portfolio .price,
+#portfolio h2, #portfolio h3,
 .category-item h2, .category-item h3,
-#events h2, #poll h2, .modal-content h2, .modal-content h3{ color:#fff; }
-#portfolio p, .category-item p, #events p, #poll p, .modal-content p{ color:#e8e8e8; }
+#events h2, #poll h2, .modal-content h2, .modal-content h3{ color:#111; }
+#portfolio p, .category-item p, #events p, #poll p, .modal-content p{ color:#333; }
 
 /* Formularze */
 label{ color:#222; }
@@ -43,7 +44,7 @@ input, textarea{
   background:#fff; color:#222; border:1px solid #ccc;
 }
 
-/* Przyciski */
+/* Przyciski (jasny motyw) */
 button, .category-item button, #events button, #poll button{
   background:#007acc; color:#fff; border:0;
 }
@@ -60,32 +61,32 @@ button:hover, .category-item button:hover, #events button:hover, #poll button:ho
 #events a{ color:#111; text-decoration:underline; font-weight:600; }
 #events a:hover{ color:#333; }
 
-/* ---------- KARTY PRODUKTÓW (jasne na stronie głównej/sklepie) ---------- */
-.product-item{
-  background:#fff; color:#111;
-  border:1px solid #e7e8eb; border-radius:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,.05);
+/* ---------- KARTY PRODUKTÓW — CIEMNE TYLKO DLA SKLEPU ---------- */
+.product-row .product-item{
+  background:#1f1f1f;
+  color:#fff;
+  border:1px solid #3b3b3b;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.10);
 }
-.product-item h2, .product-item h3, .product-item p{ color:#111; }
-.product-item button{
-  background:#0a7bdc; color:#fff; border:0; border-radius:10px;
-}
-.product-item button:hover{ background:#075ea7; }
-
-/* Obrazki w kartach */
-.product-item img{
+.product-row .product-item h4{ color:#fff; }
+.product-row .product-item p{ color:rgba(255,255,255,.88); }
+.product-row .product-item img{
   width:100%; height:220px; object-fit:cover; border-radius:10px;
 }
+.product-row .product-item .add-to-cart{
+  background:#0a7bdc; color:#fff; border:0; border-radius:10px; padding:10px 16px; font-weight:700;
+}
+.product-row .product-item .add-to-cart:hover{ background:#075ea7; }
 
-/* ---------- Talent Spotlight ---------- */
-.intro-ig{ max-width:1100px; margin:40px auto 20px; text-align:center; }
-.intro-ig p{ margin:0; color:#222; }
-
+/* ---------- Talent Spotlight — lżejsza ramka (bez skracania treści) ---------- */
 .talent-card{
   display:flex; flex-wrap:wrap; align-items:center; gap:24px;
   background:#fff; color:#000;
-  padding:24px; border:5px solid #EF9D8A; border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  border:3px solid #EF9D8A;       /* było 5px */
+  border-radius:12px;
+  padding:18px;                    /* było 24px – subtelniej */
+  box-shadow:0 4px 14px rgba(0,0,0,.10);
   max-width:1100px; margin:20px auto;
 }
 .talent-card .half{ flex:1 1 420px; padding:10px; }
@@ -96,21 +97,14 @@ button:hover, .category-item button:hover, #events button:hover, #poll button:ho
   width:90%; max-width:360px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover;
 }
 
-/* ---------- Our Goal ---------- */
-.goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }
-.goal-section h2{ margin:0 0 10px; }
-.goal-section p{ margin:0; line-height:1.6; }
-
-/* ---------- Quote block (centered) ---------- */
+/* ---------- Quote block (wyśrodkowany, avatar trochę większy) ---------- */
 .quote{
   background:#f5f5f5; padding:28px 16px; margin:30px auto;
   border-radius:10px; text-align:center; max-width:1100px;
 }
 .quote .row{ display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; }
-
-/* Avatar (nie podlega globalnemu img { width:100% }) */
 .quote-avatar{
-  width:110px; height:110px; border-radius:9999px; object-fit:cover;
+  width:120px; height:120px; border-radius:9999px; object-fit:cover;
   box-shadow:0 4px 8px rgba(0,0,0,.2); flex:0 0 auto;
 }
 .quote .text{ max-width:760px; margin:0 auto; }
@@ -120,168 +114,18 @@ button:hover, .category-item button:hover, #events button:hover, #poll button:ho
 }
 .quote .by{ font-size:14px; color:#777; margin:6px 0 0; }
 .quote .desc{ font-size:14px; color:#555; margin-top:10px; }
-
-/* ---------- Mobile tweaks ---------- */
-@media (max-width:900px){
-  .talent-card{ padding:20px; gap:16px; }
-  .talent-card h3{ text-align:left; }
-}
-@media (max-width:640px){
-  .talent-card{ padding:16px; gap:12px; }
-  .talent-card .half{ padding:6px; }
-  .talent-card h3{ font-size:1.25rem; }
-}
 @media (max-width:520px){
-  .quote-avatar{ width:96px; height:96px; }
-  .quote .line{ font-size:19px; }
+  .quote-avatar{ width:100px; height:100px; }
 }
 
 /* ---------- Obrazki z width/height – anty-rozciąganie ---------- */
-img[width][height]{ height:auto; }       /* np. Merchandise.png nie będzie „wyciągany” w pionie */
+img[width][height]{ height:auto; }
 
-/* === 1) Downloadable Resources — wyśrodkowanie === */
-#resources { text-align: center; }
-#resources p { text-align: center; }
-#resources ul { padding-left: 0; margin: 10px 0 0; }
-#resources li { display: inline-block; margin: 10px 12px; }
-
-/* === 2) Sklep na stronie głównej — powrót do poprzednich kolorów === */
-/* Użyj #home-shop tylko jeśli dodałaś ten id do sekcji z 3 produktami */
-#home-shop .product-row .product-item{
-  background: #1f1f1f !important;
-  color: #fff !important;
-  border: 1px solid #2b2b2b !important;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.10);
-}
-#home-shop .product-row .product-item h4{ color:#fff !important; }
-#home-shop .product-row .product-item p{ color: rgba(255,255,255,.85) !important; }
-#home-shop .product-row .product-item img{ border-radius:10px; }
-
-#home-shop .product-row .product-item .add-to-cart{
-  background:#0a7bdc !important;
-  color:#fff !important;
-  border:none;
-  border-radius:10px;
-  padding:10px 16px;
-  font-weight:700;
-  cursor:pointer;
-}
-#home-shop .product-row .product-item .add-to-cart:hover{
-  background:#075ea7 !important;
-}
-
-/* === 3) Talent Spotlight — delikatniej (mniejsza ramka/padding) === */
-.talent-card{
-  border-width: 3px !important;   /* było 5px */
-  padding: 18px !important;       /* było 24px */
-  box-shadow: 0 4px 14px rgba(0,0,0,.10);
-}
-.talent-card .half-image img{ max-width: 340px; } /* subtelnie mniejszy obrazek */
-
-/* === SKLEP — ciemne kafelki (globalnie, nadpisuje inline przez !important) === */
-.product-row .product-item{
-  background:#151515 !important;
-  color:#fff !important;
-  border:1px solid #2a2a2a !important;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-.product-row .product-item h4{ color:#fff !important; }
-.product-row .product-item p{ color:rgba(255,255,255,.88) !important; }
-.product-row .product-item img{ border-radius:10px; }
-
-/* przycisk – zostaje niebieski */
-.product-row .product-item .add-to-cart{
-  background:#0a7bdc !important;
-  color:#fff !important;
-  border:none;
-  border-radius:10px;
-  padding:10px 16px;
-  font-weight:700;
-}
-.product-row .product-item .add-to-cart:hover{ background:#075ea7 !important; }
-
-/* === TALENT SPOTLIGHT — subtelniej === */
-.talent-card{
-  border-width:2px !important;   /* było 5px */
-  padding:16px !important;       /* było 24px */
-  margin:16px auto !important;   /* było 20+ — wygląda lżej */
-  box-shadow:0 3px 10px rgba(0,0,0,.10) !important;
-}
-.talent-card .half-image img{
-  max-width:300px !important;    /* delikatnie mniejszy obrazek */
-}
-
-/* (zostawiamy całą treść bez zmian) */
-
-/* Talent Spotlight — lżejsza ramka, obrazek bez zmian */
-.talent-card{
-  border-width: 2px !important;      /* było grubo – teraz subtelnie */
-  padding: 16px !important;           /* było 24px */
-  margin: 16px auto !important;       /* trochę mniej „masy” wokół */
-  box-shadow: 0 3px 10px rgba(0,0,0,.10) !important; /* delikatniejszy cień */
-  border-color: #EF9D8A !important;   /* ten sam kolor ramki */
-}
-
-/* Przywrócenie rozmiaru obrazka, jeśli wcześniej został zredukowany */
-.talent-card .half-image img{
-  width: 90% !important;
-  max-width: 360px !important;        /* jak wcześniej */
-  height: auto !important;
-}
-
-/* Avatar w cytacie – większy i odporny na globalne img { width:100% } */
-.quote-avatar{
-  width: 140px !important;
-  height: 140px !important;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,.2);
-}
-
-/* lekki spadek na telefonach */
-@media (max-width:520px){
-  .quote-avatar{ width:120px !important; height:120px !important; }
-}
-
-/* Talent Spotlight – lżejsza ramka i odrobinkę mniejsza typografia */
-.talent-card{
-  border:3px solid #EF9D8A !important;  /* było 5px */
-  padding:18px;                          /* było 24px */
-  border-radius:12px;
-}
-.talent-card h3{ font-size:1.35rem; }    /* było 1.5rem */
-.talent-card p{  font-size:0.98rem; }
-
-/* Talent Spotlight – lżejsza ramka i odrobinkę mniejsza typografia */
-.talent-card{
-  border:3px solid #EF9D8A !important;  /* było 5px */
-  padding:18px;                          /* było 24px */
-  border-radius:12px;
-}
-.talent-card h3{ font-size:1.35rem; }    /* było 1.5rem */
-.talent-card p{  font-size:0.98rem; }
-
-/* Shop cards — wracamy do ciemnych kafli, ale tylko w #shop-cards */
-#shop-cards .product-item{
-  background:#1f1f1f !important;
-  color:#fff !important;
-  border:1px solid #3b3b3b !important;
-  border-radius:12px;
-}
-#shop-cards .product-item h4,
-#shop-cards .product-item p{ color:#eaeaea !important; }
-#shop-cards .product-item button{
-  background:#0a7bdc !important;
-  color:#fff !important;
-}
-#shop-cards .product-item button:hover{ background:#075ea7 !important; }
-
-
-
-
-
+/* ---------- Resources: „Click below…” na środku ---------- */
+#resources { text-align:center; }
+#resources p { text-align:center; }
+#resources ul { padding-left:0; margin:10px 0 0; }
+#resources li { display:inline-block; margin:10px 12px; }
 
 
 
