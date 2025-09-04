@@ -409,6 +409,74 @@ section { background:transparent !important; color:inherit !important; }
 
 
 
+/* === CEO avatar – większy, wymuszone nad inline === */
+.quote img.quote-avatar{
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2) !important;
+}
+
+/* Na telefonach odrobinę mniejszy */
+@media (max-width:520px){
+  .quote img.quote-avatar{ width:120px !important; height:120px !important; }
+}
+
+/* === Talent Spotlight – cieńsza ramka + mniejszy padding i fonty === */
+section .talent-card{
+  border: 2px solid #EF9D8A !important;   /* 5px -> 2px */
+  padding: 16px !important;               /* 24px -> 16px */
+  border-radius: 12px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,.10) !important;
+}
+section .talent-card h3{ font-size: 1.35rem !important; }  /* było ~1.5rem */
+section .talent-card p { font-size: 0.98rem !important; }
+
+/* Przywrócenie rozmiaru obrazka w Spotlight (wcześniejsze reguły mogły go zmniejszyć) */
+section .talent-card .half-image img{
+  width: 90% !important;
+  max-width: 360px !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+
+/* === CEO avatar – większy, wymuszone nad inline === */
+.quote img.quote-avatar{
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2) !important;
+}
+
+/* Na telefonach odrobinę mniejszy */
+@media (max-width:520px){
+  .quote img.quote-avatar{ width:120px !important; height:120px !important; }
+}
+
+/* === Talent Spotlight – cieńsza ramka + mniejszy padding i fonty === */
+section .talent-card{
+  border: 2px solid #EF9D8A !important;   /* 5px -> 2px */
+  padding: 16px !important;               /* 24px -> 16px */
+  border-radius: 12px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,.10) !important;
+}
+section .talent-card h3{ font-size: 1.35rem !important; }  /* było ~1.5rem */
+section .talent-card p { font-size: 0.98rem !important; }
+
+/* Przywrócenie rozmiaru obrazka w Spotlight (wcześniejsze reguły mogły go zmniejszyć) */
+section .talent-card .half-image img{
+  width: 90% !important;
+  max-width: 360px !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+
+
+
 
 
 
