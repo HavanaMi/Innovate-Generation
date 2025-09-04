@@ -166,5 +166,85 @@ img[width][height]{ height:auto; }
   background:#005f99 !important;
 }
 
+/* ==== FINAL LIGHT THEME HOTFIX – everywhere light, shop cards dark ==== */
+
+/* Global – wymuś jasne tło/tekst wszędzie */
+html, body { background:#f8f6f1 !important; color:#222 !important; }
+
+/* Wszystkie sekcje/kontenery z powrotem jasne */
+main, section, article, aside,
+header, footer,
+.container, .content, .wrap, .page,
+.hero, .panel, .card, .post, .article, .article-card,
+#home, #about, #articles, #portfolio, #shop, #resources, #contact, #policy,
+#events, #poll, .modal-content, .category-item, .portfolio-item {
+  background:transparent !important;
+  color:#222 !important;
+  border-color:#e7e8eb !important;
+}
+
+/* Pudełka (panele) – białe wnętrze */
+#portfolio, .portfolio-item,
+#events, #poll, .modal-content,
+.category-item, .post, .card, .panel, .article-card {
+  background:#ffffff !important;
+  color:#222 !important;
+  border:1px solid #e7e8eb !important;
+  box-shadow:0 0 10px rgba(0,0,0,.06) !important;
+}
+
+/* NAV zostaje ciemny – nie ruszamy */
+
+/* === SKLEP: tylko karty produktów mają być ciemne (jak wcześniej) === */
+.product-row .product-item{
+  background:#1f1f1f !important;
+  color:#f2f2f2 !important;
+  border:none !important;
+  border-radius:8px !important;
+  padding:20px !important;
+  box-shadow:none !important;
+  text-align:center !important;
+}
+.product-row .product-item h4,
+.product-row .product-item p{ color:#f2f2f2 !important; }
+.product-row .product-item img{
+  width:100% !important;
+  height:200px !important;
+  object-fit:cover !important;
+  border-radius:4px !important;
+}
+.product-row .product-item .add-to-cart{
+  margin-top:10px !important;
+  background:#007acc !important;
+  color:#fff !important;
+  padding:10px 20px !important;
+  border:none !important;
+  border-radius:5px !important;
+  cursor:pointer !important;
+}
+.product-row .product-item .add-to-cart:hover{ background:#005f99 !important; }
+
+/* Talent Spotlight – tylko cieńsza ramka, bez zmian treści */
+.talent-card{
+  background:#fff !important; color:#000 !important;
+  border:3px solid #EF9D8A !important;   /* lżej */
+  border-radius:12px !important;
+  padding:18px !important;
+  box-shadow:0 4px 14px rgba(0,0,0,.10) !important;
+}
+
+/* Cytat – avatar trochę większy (nie wpływa na tła) */
+.quote-avatar{
+  width:130px !important; height:130px !important;
+  border-radius:9999px; object-fit:cover; box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+
+/* Resources – opis na środku */
+#resources, #resources p{ text-align:center !important; }
+#resources ul{ padding-left:0 !important; margin:10px 0 0 !important; }
+#resources li{ display:inline-block !important; margin:10px 12px !important; }
+
+/* Anty-rozciąganie obrazków z width/height (np. Merchandise) */
+img[width][height]{ height:auto !important; }
 
 
