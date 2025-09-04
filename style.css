@@ -248,3 +248,49 @@ header, footer,
 img[width][height]{ height:auto !important; }
 
 
+
+/* === 0) Montserrat wszędzie === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+html, body, h1, h2, h3, h4, h5, h6,
+p, a, li, button, input, textarea {
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+  letter-spacing: .2px;
+}
+
+/* === 1) Globalnie przywróć jasny motyw na podstronach === */
+html, body { background:#f8f6f1 !important; color:#222 !important; }
+header, footer { background:#f8f6f1 !important; color:#222 !important; }
+
+/* Zbij przypadkowe ciemne tła na sekcjach/podstronach */
+#home, #about, #articles, #shop, #resources, #contact, #policy, #portfolio,
+section {
+  background: transparent !important;
+  color:#222 !important;
+}
+
+/* === 2) PORTFOLIO – naprawa czytelności boxa z opisem ===
+   (łapiemy typowe nazwy kontenerów – jeżeli któryś z nich istnieje,
+   box dostanie jasne tło i ciemny tekst) */
+#portfolio .panel, #portfolio .card, #portfolio .box,
+#portfolio .content, #portfolio .projects-intro, #portfolio .project-panel,
+#portfolio [class*="panel"], #portfolio [class*="card"], #portfolio [class*="box"] {
+  background:#ffffff !important;
+  color:#222 !important;
+  border:1px solid #e7e8eb !important;
+  box-shadow:0 4px 12px rgba(0,0,0,.06) !important;
+}
+#portfolio .panel p, #portfolio .panel h1, #portfolio .panel h2, #portfolio .panel h3,
+#portfolio .card p,  #portfolio .card h1,  #portfolio .card h2,  #portfolio .card h3 {
+  color:#222 !important;
+}
+
+/* Na wszelki wypadek – jeżeli coś zostało przyciemnione selektorem z wyższą specyficznością */
+#portfolio * { color:inherit !important; }
+
+/* === 3) Obrazki ze stałymi width/height nie będą rozciągane w pionie === */
+img[width][height]{ height:auto; }
+
+
+
+
+
