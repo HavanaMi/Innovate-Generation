@@ -127,6 +127,44 @@ img[width][height]{ height:auto; }
 #resources ul { padding-left:0; margin:10px 0 0; }
 #resources li { display:inline-block; margin:10px 12px; }
 
+/* === KARTY SKLEPU – jak wcześniej (ciemne kafelki) === */
+.product-row .product-item{
+  background:#1f1f1f !important;
+  color:#f2f2f2 !important;
+  border:none !important;
+  border-radius:8px !important;
+  padding:20px !important;
+  box-shadow:none !important; /* w poprzedniej wersji nie było cienia */
+  text-align:center;
+}
+
+/* Tekst w kartach */
+.product-row .product-item h4,
+.product-row .product-item p{
+  color:#f2f2f2 !important;
+}
+
+/* Obrazki w kartach */
+.product-row .product-item img{
+  width:100% !important;
+  height:200px !important;
+  object-fit:cover !important;
+  border-radius:4px !important;
+}
+
+/* Przyciski w kartach */
+.product-row .product-item .add-to-cart{
+  margin-top:10px;
+  background:#007acc !important;
+  color:#fff !important;
+  padding:10px 20px !important;
+  border:none !important;
+  border-radius:5px !important;
+  cursor:pointer;
+}
+.product-row .product-item .add-to-cart:hover{
+  background:#005f99 !important;
+}
 
 
 
