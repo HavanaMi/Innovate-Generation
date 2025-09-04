@@ -292,5 +292,78 @@ img[width][height]{ height:auto; }
 
 
 
+/* ========== PORTFOLIO: jasny panel pod "Our Projects" ========== */
+/* Łapiemy najczęstsze układy: h2 + div/section w sekcji Portfolio */
+#portfolio h2 + div,
+#portfolio h2 + section,
+#portfolio .portfolio-intro,
+#portfolio .projects-intro,
+#portfolio .project-panel,
+#portfolio .panel,
+#portfolio .card,
+#portfolio .box {
+  background:#ffffff !important;
+  color:#222 !important;
+  border:1px solid #e7e8eb !important;
+  box-shadow:0 4px 12px rgba(0,0,0,.06) !important;
+}
+#portfolio h2 + div *,
+#portfolio h2 + section *,
+#portfolio .portfolio-intro *,
+#portfolio .projects-intro *,
+#portfolio .project-panel *,
+#portfolio .panel *,
+#portfolio .card *,
+#portfolio .box * {
+  color:inherit !important;
+}
+
+/* Dodatkowy bezpiecznik, gdyby strona nie miała #portfolio:
+   pierwszy DIV zaraz po nagłówku "Our Projects" też rozjaśnij */
+h2:nth-of-type(1)+div[style*="background"],
+h2:nth-of-type(1)+div {
+  background:#ffffff !important;
+  color:#222 !important;
+  border:1px solid #e7e8eb !important;
+  box-shadow:0 4px 12px rgba(0,0,0,.06) !important;
+}
+
+/* ========== PORTFOLIO: wideo na pełną szerokość kontentu ========== */
+#portfolio video {
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  border-radius:8px;
+}
+
+/* Rozszerz typowe wrappery na 100% szerokości layoutu */
+#portfolio .video-wrapper,
+#portfolio .video-container,
+#portfolio .video-card,
+#portfolio .project-video,
+#portfolio .media,
+#portfolio figure,
+#portfolio .video-block {
+  width:100% !important;
+  max-width:1100px !important;   /* dopasuj do szerokości treści strony */
+  margin:0 auto 20px !important;
+  background:#fff;               /* jeżeli chcesz białe tło za playerem */
+  border:1px solid #e7e8eb;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+/* ========== GLOBALNIE (żeby nic nie przyciemniało z powrotem) ========== */
+body, html { background:#f8f6f1 !important; color:#222 !important; }
+section { background:transparent !important; color:inherit !important; }
+
+
+
+
+
+
+
+
 
 
