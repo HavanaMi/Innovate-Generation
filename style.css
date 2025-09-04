@@ -474,6 +474,40 @@ section .talent-card .half-image img{
   object-fit: cover !important;
 }
 
+/* Talent Spotlight */
+.talent-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;              /* zmniejszone z np. 30px */
+  margin: 40px auto;
+  max-width: 900px;           /* lekko węższa ramka */
+  border: 1px solid #e66;
+  border-radius: 10px;
+  background-color: #fffaf6;  /* dopasuj do reszty */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.talent-card .half-text {
+  flex: 1;
+  font-size: 0.95rem;         /* zmniejszone o 1 jednostkę */
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+.talent-card h3 {
+  font-size: 1.3rem;          /* nagłówek też mniejszy */
+  margin-bottom: 12px;
+}
+
+.talent-card .half-image img {
+  max-width: 300px;           /* obrazek w tych samych wymiarach */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
 
 
 
