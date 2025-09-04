@@ -245,6 +245,41 @@ img[width][height]{ height:auto; }       /* np. Merchandise.png nie będzie „w
   .quote-avatar{ width:120px !important; height:120px !important; }
 }
 
+/* Talent Spotlight – lżejsza ramka i odrobinkę mniejsza typografia */
+.talent-card{
+  border:3px solid #EF9D8A !important;  /* było 5px */
+  padding:18px;                          /* było 24px */
+  border-radius:12px;
+}
+.talent-card h3{ font-size:1.35rem; }    /* było 1.5rem */
+.talent-card p{  font-size:0.98rem; }
+
+/* Talent Spotlight – lżejsza ramka i odrobinkę mniejsza typografia */
+.talent-card{
+  border:3px solid #EF9D8A !important;  /* było 5px */
+  padding:18px;                          /* było 24px */
+  border-radius:12px;
+}
+.talent-card h3{ font-size:1.35rem; }    /* było 1.5rem */
+.talent-card p{  font-size:0.98rem; }
+
+/* Shop cards — wracamy do ciemnych kafli, ale tylko w #shop-cards */
+#shop-cards .product-item{
+  background:#1f1f1f !important;
+  color:#fff !important;
+  border:1px solid #3b3b3b !important;
+  border-radius:12px;
+}
+#shop-cards .product-item h4,
+#shop-cards .product-item p{ color:#eaeaea !important; }
+#shop-cards .product-item button{
+  background:#0a7bdc !important;
+  color:#fff !important;
+}
+#shop-cards .product-item button:hover{ background:#075ea7 !important; }
+
+
+
 
 
 
