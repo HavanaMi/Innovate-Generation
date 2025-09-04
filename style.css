@@ -548,6 +548,49 @@ section .talent-card .half-image img{
   }
 }
 
+/* CEO Quote – wyrównanie i zbliżenie avatara do tekstu */
+#ceo-quote{
+  margin-top: 16px !important;        /* mniejszy odstęp nad sekcją */
+}
+
+#ceo-quote img{
+  display: inline-block !important;
+  vertical-align: middle !important;
+  border-radius: 50% !important;
+}
+
+/* Klasa dla avatara – jeśli nie masz klasy, zostaw jak jest: zadziała przez selektor niżej */
+#ceo-quote .ceo-avatar{
+  width: 120px !important;             /* lekko większe kółko (usuń, jeśli nie chcesz powiększać) */
+  height: 120px !important;
+  object-fit: cover !important;
+}
+
+/* Gdy nie masz klasy na img – złap dowolny okrągły obraz w tej sekcji */
+#ceo-quote img{
+  width: 120px !important;             /* rozmiar kółka */
+  height: 120px !important;
+  margin-right: 16px !important;       /* bliżej tekstu w poziomie */
+  transform: translateY(-8px) !important; /* podsuń do góry = bliżej cytatu */
+}
+
+/* Tekst cytatu – zredukuj przerwy wokół, wyrównaj do środka */
+#ceo-quote blockquote,
+#ceo-quote .quote-line,
+#ceo-quote .quote-text{
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* Opcjonalnie: układ w jednym wierszu (avatar + cytat) i wyrównanie do środka */
+#ceo-quote .quote-wrap{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+
 
 
 
