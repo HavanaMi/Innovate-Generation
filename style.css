@@ -370,6 +370,17 @@ section { background:transparent !important; color:inherit !important; }
 
 
 
+/* Avatar w cytacie – trochę większy */
+.quote-avatar{
+  width:130px !important;
+  height:130px !important;
+  border-radius:9999px;
+  object-fit:cover;
+  box-shadow:0 4px 8px rgba(0,0,0,.2);
+  flex:0 0 auto;
+}
+
+
 
 
 
