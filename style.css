@@ -506,6 +506,48 @@ section .talent-card .half-image img{
   border-radius: 8px;
 }
 
+/* Talent Spotlight – forced override */
+#talent-spotlight .talent-card{
+  padding: 20px !important;              /* cieńsza „ramka” wewnątrz */
+  margin: 32px auto !important;
+  max-width: 900px !important;           /* mniej masywne */
+  border: 1px solid #ea6a6a !important;  /* cieniej */
+  border-radius: 10px !important;
+  background: #fffaf6 !important;
+}
+
+#talent-spotlight .half.half-text{
+  font-size: 0.95rem !important;         /* tekst mniejszy o ~1 jednostkę */
+  line-height: 1.5 !important;
+  margin-right: 20px !important;
+}
+
+#talent-spotlight h3{
+  font-size: 1.3rem !important;          /* mniejszy nagłówek */
+  margin: 0 0 10px 0 !important;
+  font-weight: 700 !important;
+}
+
+#talent-spotlight .half.half-image img{
+  width: 360px !important;               /* ZACHOWAJ ten sam rozmiar obrazu */
+  height: auto !important;
+  border-radius: 8px !important;
+}
+
+/* Mobile – żeby było lżej na telefonie */
+@media (max-width: 768px){
+  #talent-spotlight .talent-card{
+    flex-direction: column !important;
+    max-width: 95% !important;
+    padding: 16px !important;
+  }
+  #talent-spotlight .half.half-image img{
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-top: 14px !important;
+  }
+}
+
 
 
 
