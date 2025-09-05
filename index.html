@@ -162,6 +162,60 @@
       Her paintings and creative energy serve as an inspiring example for other youth in our community.
       We’re proud to share her beautiful artwork with the world, and each year we aim to celebrate exceptional talents from our programs.
     </p>
+
+
+#talent-spotlight.talent-card {
+  display: flex;                  /* obok siebie */
+  flex-wrap: wrap;                /* na telefonie spada w dół */
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 900px;               /* węższy box */
+  margin: 20px auto;
+  padding: 16px;                  /* mniej luzu */
+  border: 2px solid #EF9D8A;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+#talent-spotlight .half-text {
+  flex: 1 1 55%;                  /* tekst zajmuje trochę więcej */
+  font-size: 0.95rem;             /* mniejszy font */
+  line-height: 1.5;
+  padding: 8px;
+}
+
+#talent-spotlight .half-text h3 {
+  font-size: 1.2rem;              /* mniejszy nagłówek */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#talent-spotlight .half-image {
+  flex: 1 1 40%;                  /* obrazek z prawej */
+  display: flex;
+  justify-content: center;
+}
+
+#talent-spotlight .half-image img {
+  max-width: 260px;               /* mniejszy obrazek */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Na telefonach (do 768px) obrazek pod tekstem */
+@media (max-width: 768px) {
+  #talent-spotlight.talent-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  #talent-spotlight .half-text,
+  #talent-spotlight .half-image {
+    flex: 1 1 100%;
+  }
+}
   </div>
 
   <figure class="half half-image">
