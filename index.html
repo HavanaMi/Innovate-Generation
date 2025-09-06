@@ -151,49 +151,21 @@
   </p>
 </section>
 
-/* Talent Spotlight – mniejszy, lżejszy blok, obrazek po prawej */
-#talent-spotlight{
-  display:flex; flex-wrap:wrap; align-items:center; gap:14px;
-  max-width:760px !important;          /* węższa ramka */
-  margin:18px auto !important;
-  padding:12px !important;             /* mniej wewnętrznego luzu */
-  border:1px solid #EF9D8A !important; /* cieńsza obwódka */
-  border-radius:10px !important;
-  background:#fff !important;
-  box-shadow:0 2px 6px rgba(0,0,0,.08) !important;
-}
-
-#talent-spotlight .half-text{
-  flex:1 1 58%;
-  font-size:.92rem !important;         /* mniejszy tekst */
-  line-height:1.45 !important;
-  padding:4px 6px !important;
-}
-
-#talent-spotlight h3{
-  font-size:1.1rem !important;         /* mniejszy nagłówek */
-  margin:0 0 8px !important;
-  text-align:left !important;
-}
-
-#talent-spotlight .half-image{
-  flex:1 1 32%;
-  display:flex; justify-content:center;
-}
-
-#talent-spotlight .half-image img{
-  max-width:220px !important;          /* mniejszy obrazek */
-  width:100%; height:auto;
-  border-radius:6px;
-}
-
-/* Telefon: układ w kolumnie i jeszcze subtelniej */
-@media (max-width:768px){
-  #talent-spotlight{ flex-direction:column; text-align:center; max-width:95% !important; }
-  #talent-spotlight .half-text, #talent-spotlight .half-image{ flex:1 1 100%; }
-  #talent-spotlight .half-image img{ max-width:260px !important; }
-}
-
+<section id="talent-spotlight" class="talent-card">
+  <div class="half half-text">
+    <h3>Talent Spotlight</h3>
+    <p>
+    As our organisation continues to grow and welcome more participants, we plan to introduce awards in various categories to recognise outstanding talent and commitment.
+      While this initiative is still in development, future recipients will be selected based on consistent dedication and achievements.
+      Nikola is a great example of someone who could be considered for such recognition in the future — she is known for her artistic skills and strong academic performance.
+      Her paintings and creative energy serve as an inspiring example for other youth in our community.
+      We’re proud to share her beautiful artwork with the world, and each year we aim to celebrate exceptional talents from our programs.
+    </p>
+  </div>
+  <div class="half half-image">
+    <img src="images/ArtistOfYear.png" alt="Artist of the Year" loading="lazy" width="420" height="280">
+  </div>
+</section>
 
 <!-- Jensen Huang quote (POJEDYNCZY) -->
 <section class="quote">
