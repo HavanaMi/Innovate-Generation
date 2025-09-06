@@ -643,6 +643,41 @@ section .talent-card .half-image img{
 }
 
 
+/* Talent Spotlight — kompaktowo */
+#talent-spotlight{
+  display:flex; flex-wrap:wrap; align-items:center; gap:14px;
+  max-width:760px !important;
+  margin:18px auto !important;
+  padding:12px !important;
+  border:1px solid #EF9D8A !important;
+  border-radius:10px !important;
+  background:#fff !important;
+  box-shadow:0 2px 6px rgba(0,0,0,.08) !important;
+}
+#talent-spotlight .half-text{
+  flex:1 1 58%;
+  font-size:.92rem !important;
+  line-height:1.45 !important;
+  padding:4px 6px !important;
+}
+#talent-spotlight h3{
+  font-size:1.1rem !important;
+  margin:0 0 8px !important;
+  text-align:left !important;
+}
+#talent-spotlight .half-image{
+  flex:1 1 32%;
+  display:flex; justify-content:center;
+}
+#talent-spotlight .half-image img{
+  max-width:220px !important;
+  width:100%; height:auto; border-radius:6px;
+}
+@media (max-width:768px){
+  #talent-spotlight{ flex-direction:column; text-align:center; max-width:95% !important; }
+  #talent-spotlight .half-text, #talent-spotlight .half-image{ flex:1 1 100%; }
+  #talent-spotlight .half-image img{ max-width:260px !important; }
+}
 
 
 
