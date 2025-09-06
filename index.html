@@ -151,10 +151,36 @@
   </p>
 </section>
 
-<!-- Talent Spotlight -->
-<section id="talent-spotlight" class="talent-card" style="font-size: 0.9rem;">
-  <div class="half half-text">
-    <h3 style="font-size: 1.8rem;">Talent Spotlight</h3>
+  <!-- Talent Spotlight -->
+<style>
+/* tylko dla tej sekcji */
+#talent-spotlight{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+  max-width:900px; margin:20px auto; padding:16px;
+  border:2px solid #EF9D8A; border-radius:12px; background:#fff;
+  box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+#talent-spotlight .half-text{
+  flex:1 1 56%; font-size:.95rem; line-height:1.5; padding:8px;
+}
+#talent-spotlight h3{
+  font-size:1.2rem; margin:0 0 10px;
+}
+#talent-spotlight .half-image{
+  flex:1 1 38%; display:flex; justify-content:center;
+}
+#talent-spotlight .half-image img{
+  width:100%; max-width:260px; height:auto; border-radius:6px;
+}
+@media (max-width:768px){
+  #talent-spotlight{ flex-direction:column; text-align:center; }
+  #talent-spotlight .half-text, #talent-spotlight .half-image{ flex:1 1 100%; }
+}
+</style>
+
+<section id="talent-spotlight" class="talent-card">
+  <div class="half-text">
+    <h3>Talent Spotlight</h3>
     <p>
       As our organisation continues to grow and welcome more participants, we plan to introduce awards in various categories to recognise outstanding talent and commitment.
       While this initiative is still in development, future recipients will be selected based on consistent dedication and achievements.
@@ -163,11 +189,12 @@
       We’re proud to share her beautiful artwork with the world, and each year we aim to celebrate exceptional talents from our programs.
     </p>
   </div>
-  <div class="half">
-    <img src="images/Artist%20of%20The%20Year.jpg" alt="Nikola - Artist of The Year"
-         style="width: 90%; max-width: 350px; display: block; margin: 0 auto; border-radius: 8px;" />
-  </div>
+
+  <figure class="half-image">
+    <img src="images/ArtistOfYear.png" alt="Artist of the Year">
+  </figure>
 </section>
+
 
 <!-- Jensen Huang quote (POJEDYNCZY) -->
 <section class="quote">
@@ -184,7 +211,6 @@
     </div>
 </section>
   
-
 <!-- Our Goal -->
 <section class="goal-section">
   <h2>Our Goal</h2>
