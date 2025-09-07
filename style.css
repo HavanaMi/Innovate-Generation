@@ -590,4 +590,47 @@ section .talent-card .half-image img{
   gap: 16px !important;
 }
 
+/* Talent Spotlight clean layout */
+#talent-spotlight .talent-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+#talent-spotlight .talent-text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#talent-spotlight .talent-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+#talent-spotlight .talent-img {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+}
+
+#talent-spotlight .talent-img img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Telefon – obrazek pod tekstem */
+@media (max-width: 768px) {
+  #talent-spotlight .talent-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
