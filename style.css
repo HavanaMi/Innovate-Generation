@@ -456,147 +456,13 @@ section .talent-card .half-image img{
   .quote img.quote-avatar{ width:120px !important; height:120px !important; }
 }
 
-/* === Talent Spotlight – cieńsza ramka + mniejszy padding i fonty === */
-section .talent-card{
-  border: 2px solid #EF9D8A !important;   /* 5px -> 2px */
-  padding: 16px !important;               /* 24px -> 16px */
-  border-radius: 12px !important;
-  box-shadow: 0 3px 10px rgba(0,0,0,.10) !important;
-}
-section .talent-card h3{ font-size: 1.35rem !important; }  /* było ~1.5rem */
-section .talent-card p { font-size: 0.98rem !important; }
-
-/* Przywrócenie rozmiaru obrazka w Spotlight (wcześniejsze reguły mogły go zmniejszyć) */
-section .talent-card .half-image img{
-  width: 90% !important;
-  max-width: 360px !important;
-  height: auto !important;
-  object-fit: cover !important;
-}
-
-/* Talent Spotlight */
-.talent-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;              /* zmniejszone z np. 30px */
-  margin: 40px auto;
-  max-width: 900px;           /* lekko węższa ramka */
-  border: 1px solid #e66;
-  border-radius: 10px;
-  background-color: #fffaf6;  /* dopasuj do reszty */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.talent-card .half-text {
-  flex: 1;
-  font-size: 0.95rem;         /* zmniejszone o 1 jednostkę */
-  line-height: 1.5;
-  margin-right: 20px;
-}
-
-.talent-card h3 {
-  font-size: 1.3rem;          /* nagłówek też mniejszy */
-  margin-bottom: 12px;
-}
-
-.talent-card .half-image img {
-  max-width: 300px;           /* obrazek w tych samych wymiarach */
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Talent Spotlight – forced override */
-#talent-spotlight .talent-card{
-  padding: 20px !important;              /* cieńsza „ramka” wewnątrz */
-  margin: 32px auto !important;
-  max-width: 900px !important;           /* mniej masywne */
-  border: 1px solid #ea6a6a !important;  /* cieniej */
-  border-radius: 10px !important;
-  background: #fffaf6 !important;
-}
-
-#talent-spotlight .half.half-text{
-  font-size: 0.95rem !important;         /* tekst mniejszy o ~1 jednostkę */
-  line-height: 1.5 !important;
-  margin-right: 20px !important;
-}
-
-#talent-spotlight h3{
-  font-size: 1.3rem !important;          /* mniejszy nagłówek */
-  margin: 0 0 10px 0 !important;
-  font-weight: 700 !important;
-}
-
-#talent-spotlight .half.half-image img{
-  width: 360px !important;               /* ZACHOWAJ ten sam rozmiar obrazu */
-  height: auto !important;
-  border-radius: 8px !important;
-}
-
-/* Mobile – żeby było lżej na telefonie */
-@media (max-width: 768px){
-  #talent-spotlight .talent-card{
-    flex-direction: column !important;
-    max-width: 95% !important;
-    padding: 16px !important;
-  }
-  #talent-spotlight .half.half-image img{
-    width: 100% !important;
-    max-width: 360px !important;
-    margin-top: 14px !important;
-  }
-}
-
-/* CEO Quote – wyrównanie i zbliżenie avatara do tekstu */
-#ceo-quote{
-  margin-top: 16px !important;        /* mniejszy odstęp nad sekcją */
-}
-
-#ceo-quote img{
-  display: inline-block !important;
-  vertical-align: middle !important;
-  border-radius: 50% !important;
-}
-
-/* Klasa dla avatara – jeśli nie masz klasy, zostaw jak jest: zadziała przez selektor niżej */
-#ceo-quote .ceo-avatar{
-  width: 120px !important;             /* lekko większe kółko (usuń, jeśli nie chcesz powiększać) */
-  height: 120px !important;
-  object-fit: cover !important;
-}
-
-/* Gdy nie masz klasy na img – złap dowolny okrągły obraz w tej sekcji */
-#ceo-quote img{
-  width: 120px !important;             /* rozmiar kółka */
-  height: 120px !important;
-  margin-right: 16px !important;       /* bliżej tekstu w poziomie */
-  transform: translateY(-8px) !important; /* podsuń do góry = bliżej cytatu */
-}
-
-/* Tekst cytatu – zredukuj przerwy wokół, wyrównaj do środka */
-#ceo-quote blockquote,
-#ceo-quote .quote-line,
-#ceo-quote .quote-text{
-  margin: 0 !important;
-  line-height: 1.3 !important;
-}
-
-/* Opcjonalnie: układ w jednym wierszu (avatar + cytat) i wyrównanie do środka */
-#ceo-quote .quote-wrap{
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 16px !important;
-}
-
-/* Talent Spotlight clean layout */
+/* Talent Spotlight – zmniejszony obrazek */
 #talent-spotlight .talent-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 40px auto;
 }
 
@@ -606,21 +472,14 @@ section .talent-card .half-image img{
   line-height: 1.5;
 }
 
-#talent-spotlight .talent-text h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-}
-
 #talent-spotlight .talent-img {
-  flex: 0 0 320px;
-  display: flex;
-  justify-content: center;
+  flex: 0 0 280px;   /* szerokość kolumny na obrazek */
+  text-align: center;
 }
 
 #talent-spotlight .talent-img img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
+  max-width: 260px;  /* obrazek nie większy niż 260px */
   border-radius: 8px;
   object-fit: cover;
 }
@@ -632,5 +491,3 @@ section .talent-card .half-image img{
     text-align: center;
   }
 }
-
-
