@@ -526,3 +526,61 @@ section .talent-card .half-image img{
     text-align: center;
   }
 }
+
+/* --- TALENT: twarde zbicie odstępów na mobile --- */
+@media (max-width: 768px) {
+  /* 1) Sekcja nie kolapsuje marginesów dzieci */
+  #talent-spotlight {
+    display: flow-root;     /* zapobiega margin-collapsing */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2) Wewnątrz – zero dolnych marginesów, także na obrazku */
+  #talent-spotlight .talent-wrap,
+  #talent-spotlight .talent-text,
+  #talent-spotlight .talent-img {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #talent-spotlight p:last-child,
+  #talent-spotlight .talent-wrap > *:last-child,
+  #talent-spotlight .talent-img img {
+    margin-bottom: 0 !important;
+  }
+  #talent-spotlight .talent-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem; /* mały, kontrolowany dystans między tekstem a obrazkiem */
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3) Zbij margines elementu PONIŻEJ sekcji (częsta przyczyna „dziury”) */
+  #talent-spotlight + * {
+    margin-top: 0 !important;     /* jeśli chcesz maleńki odstęp, daj 0.5rem */
+    padding-top: 0 !important;
+  }
+
+  /* 4) Jeżeli poniżej jest blockquote/sekcja z dużymi globalnymi marginesami */
+  blockquote,
+  section,
+  .section,
+  .container {
+    /* ostrożnie: tylko jeśli WYSTĘPUJĄ tuż po Talent */
+  }
+  #talent-spotlight + blockquote,
+  #talent-spotlight + section,
+  #talent-spotlight + .section,
+  #talent-spotlight + .container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* 5) Czasem gap robi padding na rodzicu (np. .container) */
+  .container:has(#talent-spotlight) {
+    padding-bottom: 0 !important;
+  }
+}
+
+
