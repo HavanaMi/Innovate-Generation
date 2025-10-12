@@ -1,0 +1,146 @@
+---
+layout: default
+title: Creative Futures – Digital Gallery
+permalink: /creative-futures/
+meta_description: "Innovate Generation – Creative Futures: moda × fotografia. Wystawa online prezentująca prace młodych twórców (16–25)."
+meta_image: "/images/banner_showcase.png"
+---
+
+<section class="hero">
+  <h1>Creative Futures – Digital Gallery</h1>
+  <p>Moda, fotografia i kulisy pracy uczestników (16–25). Zobacz efekty projektu Creative Futures.</p>
+</section>
+
+<nav class="filters">
+  <button data-filter="all">Wszystko</button>
+  <button data-filter="lookbook">Lookbook</button>
+  <button data-filter="runway">Runway</button>
+  <button data-filter="bts">Behind-the-Scenes</button>
+  <button data-filter="articles">Artykuły</button>
+</nav>
+
+<div id="grid" class="grid">
+  <!-- Sekcja artykułów oznaczonych tagiem 'creative-futures' -->
+  {% assign all_posts = site.posts | where_exp: "p", "p.tags contains 'creative-futures'" %}
+  {% for p in all_posts %}
+    <article class="card" data-kind="articles">
+      <a href="{{ p.url }}">
+        {% if p.cover %}
+          <img src="{{ p.cover }}" alt="{{ p.title | escape }}">
+        {% endif %}
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.excerpt | strip_html | truncate: 120 }}</p>
+      </a>
+    </article>
+  {% endfor %}
+
+  <!-- Sekcja galerii z pliku _data/gallery.yml -->
+  {% assign gallery = site.data.gallery | where: "tag", "creative-futures" %}
+  {% for item in gallery %}
+    <figure class="card" data-kind="{{ item.kind | default: 'lookbook' }}">
+      <img src="{{ item.src }}" alt="{{ item.alt | escape }}">
+      <figcaption>{{ item.caption }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>
+
+<script>
+  // prosty filtr kart po kategorii
+  const btns = document.querySelectorAll('[data-filter]');
+  const cards = document.querySelectorAll('#grid .card');
+
+  btns.forEach(b => b.onclick = () => {
+    const f = b.dataset.filter;
+    btns.forEach(x => x.classList.toggle('active', x === b));
+    cards.forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.kind === f) ? 'block' : 'none';
+    });
+  });
+</script>
+
+<style>
+  /* Hero section */
+  .hero {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+  .hero p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Filter buttons */
+  .filters {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .filters button {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .filters button:hover,
+  .filters button.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Cards */
+  .card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .card h3 {
+    margin: .5rem .75rem 0;
+    font-size: 1.05rem;
+  }
+  .card p,
+  figcaption {
+    margin: .5rem .75rem 1rem;
+    color: #555;
+    font-size: .9rem;
+  }
+
+  @media (max-width: 480px) {
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
