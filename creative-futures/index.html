@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Futures – Digital Gallery | Innovate Generation</title>
+  <meta name="description" content="Moda × fotografia – wystawa online prac uczestników (16–25) w ramach projektu Creative Futures.">
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .hero{margin:2rem 0;text-align:center}
+    .hero p{color:#666;max-width:600px;margin:0 auto}
+    .filters{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem}
+    .filters button{border:1px solid #ccc;background:#fff;color:#333;padding:.5rem .9rem;border-radius:999px;cursor:pointer;transition:all .2s}
+    .filters button:hover,.filters button.active{background:#111;color:#fff;border-color:#111}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;padding-bottom:2rem}
+    .card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 3px 8px rgba(0,0,0,.1)}
+    .card img{width:100%;height:auto;display:block}
+    .card h3{margin:.5rem .75rem 0;font-size:1.05rem}
+    .card p,figcaption{margin:.5rem .75rem 1rem;color:#555;font-size:.9rem}
+    @media(max-width:480px){.filters{flex-direction:column;align-items:center}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- MENU (możesz skopiować z about.html, jeśli chcesz to samo) -->
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/articles.html">Articles</a>
+    <a href="/shop.html">Shop</a>
+    <a href="/resources.html">Resources</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/policy.html">Policy</a>
+    <a href="/cart.html">🛒 Cart</a>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Creative Futures – Digital Gallery</h1>
+      <p>Moda, fotografia i kulisy pracy uczestników (16–25). Zobacz efekty projektu Creative Futures.</p>
+    </section>
+
+    <nav class="filters" aria-label="Filtry">
+      <button data-filter="all" class="active">Wszystko</button>
+      <button data-filter="lookbook">Lookbook</button>
+      <button data-filter="runway">Runway</button>
+      <button data-filter="bts">Behind-the-Scenes</button>
+      <button data-filter="articles">Artykuły</button>
+    </nav>
+
+    <div id="grid" class="grid">
+      <figure class="card" data-kind="lookbook">
+        <img src="/images/cf/look01.jpg" alt="Look 01 — upcycled denim">
+        <figcaption>Look 01 — upcycled denim • Autor: Ola K.</figcaption>
+      </figure>
+
+      <figure class="card" data-kind="runway">
+        <img src="/images/cf/runway01.jpg" alt="Finałowy pokaz — sylwetka 3">
+        <figcaption>Finałowy pokaz — sylwetka 3 • Miejsce: Croydon</figcaption>
+      </figure>
+
+      <article class="card" data-kind="articles">
+        <a href="/articles/creative-futures-story.html" style="text-decoration:none;color:inherit">
+          <img src="/images/cf/article-cover.jpg" alt="Okładka artykułu — moodboard projektu">
+          <h3>Historia projektu: od moodboardu do runwayu</h3>
+          <p>Jak łączymy recykling tkanin, stylizację i fotografię w praktyce warsztatowej.</p>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    const btns=document.querySelectorAll('[data-filter]');
+    const cards=document.querySelectorAll('#grid .card');
+    btns.forEach(b=>b.onclick=()=>{
+      btns.forEach(x=>x.classList.toggle('active',x===b));
+      const f=b.dataset.filter;
+      cards.forEach(c=>c.style.display=(f==='all'||c.dataset.kind===f)?'':'none');
+    });
+  </script>
+</body>
+</html>
+
