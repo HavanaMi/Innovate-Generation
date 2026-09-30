@@ -197,8 +197,8 @@
 const CART_KEY = 'ig_cart_v2';
 
 function getCart(){
-  try{ return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
-  catch(e){ localStorage.removeItem(CART_KEY); return []; }
+  try{ const cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]'); return Array.isArray(cart) ? cart : []; }
+  catch(e){ return []; }
 }
 const setCart = (c) => localStorage.setItem(CART_KEY, JSON.stringify(c));
 
@@ -254,7 +254,7 @@ function render(){
             <td>${currency(i.price)}</td>
             <td class="qty">
               <button data-act="dec" data-idx="${idx}" aria-label="Decrease quantity">−</button>
-              <input data-idx="${idx}" type="number" min="1" max="99" value="${i.qty||1}" inputmode="numeric">
+              <input data-idx="${idx}" type="number" min="1" max="10" value="${i.qty||1}" inputmode="numeric">
               <button data-act="inc" data-idx="${idx}" aria-label="Increase quantity">+</button>
             </td>
             <td class="right">${currency((i.price||0)*(i.qty||1))}</td>
@@ -285,7 +285,7 @@ document.addEventListener('input', (e)=>{
     const cart = getCart();
     let v = parseInt(e.target.value,10);
     if(isNaN(v)||v<1) v=1;
-    if(v>99) v=99;
+    if(v>10) v=10;
     cart[idx].qty = v;
     setCart(cart);
     render();
@@ -301,6 +301,7 @@ document.addEventListener('click', async (e)=>{
     let q = cart[idx].qty || 1;
     q += (btn.dataset.act==='inc' ? 1 : -1);
     if(q<1) q=1;
+    if(q>10) q=10;
     cart[idx].qty = q;
     setCart(cart);
     render();
@@ -329,9 +330,9 @@ document.addEventListener('click', async (e)=>{
     try{
       // jeśli front na innovategeneration.com -> użyj hosta Vercel
       // jeśli na *.vercel.app -> użyj ścieżki względnej
-      const API_BASE = location.hostname.endsWith('innovategeneration.com')
-        ? 'https://inno-gen-dusky.vercel.app'
-        : '';
+      const API_BASE = location.hostname === 'inno-gen-dusky.vercel.app'
+        ? ''
+        : 'https://inno-gen-dusky.vercel.app';
 
       const res = await fetch(`${API_BASE}/api/create-checkout-session`, {
         method:'POST',
@@ -356,23 +357,7 @@ document.addEventListener('click', async (e)=>{
 render();
 </script>
 
-<!-- Badge „Cart” zawsze aktualny po wejściu na stronę -->
-<script>
-(function(){
-  const KEY='ig_cart_v2';
-  function update(){
-    try{
-      const cart = JSON.parse(localStorage.getItem(KEY) || '[]');
-      const n = cart.reduce((s,i)=>s+(i.qty||1),0);
-      const el = document.getElementById('cart-count');
-      if (el) el.textContent = n;
-    }catch(e){}
-  }
-  document.addEventListener('DOMContentLoaded', update);
-})();
-</script>
+
 
 </body>
 </html>
-
-
