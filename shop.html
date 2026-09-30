@@ -217,7 +217,7 @@
     const getCart=()=>{
       try{
         const cart=JSON.parse(localStorage.getItem(CART_KEY)||'[]');
-        return Array.isArray(cart)?cart:[];
+        return Array.isArray(cart)?cart.filter(i=>i&&typeof i==='object').map(i=>({...i,qty:Math.max(1,Math.min(10,Number.parseInt(i.qty||1,10)||1))})):[];
       }catch(e){ return []; }
     };
     const setCart=c=>localStorage.setItem(CART_KEY, JSON.stringify(c));
@@ -238,6 +238,11 @@
       };
       const cart=getCart();
       const ex=cart.find(i=>i.id===item.id);
+      if(ex && ex.qty>=10){
+        const btn=e.target, old=btn.textContent; btn.textContent='Limit reached'; btn.disabled=true;
+        setTimeout(()=>{ btn.textContent=old; btn.disabled=false; },900);
+        return;
+      }
       ex ? ex.qty++ : cart.push(item);
       setCart(cart); updateCartBadge();
       const btn=e.target, old=btn.textContent; btn.textContent='Added ✓'; btn.disabled=true;
