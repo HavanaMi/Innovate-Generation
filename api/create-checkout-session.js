@@ -60,7 +60,7 @@ module.exports = async (req, res) => {
 
     if (req.method === 'GET') {
       const sessionId = req.query && req.query.session_id;
-      if (typeof sessionId !== 'string' || !/^cs_[A-Za-z0-9]+$/.test(sessionId)) {
+      if (typeof sessionId !== 'string' || !/^cs_[A-Za-z0-9_]+$/.test(sessionId)) {
         return res.status(400).json({ error: 'Invalid session_id' });
       }
       const session = await stripe.checkout.sessions.retrieve(sessionId);
