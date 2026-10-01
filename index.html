@@ -59,16 +59,59 @@
     .talent-card .half-image{ display:flex; justify-content:center; align-items:center; }
     .talent-card .half-image img{ width:90%; max-width:320px; height:auto; display:block; margin:0 auto; border-radius:8px; object-fit:cover; }
 
-    /* Cytat (pojedynczy) */
-    .quote {
-      background:#f5f5f5; padding:28px 16px; margin:30px auto; border-radius:10px; text-align:center; max-width:1100px;
-    }
-    .quote .row{ display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; }
-    .quote-avatar{ width:110px; height:110px; border-radius:9999px; object-fit:cover; box-shadow:0 4px 8px rgba(0,0,0,.2); }
-    .quote .text{ max-width:760px; margin:0 auto; }
-    .quote .line{ font-size:22px; font-style:italic; font-weight:800; text-transform:uppercase; color:#333; margin:0; }
-    .quote .by{ font-size:14px; color:#777; margin:6px 0 0; }
-    .quote .desc{ font-size:14px; color:#555; margin-top:10px; }
+/* Cytat (pojedynczy) */
+.quote {
+  background:#f5f5f5;
+  padding:28px 16px;
+  margin:30px auto;
+  border-radius:10px;
+  text-align:center;
+  max-width:1100px;
+}
+
+.quote .row {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.quote img.quote-avatar {
+  width:160px !important;
+  height:160px !important;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 auto;
+  box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+
+.quote .text {
+  flex:1 1 300px;
+  max-width:760px;
+  margin:0;
+}
+
+.quote .line {
+  font-size:22px;
+  font-style:italic;
+  font-weight:800;
+  text-transform:uppercase;
+  color:#333;
+  margin:0;
+}
+
+.quote .by {
+  font-size:14px;
+  color:#777;
+  margin:6px 0 0;
+}
+
+.quote .desc {
+  font-size:14px;
+  color:#555;
+  margin-top:10px;
+}
 
     /* Our Goal */
     .goal-section{ max-width:1100px; margin:0 auto 30px; padding:0 10px; }

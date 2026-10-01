@@ -3,83 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank you – Innovate Generation</title>
+  <title>Order status – Innovate Generation</title>
   <style>
-    :root{
-      --bg:#f5f6f8; --text:#111; --muted:#555; --panel:#fff; --panel-border:#e7e8eb;
-      --accent:#0a7bdc; --accent-2:#075ea7; --btn-ghost:#eef1f5;
-    }
+    :root{--bg:#f5f6f8;--text:#111;--muted:#555;--panel:#fff;--border:#e7e8eb;--accent:#0a7bdc;--accent2:#075ea7}
     body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,"Segoe UI",Arial}
-    /* Top nav – jak w cart.html */
-    nav{
-      position:sticky; top:0; z-index:10; background:#1f1f1f; padding:12px 10px; text-align:center;
-      box-shadow:0 2px 6px rgba(0,0,0,.15);
-    }
-    nav a{color:#fff; margin:0 10px; text-decoration:none; font-weight:600}
-    nav a:hover{color:#ffd95a}
-    .cart-pill{display:inline-block; min-width:18px; padding:2px 6px; border-radius:999px; background:#ffd95a; color:#000; font-size:.8rem; line-height:1; margin-left:4px}
-    header,footer{background:#fff; text-align:center; padding:28px 16px; border-block:1px solid var(--panel-border)}
-    main{max-width:820px; margin:46px auto; padding:0 16px}
-    .card{
-      background:var(--panel); border:1px solid var(--panel-border); border-radius:14px; padding:28px;
-      box-shadow:0 6px 18px rgba(0,0,0,.06); text-align:center
-    }
-    .ok{font-size:56px; line-height:1; margin:0 0 8px}
-    .muted{color:var(--muted)}
-    .actions{display:flex; gap:10px; justify-content:center; margin-top:16px}
-    .btn{border:none; border-radius:10px; padding:12px 18px; background:var(--accent); color:#fff; font-weight:700; cursor:pointer}
-    .btn:hover{background:var(--accent-2)}
-    .ghost{border:1px solid var(--panel-border); background:#fff; color:var(--text); border-radius:10px; padding:12px 18px; cursor:pointer}
-    .note{margin-top:10px; color:var(--muted); font-size:.95rem}
+    nav{position:sticky;top:0;z-index:10;background:#1f1f1f;padding:12px 10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600}nav a:hover{color:#ffd95a}
+    .cart-pill{display:inline-block;min-width:18px;padding:2px 6px;border-radius:999px;background:#ffd95a;color:#000;font-size:.8rem;line-height:1;margin-left:4px}
+    header,footer{background:#fff;text-align:center;padding:28px 16px;border-block:1px solid var(--border)}
+    main{max-width:820px;margin:46px auto;padding:0 16px}.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:28px;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:center}
+    .state-icon{font-size:56px;line-height:1;margin:0 0 8px}.muted{color:var(--muted)}.actions{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+    .btn,.ghost{display:inline-block;border-radius:10px;padding:12px 18px;font-weight:700;text-decoration:none;cursor:pointer}.btn{border:0;background:var(--accent);color:#fff}.btn:hover{background:var(--accent2)}.ghost{border:1px solid var(--border);background:#fff;color:var(--text)}
+    .note{margin-top:10px;color:var(--muted);font-size:.95rem}
   </style>
 </head>
 <body>
-  <!-- Nawigacja (jak na innych stronach) -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="articles.html">Articles</a>
-    <a href="shop.html">Shop</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
-    <a href="policy.html">Policy</a>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+    <a href="articles.html">Articles</a><a href="shop.html">Shop</a><a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a><a href="policy.html">Policy</a>
     <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
   </nav>
 
   <header>
-    <h1>Payment successful</h1>
-    <p class="muted">Thank you for supporting Innovate Generation CIC.</p>
+    <h1 id="status-title">Checking payment…</h1>
+    <p id="status-message" class="muted">Please wait while we confirm your payment with Stripe.</p>
   </header>
 
   <main>
     <div class="card">
-      <div class="ok">✅</div>
-      <h2>Thank you for your order! 🎉</h2>
-      <p class="muted">We've received your payment. A confirmation email is on its way.</p>
-
+      <div id="status-icon" class="state-icon" aria-hidden="true">⏳</div>
+      <h2 id="order-title">Payment not confirmed yet</h2>
+      <p id="order-message" class="muted">Your cart will be kept until payment is confirmed.</p>
       <div class="actions">
         <a class="btn" href="shop.html">Back to shop</a>
-        <button class="ghost" onclick="window.print()">Print confirmation</button>
+        <button id="print-button" class="ghost" type="button" hidden>Print confirmation</button>
       </div>
-      <p class="note">You’ll be redirected to the shop in <span id="sec">8</span>s.</p>
+      <p id="redirect-note" class="note" hidden>You’ll be redirected to the shop in <span id="sec">8</span>s.</p>
     </div>
   </main>
 
   <footer><p>&copy; 2025 Innovate Generation.</p></footer>
 
   <script>
-    // Utrzymuj licznik koszyka spójny z resztą stron
-    (function(){
-      const KEY='ig_cart_v2';
-      try { localStorage.removeItem(KEY); } catch(e){}
-      const pill=document.querySelector('#cart-count'); if(pill) pill.textContent='0';
+    (async function(){
+      const icon=document.getElementById('status-icon');
+      const title=document.getElementById('status-title');
+      const message=document.getElementById('status-message');
+      const orderTitle=document.getElementById('order-title');
+      const orderMessage=document.getElementById('order-message');
+      const printButton=document.getElementById('print-button');
+      const redirectNote=document.getElementById('redirect-note');
+      const sessionId=new URLSearchParams(location.search).get('session_id');
+      const pill=document.getElementById('cart-count');
+      const apiBase=location.hostname==='inno-gen-dusky.vercel.app'
+        ? ''
+        : 'https://inno-gen-dusky.vercel.app';
 
-      // Auto-redirect po 8 s (możesz usunąć, jeśli nie chcesz)
-      let t=8; const s=document.getElementById('sec');
-      const id=setInterval(()=>{ t--; if(s) s.textContent=t; if(t<=0){ clearInterval(id); location.href='shop.html'; } },1000);
+      try{
+        if(!sessionId) throw new Error('Missing checkout session');
+
+        const response=await fetch(
+          apiBase+'/api/create-checkout-session?session_id='+encodeURIComponent(sessionId)
+        );
+        const result=await response.json();
+
+        if(!response.ok||result.paid!==true){
+          throw new Error('Payment not confirmed');
+        }
+
+        try{
+          localStorage.setItem('ig_cart_v2','[]');
+        }catch(storageError){}
+
+        if(pill) pill.textContent='0';
+        document.title='Payment successful – Innovate Generation';
+        title.textContent='Payment successful';
+        message.textContent='Thank you for supporting Innovate Generation CIC.';
+        icon.textContent='✅';
+        orderTitle.textContent='Thank you for your order! 🎉';
+        orderMessage.textContent='We have received your payment. A confirmation email is on its way.';
+
+        printButton.hidden=false;
+        printButton.addEventListener('click',()=>window.print());
+        redirectNote.hidden=false;
+
+        let seconds=8;
+        const secondsNode=document.getElementById('sec');
+        const timer=setInterval(()=>{
+          seconds-=1;
+          if(secondsNode) secondsNode.textContent=seconds;
+          if(seconds<=0){
+            clearInterval(timer);
+            location.href='shop.html';
+          }
+        },1000);
+      }catch(error){
+        title.textContent='Payment not verified';
+        message.textContent='We could not confirm this payment. Your cart has been kept; check your Stripe receipt or contact us if you were charged.';
+        icon.textContent='⚠️';
+        orderTitle.textContent='Your cart is still available';
+        orderMessage.textContent='Return to the cart to try again, or contact us for help.';
+        if(pill) pill.textContent='';
+      }
     })();
   </script>
 </body>
 </html>
-
