@@ -357,9 +357,11 @@ document.addEventListener('click', async (e)=>{
 });
 
 render();
+window.addEventListener('pageshow', render);
+window.addEventListener('storage', e=>{
+  if(e.key===CART_KEY || e.key===null) render();
+});
 </script>
-
-
 
 </body>
 </html>
