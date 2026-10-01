@@ -24,15 +24,27 @@
     <a href="contact.html">Contact</a><a href="policy.html">Policy</a>
     <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
   </nav>
-  <header><h1 id="status-title">Checking payment…</h1><p id="status-message" class="muted">Please wait while we confirm your payment with Stripe.</p></header>
-  <main><div class="card">
-    <div id="status-icon" class="state-icon" aria-hidden="true">⏳</div>
-    <h2 id="order-title">Payment not confirmed yet</h2>
-    <p id="order-message" class="muted">Your cart will be kept until payment is confirmed.</p>
-    <div class="actions"><a class="btn" href="shop.html">Back to shop</a><button id="print-button" class="ghost" type="button" hidden>Print confirmation</button></div>
-    <p id="redirect-note" class="note" hidden>You’ll be redirected to the shop in <span id="sec">8</span>s.</p>
-  </div></main>
+
+  <header>
+    <h1 id="status-title">Checking payment…</h1>
+    <p id="status-message" class="muted">Please wait while we confirm your payment with Stripe.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <div id="status-icon" class="state-icon" aria-hidden="true">⏳</div>
+      <h2 id="order-title">Payment not confirmed yet</h2>
+      <p id="order-message" class="muted">Your cart will be kept until payment is confirmed.</p>
+      <div class="actions">
+        <a class="btn" href="shop.html">Back to shop</a>
+        <button id="print-button" class="ghost" type="button" hidden>Print confirmation</button>
+      </div>
+      <p id="redirect-note" class="note" hidden>You’ll be redirected to the shop in <span id="sec">8</span>s.</p>
+    </div>
+  </main>
+
   <footer><p>&copy; 2025 Innovate Generation.</p></footer>
+
   <script>
     (async function(){
       const icon=document.getElementById('status-icon');
@@ -44,15 +56,26 @@
       const redirectNote=document.getElementById('redirect-note');
       const sessionId=new URLSearchParams(location.search).get('session_id');
       const pill=document.getElementById('cart-count');
-      const apiBase=location.hostname==='inno-gen-dusky.vercel.app'?'':'https://inno-gen-dusky.vercel.app';
+      const apiBase=location.hostname==='inno-gen-dusky.vercel.app'
+        ? ''
+        : 'https://inno-gen-dusky.vercel.app';
 
       try{
         if(!sessionId) throw new Error('Missing checkout session');
-        const response=await fetch(apiBase+'/api/create-checkout-session?session_id='+encodeURIComponent(sessionId));
-        const result=await response.json();
-        if(!response.ok||result.paid!==true) throw new Error('Payment not confirmed');
 
-        try{localStorage.removeItem('ig_cart_v2');}catch(storageError){} 
+        const response=await fetch(
+          apiBase+'/api/create-checkout-session?session_id='+encodeURIComponent(sessionId)
+        );
+        const result=await response.json();
+
+        if(!response.ok||result.paid!==true){
+          throw new Error('Payment not confirmed');
+        }
+
+        try{
+          localStorage.setItem('ig_cart_v2','[]');
+        }catch(storageError){}
+
         if(pill) pill.textContent='0';
         document.title='Payment successful – Innovate Generation';
         title.textContent='Payment successful';
@@ -60,15 +83,20 @@
         icon.textContent='✅';
         orderTitle.textContent='Thank you for your order! 🎉';
         orderMessage.textContent='We have received your payment. A confirmation email is on its way.';
+
         printButton.hidden=false;
         printButton.addEventListener('click',()=>window.print());
         redirectNote.hidden=false;
+
         let seconds=8;
         const secondsNode=document.getElementById('sec');
         const timer=setInterval(()=>{
           seconds-=1;
           if(secondsNode) secondsNode.textContent=seconds;
-          if(seconds<=0){clearInterval(timer);location.href='shop.html';}
+          if(seconds<=0){
+            clearInterval(timer);
+            location.href='shop.html';
+          }
         },1000);
       }catch(error){
         title.textContent='Payment not verified';
