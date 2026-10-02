@@ -20,6 +20,9 @@ const ALLOWED_PRICE_IDS = new Set([
   'price_1RtwX3BaMwJkUgdcmIe8FgqK',
   'price_1RtwQVBaMwJkUgdcQHLgqlPx',
   'price_1RtwG8BaMwJkUgdcnV26Rq2G',
+  'price_1Rty8IBaMwJkUgdcrvKbIt9F',
+  'price_1RtyDPBaMwJkUgdcEeNCNmLv',
+  'price_1RtyI2BaMwJkUgdcrqvdqmeu',
 ]);
 
 function setCors(req, res) {
