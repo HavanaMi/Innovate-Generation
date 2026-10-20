@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Articles</title>
-    <meta name="description" content="Innovate Generation is a London-based CIC empowering young creatives in art, music, fashion and events through workshops, mentoring, and showcases.">
+  <title>London Creative Activities &amp; Articles | Innovate Generation</title>
+    <meta name="description" content="Explore London museums, exhibitions, fashion events and creative opportunities for young people with Innovate Generation.">
   <meta name="keywords" content="Innovate Generation, CIC, London, youth, art, music, fashion, workshops, mentoring, creative projects">
   <meta name="author" content="Innovate Generation">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.innovategeneration.com/portfolio.html">
-  <meta name="description" content="Innovate Generation CIC – wspieramy młodych twórców w Londynie poprzez modę, muzykę, sztukę, eventy i mentoring. Dołącz do naszej społeczności.">
-<meta name="keywords" content="Innovate Generation, London, moda, muzyka, eventy, sztuka, mentoring, CIC">
+  <link rel="canonical" href="https://www.innovategeneration.com/articles.html">
+  
 
   <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="About Us – Innovate Generation">
-  <meta property="og:description" content="We support young creatives aged 14–25 in London with mentoring, art shows, fashion events, and creative business opportunities.">
+  <meta property="og:title" content="London Creative Activities &amp; Articles – Innovate Generation">
+  <meta property="og:description" content="Discover creative exhibitions, fashion events and museum visits in London for young people.">
   <meta property="og:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
-  <meta property="og:url" content="https://www.innovategeneration.com/about.html">
+  <meta property="og:url" content="https://www.innovategeneration.com/articles.html">
   <meta property="og:type" content="website">
 
   <!-- Twitter (optional) -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Us – Innovate Generation">
-  <meta name="twitter:description" content="Helping young people grow in the creative industry through real-world projects and support.">
+  <meta name="twitter:title" content="London Creative Activities &amp; Articles – Innovate Generation">
+  <meta name="twitter:description" content="Exhibitions, museums and fashion industry experiences for young creatives in London.">
   <meta name="twitter:image" content="https://www.innovategeneration.com/images/banner_what_we_do.png">
 
   <link rel="stylesheet" href="style.css">
@@ -30,18 +29,19 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #f2f2f2;
+      background-color: #f8f6f1;
+      color: #222;
     }
 
     header, footer {
-      background-color: #1a1a1a;
+      background-color: #f8f6f1;
+      color: #222;
       text-align: center;
       padding: 40px 20px;
     }
 
     nav {
-      background-color: #222;
+      background-color: #303030;
       padding: 10px;
       text-align: center;
     }
@@ -89,7 +89,7 @@
     }
 
     .sidebar a:hover {
-      color: white;
+      color: #555;
     }
 
     .content {
@@ -104,6 +104,53 @@
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+    }
+
+
+    /* Photo galleries: cream theme consistent with Innovate Generation */
+    .ig-gallery { margin: 24px 0 32px; }
+    .ig-gallery-main, .ig-gallery-thumb {
+      display: block; padding: 0; border: 0; overflow: hidden;
+      border-radius: 10px; cursor: zoom-in; background: #e5dfd3;
+      text-align: left; width: 100%;
+    }
+    .ig-gallery-main { max-width: 790px; position: relative; }
+    .ig-gallery-main img { display: block; width: 100%; max-height: 520px;
+      object-fit: cover; object-position: center; border-radius: 10px; }
+    .ig-gallery-main span { position: absolute; right: 12px; bottom: 12px;
+      padding: 8px 12px; background: rgba(25,25,25,.85); color: #fff;
+      font: 600 13px/1.3 Arial, sans-serif; border-radius: 6px; }
+    .ig-gallery-thumbs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 12px; margin-top: 12px; max-width: 790px; }
+    .ig-gallery-thumbs:empty { display: none; }
+    .ig-gallery-thumb img { display:block; width:100%; height:150px; object-fit:cover; }
+    .ig-gallery-main:hover img, .ig-gallery-thumb:hover img { filter: brightness(.94); }
+    .ig-gallery-main:focus-visible, .ig-gallery-thumb:focus-visible,
+    .ig-lightbox button:focus-visible { outline: 3px solid #b88200; outline-offset: 3px; }
+    .ig-photo-credit { color:#555; font-size: .85rem; margin: 9px 0 0; }
+    .ig-article-meta { color:#555; font-size: .95rem; }
+    .content article { scroll-margin-top: 25px; }
+    .content article a { color: #815900; }
+    .content article a:hover { color: #533a00; }
+    .ig-lightbox { border: none; padding: 16px; border-radius: 12px;
+      color:#fff; background:#181818; max-width: min(94vw, 1100px); width: 100%;
+      max-height: 94vh; box-sizing: border-box; }
+    .ig-lightbox::backdrop { background: rgba(0,0,0,.88); }
+    .ig-lightbox-top { display:flex; gap:16px; justify-content:space-between; align-items:center; }
+    .ig-lightbox figure { margin: 12px 0 8px; text-align:center; }
+    .ig-lightbox img { display: block; max-height: 70vh; max-width: 100%;
+      width: auto; height:auto; object-fit: contain; margin:auto; }
+    .ig-lightbox figcaption { padding-top: 9px; color:#e9e9e9; font-size:.9rem; }
+    .ig-lightbox button { padding: 8px 13px; border: 1px solid #777; border-radius:6px;
+      color:#fff; background:#333; cursor:pointer; font-size:1rem; }
+    .ig-lightbox-controls { display:flex; align-items:center; justify-content:center; gap:16px; }
+    .ig-lightbox-controls button:disabled { cursor:default; opacity:.3; }
+    .ig-gallery-label { color:#555; margin-top:8px; font-size:.9rem; }
+    @media (max-width: 768px) {
+      .ig-gallery-thumbs { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .ig-gallery-thumb img { height:110px; }
+      .ig-lightbox { padding: 10px; }
+      .ig-lightbox img { max-height: 67vh; }
     }
 
     @media screen and (max-width: 768px) {
@@ -132,7 +179,7 @@
 
   <header>
     <h1>Articles</h1>
-    <p>Discover inspiring stories, event highlights, and behind-the-scenes from Innovate Generation.</p>
+    <p>Explore creative experiences, free days out and inspiring opportunities for young people in London.</p>
   </header>
 
   <nav>
@@ -152,6 +199,10 @@
     <aside class="sidebar">
       <h3>Jump to article</h3>
       <ul>
+        <li><a href="#schiaparelli">Schiaparelli: Fashion Becomes Art</a></li>
+        <li><a href="#source-fashion-day-out">Source Fashion Day Out</a></li>
+        <li><a href="#natural-history-museum">Natural History Museum: Free Day Out</a></li>
+        <li><a href="#tate-modern">Tate Modern: Art &amp; Exhibitions</a></li>
         <li><a href="#article1"> Nikola's First Portrait</a></li>
         <li><a href="#article3"> Summer Fashion Show</a></li>
         <li><a href="#article4"> Building Our Workshop</a></li>
@@ -160,6 +211,155 @@
     </aside>
 
     <main class="content">
+      <!-- New article 1: Schiaparelli -->
+      <article id="schiaparelli">
+        <h2>Schiaparelli: When Fashion Becomes Art</h2>
+        <p><strong>Exhibition spotlight</strong> | V&amp;A South Kensington, London | 2026</p>
+        <div class="ig-gallery" data-gallery="schiaparelli">
+          <button type="button" class="ig-gallery-main" data-open-gallery="schiaparelli" data-photo-index="0" aria-label="Open photo gallery">
+            <img src="images/Schiaparelli4.jpeg" alt="Gallery of fashion photography at the Schiaparelli exhibition" loading="lazy" decoding="async">
+            <span>View photo ↗</span>
+          </button>
+          <div class="ig-gallery-thumbs" id="thumbs-schiaparelli" aria-label="More photos"></div>
+          <p class="ig-photo-credit">Photograph: Innovate Generation. More photographs can be added to this gallery.</p>
+        </div>
+        <p>Can a dress become a work of art? The exhibition <em>Schiaparelli: Fashion Becomes Art</em>
+          at the Victoria and Albert Museum explores that question through the imaginative designs
+          of Elsa Schiaparelli and the fashion house she founded. It is the first UK exhibition
+          devoted to Schiaparelli, tracing the story from the 1920s to the present day.</p>
+        <p>Schiaparelli challenged traditional ideas of clothing through unexpected shapes,
+          playful details and surrealist collaborations. Among the works highlighted by the V&amp;A
+          are the extraordinary <em>Skeleton Dress</em> and <em>Tears Dress</em>, both created
+          with Salvador Dal&iacute; in 1938, as well as designs connected with artist Jean Cocteau.
+          The exhibition also looks at the house's contemporary work under creative director
+          Daniel Roseberry.</p>
+        <p>What makes this story important to emerging creatives is its refusal to separate
+          disciplines. Fashion can draw on painting, sculpture, performance and storytelling.
+          For someone just starting out in art or design, Schiaparelli offers a reminder that
+          a distinctive idea can matter as much as technical convention.</p>
+        <p><strong>Planning a London day out:</strong> The exhibition is at V&amp;A South Kensington,
+          The Sainsbury Gallery, and closes on 15 November 2026. As of 20 October 2026,
+          the official exhibition page lists it as <strong>sold out</strong>. Check for updates
+          before making plans. Entry to the V&amp;A's permanent collections is free,
+          so young people interested in art and design can still explore the museum.</p>
+        <p><strong>Source:</strong>
+          <a href="https://www.vam.ac.uk/exhibitions/schiaparelli" target="_blank" rel="noopener noreferrer">Victoria and Albert Museum &ndash; Schiaparelli: Fashion Becomes Art</a>.
+        </p>
+      </article>
+
+      <!-- New article 2: Source Fashion -->
+      <article id="source-fashion-day-out">
+        <h2>Source Fashion Day Out: Discovering the Business Behind Fashion</h2>
+        <p><strong>Industry event spotlight</strong> | ExCeL London | 7&ndash;9 July 2026</p>
+        <div class="ig-gallery" data-gallery="source-fashion-day-out">
+          <button type="button" class="ig-gallery-main" data-open-gallery="source-fashion-day-out" data-photo-index="0" aria-label="Open photo gallery">
+            <img src="images/SourceFashion20.jpeg" alt="Models walking the runway during Source Fashion at ExCeL London" loading="lazy" decoding="async">
+            <span>View photo ↗</span>
+          </button>
+          <div class="ig-gallery-thumbs" id="thumbs-source-fashion-day-out" aria-label="More photos"></div>
+          <p class="ig-photo-credit">Photograph: Innovate Generation. More photographs can be added to this gallery.</p>
+        </div>
+        <p>Fashion is not only about the finished outfit or the runway. Before a collection
+          reaches a customer, designers and brands need to consider fabrics, production,
+          manufacturing partners and the people behind each stage. Source Fashion brings
+          those parts of the industry together in one place.</p>
+        <p>The July 2026 edition was held at ExCeL London following the event's move from
+          Olympia London. The trade show connected buyers and fashion brands with manufacturers,
+          textile suppliers and sourcing partners from the UK and overseas, with a focus on
+          making more informed decisions about how garments are produced.</p>
+        <p>Its published programme included a Source Fashion Catwalk, expert discussions on
+          sustainability and transparency, practical <em>Fashion Deconstructed</em> workshops,
+          and the new <em>Source Fashion Factory</em> feature showing the stages of garment
+          production. Together, these activities offered a broader view of fashion as a
+          creative and commercial industry.</p>
+        <p>For young designers and aspiring fashion entrepreneurs, an industry day out like
+          this can be an opportunity to understand the journey from an original concept
+          to a product, and to see why sourcing and responsible production matter.</p>
+        <p><strong>Next opportunity for students:</strong> Source Fashion returns to ExCeL London
+          on 19&ndash;21 January 2027. Students studying fashion, textiles or retail at degree level
+          or at a specialist college are invited on <strong>Thursday 21 January 2027,
+          after 11:30am</strong>. All visitors must be <strong>over 18</strong>.
+          This is a trade exhibition, not a general drop-in activity for under-18s.
+          Check registration and eligibility before travelling.</p>
+        <p><strong>Visitor information:</strong>
+          <a href="https://www.source-fashion.com/visit/plan-your-visit/student-notice" target="_blank" rel="noopener noreferrer">Source Fashion student attendance rules</a>
+          and <a href="https://www.source-fashion.com/visit/plan-your-visit" target="_blank" rel="noopener noreferrer">2027 dates and venue information</a>.</p>
+        <p><strong>Source:</strong>
+          <a href="https://www.source-fashion.com/latest-articles/source-fashion-returns-excel-london-7-9-july-2026" target="_blank" rel="noopener noreferrer">Source Fashion &ndash; July 2026 event programme</a>.
+        </p>
+      </article>
+
+      <!-- New article 3: London activities for young people -->
+      <article id="natural-history-museum">
+        <h2>Natural History Museum: A Free Day Out for Young People in London</h2>
+        <p><strong>London activity guide</strong> | South Kensington | Free permanent galleries | Suitable for ages 14&ndash;25</p>
+        <div class="ig-gallery" data-gallery="natural-history-museum">
+          <button type="button" class="ig-gallery-main" data-open-gallery="natural-history-museum" data-photo-index="0" aria-label="Open photo gallery">
+            <img src="images/NaturalMusem4.jpeg" alt="Tyrannosaurus rex installation inside the Natural History Museum in London" loading="lazy" decoding="async">
+            <span>View photo ↗</span>
+          </button>
+          <div class="ig-gallery-thumbs" id="thumbs-natural-history-museum" aria-label="More photos"></div>
+          <p class="ig-photo-credit">Photograph: Innovate Generation. More photographs can be added to this gallery.</p>
+        </div>
+        <p>Looking for something interesting to do in London without spending money on admission?
+          The Natural History Museum in South Kensington is a place to explore science, nature
+          and the story of our planet. You do not need to be studying biology to enjoy it.
+          Whether you love photography, design, wildlife, dinosaurs or simply discovering
+          something new, there is plenty to inspire a day out with friends or a solo visit.</p>
+        <p>One of the first sights is <strong>Hope, the 25-metre blue whale skeleton</strong>
+          suspended above Hintze Hall. From there, head to the free <strong>Dinosaurs Gallery</strong>
+          to see fossils and a roaring animatronic T. rex. The <strong>Earth Hall</strong> is another
+          highlight, featuring a Stegosaurus skeleton, minerals and even a piece of Moon rock.</p>
+        <p><strong>Three ideas for a self-guided visit:</strong></p>
+        <ul>
+          <li><strong>Photography and observation:</strong> Find an unusual shape, pattern or texture
+            in nature and use it as inspiration for your own photography or sketchbook.</li>
+          <li><strong>Creative research:</strong> Choose a fossil, mineral or animal and imagine how its
+            colours, structures or history could inspire a design, illustration or story.</li>
+          <li><strong>Explore together:</strong> Pick two or three galleries, compare your favourite
+            discoveries and share what surprised you most.</li>
+        </ul>
+        <p>These are simple ideas for visitors to try independently, rather than organised
+          activities run by the museum. The museum also provides suggested self-guided routes,
+          including a two-hour tour for people who want to see the highlights.</p>
+        <p><strong>Plan your visit:</strong> Natural History Museum, Cromwell Road, London SW7 5BD,
+          near South Kensington station. It is normally open daily from <strong>10:00 to 17:50</strong>,
+          with last entry at <strong>17:30</strong>. Permanent galleries are free.
+          Booking a free entry ticket in advance is recommended to guarantee entry,
+          particularly during busy periods. Temporary exhibitions and special events may
+          have separate charges. Check opening dates and availability before travelling.</p>
+        <p><strong>Official information:</strong>
+          <a href="https://www.nhm.ac.uk/visit.html" target="_blank" rel="noopener noreferrer">Plan your visit and book free entry</a>
+          and <a href="https://www.nhm.ac.uk/visit/galleries-and-museum-map.html" target="_blank" rel="noopener noreferrer">Explore the galleries and museum map</a>.
+        </p>
+      </article>
+
+
+      <!-- New article 4: Tate Modern -->
+      <article id="tate-modern">
+        <h2>Tate Modern: Discovering Art and Exhibitions in London</h2>
+        <p class="ig-article-meta"><strong>London activity guide</strong> | Bankside, London | Free collection displays | Young creatives</p>
+        <div class="ig-gallery" data-gallery="tate-modern">
+          <button type="button" class="ig-gallery-main" data-open-gallery="tate-modern" data-photo-index="0" aria-label="Open Tate Modern photo">
+            <img src="images/TateGallery.jpeg" alt="An exhibition gallery with art displays and video installations" loading="lazy" decoding="async">
+            <span>View photo ↗</span>
+          </button>
+          <div class="ig-gallery-thumbs" id="thumbs-tate-modern" aria-label="More photos"></div>
+          <p class="ig-photo-credit">Photograph: Innovate Generation.</p>
+        </div>
+        <p>Tate Modern, on London's South Bank, is a place to discover how artists explore the world around them through painting, photography, film, sculpture and installations. You don't need previous experience of art to enjoy a visit. Sometimes the most interesting question is simply: what does this artwork make you notice or feel?</p>
+        <p>The museum's free collection displays introduce visitors to a wide range of modern and contemporary art. The artworks can spark ideas for students interested in illustration, fashion, filmmaking, graphic design, photography or creative writing. Separate temporary exhibitions may require a paid ticket.</p>
+        <p><strong>Creative ideas for a visit:</strong></p>
+        <ul>
+          <li><strong>Explore an unfamiliar medium:</strong> Find an installation, video work or sculpture and think about how it differs from a traditional painting.</li>
+          <li><strong>Start a visual notebook:</strong> Record colours, shapes, messages and ideas you might use in your own creative work. Follow the museum's rules on photography and sketching.</li>
+          <li><strong>Discover an artist:</strong> Choose an artist whose work interests you, read the gallery information and explore how they developed their individual style.</li>
+        </ul>
+        <p>For young creatives in London, a free museum visit can be a practical way to discover new techniques, spend time with friends and find inspiration beyond the classroom. These activities are suggestions for visitors to try independently, not organised sessions provided by Tate.</p>
+        <p><strong>Plan your visit:</strong> Tate Modern, Bankside, London SE1 9TG. The collection displays are generally free to enter. Check current opening hours, access information, temporary exhibitions and any ticket requirements before travelling.</p>
+        <p><strong>Official information:</strong> <a href="https://www.tate.org.uk/visit/tate-modern" target="_blank" rel="noopener noreferrer">Visit Tate Modern</a> and <a href="https://www.tate.org.uk/whats-on/tate-modern" target="_blank" rel="noopener noreferrer">Exhibitions and events at Tate Modern</a>.</p>
+      </article>
+
       <article id="article1">
         <h2>Spotlight on Nikola</h2>
 <img src="images/NikolaFlowers.jpg" alt="Nikola’s Painting" style="width: 60%; max-width: 600px; display: block; margin: auto; border-radius: 8px;">
@@ -209,7 +409,7 @@ The studio was set up in a vibrant cartoon-style scenery, enhanced with colourfu
           <img src="images/PhotoSessionJune25.JPG" alt="Session 1" style="width: 80%;">
           <img src="images/PhotoSessionJune25_.JPG" alt="Session 2" style="width: 80%;">
         </div>
-        <p> [on photo: a fellow member of a class only, at school/college/university.]
+        <p> [on photo: a fellow member of a class only, at school/college/university.]</p>
         <p>This gives everyone time to work creatively and ensure professional results without stress.</p>
       </article>
 
@@ -243,7 +443,7 @@ The studio was set up in a vibrant cartoon-style scenery, enhanced with colourfu
   </div>
 
   <footer>
-    <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
+    <p>&copy; 2026 Innovate Generation. All rights reserved.</p>
   </footer>
 
 <script>
@@ -261,6 +461,121 @@ The studio was set up in a vibrant cartoon-style scenery, enhanced with colourfu
 })();
 </script>
 
+
+  <dialog id="ig-lightbox" class="ig-lightbox" aria-label="Photo gallery">
+    <div class="ig-lightbox-top">
+      <span id="ig-lightbox-title">Photo gallery</span>
+      <button type="button" id="ig-lightbox-close" aria-label="Close photo gallery">✕ Close</button>
+    </div>
+    <figure>
+      <img id="ig-lightbox-image" alt="">
+      <figcaption id="ig-lightbox-caption"></figcaption>
+    </figure>
+    <div class="ig-lightbox-controls">
+      <button type="button" id="ig-lightbox-prev" aria-label="Previous photograph">← Previous</button>
+      <span id="ig-lightbox-count" aria-live="polite">1 / 1</span>
+      <button type="button" id="ig-lightbox-next" aria-label="Next photograph">Next →</button>
+    </div>
+  </dialog>
+
+<script>
+/*
+  Add more photographs when the files have been uploaded to your GitHub /images folder.
+  Include a new entry with its exact filename (capital letters and extension matter).
+  Example: { file: 'Schiaparelli5.jpeg', alt: 'Detail from the exhibition' },
+  The first image in each group is already displayed as the main photograph.
+  The other images become thumbnails and will work in the lightbox.
+*/
+(() => {
+  'use strict';
+  const galleryData = {
+    'schiaparelli': [
+      { file: 'Schiaparelli4.jpeg', alt: 'Fashion photography from the Schiaparelli exhibition' }
+    ],
+    'source-fashion-day-out': [
+      { file: 'SourceFashion20.jpeg', alt: 'Models walking on the Source Fashion runway in London' }
+    ],
+    'natural-history-museum': [
+      { file: 'NaturalMusem4.jpeg', alt: 'Tyrannosaurus rex display at the Natural History Museum' }
+    ],
+    'tate-modern': [
+      { file: 'TateGallery.jpeg', alt: 'Exhibition displays in a London art gallery' }
+    ]
+  };
+  const titles = {
+    'schiaparelli': 'Schiaparelli',
+    'source-fashion-day-out': 'Source Fashion',
+    'natural-history-museum': 'Natural History Museum',
+    'tate-modern': 'Tate Modern'
+  };
+  const dialog = document.getElementById('ig-lightbox');
+  const photo = document.getElementById('ig-lightbox-image');
+  const caption = document.getElementById('ig-lightbox-caption');
+  const counter = document.getElementById('ig-lightbox-count');
+  const prev = document.getElementById('ig-lightbox-prev');
+  const next = document.getElementById('ig-lightbox-next');
+  let selected = '';
+  let index = 0;
+
+  // Build thumbnails only for real photographs included in the gallery data.
+  for (const [key, photos] of Object.entries(galleryData)) {
+    const target = document.getElementById('thumbs-' + key);
+    if (!target) continue;
+    photos.slice(1).forEach((item, i) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ig-gallery-thumb';
+      button.dataset.openGallery = key;
+      button.dataset.photoIndex = String(i + 1);
+      button.setAttribute('aria-label', 'Open photograph ' + String(i + 2));
+      const img = document.createElement('img');
+      img.src = 'images/' + item.file;
+      img.alt = item.alt;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.onerror = () => button.remove();
+      button.appendChild(img);
+      target.appendChild(button);
+    });
+  }
+
+  const showPhoto = () => {
+    const items = galleryData[selected] || [];
+    if (!items.length) return;
+    const item = items[index];
+    photo.src = 'images/' + item.file;
+    photo.alt = item.alt;
+    caption.textContent = item.alt + ' — Photograph: Innovate Generation';
+    counter.textContent = (index + 1) + ' / ' + items.length;
+    prev.disabled = items.length < 2;
+    next.disabled = items.length < 2;
+  };
+  const step = offset => {
+    const items = galleryData[selected] || [];
+    if (!items.length) return;
+    index = (index + offset + items.length) % items.length;
+    showPhoto();
+  };
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-open-gallery]');
+    if (!btn) return;
+    selected = btn.dataset.openGallery;
+    index = Number(btn.dataset.photoIndex || 0);
+    showPhoto();
+    if (!dialog.open) dialog.showModal();
+  });
+  document.getElementById('ig-lightbox-close').addEventListener('click', () => dialog.close());
+  prev.addEventListener('click', () => step(-1));
+  next.addEventListener('click', () => step(1));
+  dialog.addEventListener('click', e => {
+    if (e.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+  });
+})();
+</script>
+
 </body>
 </html>
-
