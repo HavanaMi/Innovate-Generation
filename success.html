@@ -20,9 +20,8 @@
 <body>
   <nav>
     <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
-    <a href="articles.html">Articles</a><a href="shop.html">Shop</a><a href="resources.html">Resources</a>
+    <a href="articles.html">Articles</a><a href="shop.html">Products</a><a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a><a href="policy.html">Policy</a>
-    <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
   </nav>
 
   <header>
@@ -36,7 +35,7 @@
       <h2 id="order-title">Payment not confirmed yet</h2>
       <p id="order-message" class="muted">Your cart will be kept until payment is confirmed.</p>
       <div class="actions">
-        <a class="btn" href="shop.html">Back to shop</a>
+        <a class="btn" href="shop.html">View products</a>
         <button id="print-button" class="ghost" type="button" hidden>Print confirmation</button>
       </div>
       <p id="redirect-note" class="note" hidden>You’ll be redirected to the shop in <span id="sec">8</span>s.</p>
@@ -103,7 +102,7 @@
         message.textContent='We could not confirm this payment. Your cart has been kept; check your Stripe receipt or contact us if you were charged.';
         icon.textContent='⚠️';
         orderTitle.textContent='Your cart is still available';
-        orderMessage.textContent='Return to the cart to try again, or contact us for help.';
+        orderMessage.textContent='Contact us for assistance with a previous payment.';
         if(pill) pill.textContent='';
       }
     })();
