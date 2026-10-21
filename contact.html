@@ -129,7 +129,10 @@
     </div>
 
     <!-- Contact Form -->
-    <form action="mailto:igclientrelations@gmail.com" method="post" enctype="text/plain">
+    <form class="ig-ajax-contact" action="https://formsubmit.co/ajax/igclientrelations@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Innovate Generation – Contact Enquiry">
+    <input type="hidden" name="_url" value="https://www.innovategeneration.com/contact.html">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -141,6 +144,7 @@
 
       <button type="submit">Submit</button>
     </form>
+  <p class="ig-form-status" role="status" aria-live="polite"></p>
   </section>
 
   <footer>
@@ -163,6 +167,7 @@
 })();
 </script>
 
+<script src="contact-form.js" defer></script>
 </body>
 </html>
 
