@@ -327,12 +327,16 @@
     Or maybe want to volunteer with us? Join our free programs today! Meetings will be accessible both online via Zoom and in person at a physical venue, such as a school room or similar location.
   </p>
 
-  <form action="mailto:igclientrelations@gmail.com" method="post" enctype="text/plain">
+  <form class="ig-ajax-contact" action="https://formsubmit.co/ajax/igclientrelations@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Innovate Generation – Mentoring and Workshops Enquiry">
+    <input type="hidden" name="_url" value="https://www.innovategeneration.com/index.html">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Tell us what you're interested in…" rows="7" spellcheck="true"></textarea>
     <button type="submit">Submit</button>
   </form>
+  <p class="ig-form-status" role="status" aria-live="polite"></p>
 </section>
 
 <!-- Resources -->
@@ -366,6 +370,7 @@ function closePopup(){ document.getElementById('popup').style.display='none'; }
 document.addEventListener('click',e=>{const img=e.target.closest('img[data-zoom]');if(img)openPopup(img.src);});
 </script>
 
+<script src="contact-form.js" defer></script>
 </body>
 </html>
 
