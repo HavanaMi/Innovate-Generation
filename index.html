@@ -175,11 +175,10 @@
   <a href="portfolio.html">Portfolio</a>
   <a href="articles.html">Articles</a>
   <a href="/creative-futures/">Creative Futures</a>
-  <a href="shop.html">Shop</a>
+  <a href="shop.html">Products</a>
   <a href="resources.html">Resources</a>
   <a href="contact.html">Contact</a>
   <a href="policy.html">Policy</a>
-  <a href="cart.html" aria-label="Cart">🛒 Cart <span id="cart-count" class="cart-pill">0</span></a>
 </nav>
 
 <!-- Intro -->
@@ -261,11 +260,11 @@
   </div>
 </section>
 
-<!-- Shop -->
+<!-- Products gallery -->
 <section>
   <img src="images/Merchandise.png" alt="Merchandise Illustration" class="merch-hero" data-zoom />
 
-  <h2>Shop – Youth-Created Products</h2>
+  <h2>Our Products</h2>
 
   <div class="product-row">
     <!-- Mug Arch -->
@@ -275,15 +274,8 @@
         <figcaption style="display:none">White Mug – Arch</figcaption>
       </figure>
       <h4>White Mug</h4>
-      <p>Arch Ceramic Mug. <strong>£35.00</strong></p>
-      <button class="btn add-to-cart"
-        data-id="white-mug-arch"
-        data-name="White Mug – Arch"
-        data-description="Arch Ceramic Mug"
-        data-price="35.00"
-        data-priceid="price_1Rty8IBaMwJkUgdcrvKbIt9F"
-        data-image="images/MugArch.png"
-        data-qty="1">Add to cart</button>
+      <p>Arch Ceramic Mug.</p>
+      
     </article>
 
     <!-- T-shirt White -->
@@ -293,15 +285,8 @@
         <figcaption style="display:none">T-shirt – Perfectly Fine (White)</figcaption>
       </figure>
       <h4>T-shirt</h4>
-      <p>Perfectly Fine White – Cotton. <strong>£36.99</strong></p>
-      <button class="btn add-to-cart"
-        data-id="tee-perfectly-fine-white"
-        data-name="T-shirt – Perfectly Fine (White)"
-        data-description="Cotton tee, white"
-        data-price="36.99"
-        data-priceid="price_1RtyDPBaMwJkUgdcEeNCNmLv"
-        data-image="images/TshirtPerfectlyFineWhite.png"
-        data-qty="1">Add to cart</button>
+      <p>Perfectly Fine White – Cotton.</p>
+      
     </article>
 
     <!-- T-shirt Black -->
@@ -311,15 +296,8 @@
         <figcaption style="display:none">T-shirt – Perfectly Fine (Black)</figcaption>
       </figure>
       <h4>T-shirt</h4>
-      <p>Perfectly Fine Black – Cotton. <strong>£36.99</strong></p>
-      <button class="btn add-to-cart"
-        data-id="tee-perfectly-fine-black"
-        data-name="T-shirt – Perfectly Fine (Black)"
-        data-description="Cotton tee, black"
-        data-price="36.99"
-        data-priceid="price_1RtyI2BaMwJkUgdcrqvdqmeu"
-        data-image="images/TshirtPerfectlyFineBlack.png"
-        data-qty="1">Add to cart</button>
+      <p>Perfectly Fine Black – Cotton.</p>
+      
     </article>
   </div>
 </section>
@@ -381,61 +359,11 @@
   <p>&copy; 2025 Innovate Generation. All rights reserved.</p>
 </footer>
 
-<!-- Koszyk + popup + AddToCart -->
+<!-- Product image zoom only -->
 <script>
-  /* ========== Cart store ========== */
-  const CART_KEY = 'ig_cart_v2';
-  function getCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }catch(e){ return []; } }
-  function setCart(c){ localStorage.setItem(CART_KEY, JSON.stringify(c)); }
-  function updateCartCount(){
-    const el = document.getElementById('cart-count');
-    if(!el) return;
-    const n = getCart().reduce((s,i)=> s + (i.qty||1), 0);
-    el.textContent = n;
-  }
-
-  /* ========== Popup dla obrazków ========== */
-  function openPopup(src){ document.getElementById('popup-img').src = src; document.getElementById('popup').style.display = 'flex'; }
-  function closePopup(){ document.getElementById('popup').style.display = 'none'; }
-  document.addEventListener('click', (e)=>{
-    const zoomImg = e.target.closest('img[data-zoom]');
-    if(zoomImg){ openPopup(zoomImg.src); }
-  });
-
-  /* ========== Add to cart (homepage) ========== */
-  document.addEventListener('click', (e)=>{
-    const btn = e.target.closest('.add-to-cart');
-    if(!btn) return;
-
-    const priceId = btn.dataset.priceId || btn.dataset.priceid;
-    const item = {
-      id: btn.dataset.id,
-      name: btn.dataset.name,
-      description: btn.dataset.description || '',
-      price: Number(btn.dataset.price || 0),
-      priceId: priceId,
-      image: btn.dataset.image,
-      qty: Number(btn.dataset.qty || 1)
-    };
-
-    if(!item.id || !item.priceId){
-      alert('Produkt ma brakujące dane (ID / priceId).');
-      return;
-    }
-
-    const cart = getCart();
-    const found = cart.find(p => p.id === item.id && p.priceId === item.priceId);
-    if(found){ found.qty += item.qty; } else { cart.push(item); }
-    setCart(cart);
-    updateCartCount();
-
-    const old = btn.textContent;
-    btn.textContent = 'Added ✓';
-    btn.disabled = true;
-    setTimeout(()=>{ btn.textContent = old; btn.disabled = false; }, 1200);
-  });
-
-  document.addEventListener('DOMContentLoaded', updateCartCount);
+function openPopup(src){ document.getElementById('popup-img').src=src; document.getElementById('popup').style.display='flex'; }
+function closePopup(){ document.getElementById('popup').style.display='none'; }
+document.addEventListener('click',e=>{const img=e.target.closest('img[data-zoom]');if(img)openPopup(img.src);});
 </script>
 
 </body>

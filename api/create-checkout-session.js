@@ -53,6 +53,8 @@ function getUiBase(req) {
 module.exports = async (req, res) => {
   setCors(req, res);
   if (req.method === 'OPTIONS') return res.status(204).end();
+  // New product checkout is disabled; preserve GET verification for historical payments.
+  if (req.method === 'POST') return res.status(503).json({ error: 'Product checkout is unavailable.' });
   if (!['GET', 'POST'].includes(req.method)) {
     res.setHeader('Allow', 'GET, POST, OPTIONS');
     return res.status(405).json({ error: 'Method Not Allowed' });

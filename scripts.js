@@ -181,7 +181,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="shop.html">Shop</a>
+    <a href="shop.html">Products</a>
     <a href="contact.html">Contact</a>
   </nav>
 
@@ -206,25 +206,25 @@
       <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Product 1">
       <h3>Product 1</h3>
       <p>Price: $25</p>
-      <button>Shop</button>
+      <span>View design</span>
     </div>
     <div class="product-item">
       <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Product 2">
       <h3>Product 2</h3>
       <p>Price: $40</p>
-      <button>Shop</button>
+      <span>View design</span>
     </div>
     <div class="product-item">
       <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Product 3">
       <h3>Product 3</h3>
       <p>Price: $15</p>
-      <button>Shop</button>
+      <span>View design</span>
     </div>
     <div class="product-item">
       <img src="https://via.placeholder.com/200x200?text=Product+4" alt="Product 4">
       <h3>Product 4</h3>
       <p>Price: $30</p>
-      <button>Shop</button>
+      <span>View design</span>
     </div>
   </section>
 
